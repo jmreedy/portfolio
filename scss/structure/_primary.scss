@@ -1,0 +1,45 @@
+main {
+    display: grid;
+    justify-items: center;
+    gap: 10rem;
+    padding-block-start: 8rem;
+
+    section {
+        max-width: 50rem;
+        margin-inline: clamp(1.5rem, 5%, auto);
+        width: 100%;
+            
+        header {
+            max-width: 50rem;
+            margin-inline: auto;
+            margin-block-end: 2rem;
+
+            h2 {
+                font-size: 2rem;
+                margin-block-end: .5rem;
+            }
+
+            p {
+                font: 400 1.125rem/1.6 inherit;
+            }
+        }
+        
+        &.large {
+            max-width: 65rem;
+            
+            header {
+                max-width: 50rem;
+            }
+        }
+
+        &.full {
+            max-width: none;
+        }
+    }
+
+    // section:last-of-type {
+    //     display: grid;
+    //     place-items: center;
+    //     height: 100vh;
+    // }
+}

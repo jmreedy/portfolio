@@ -1,0 +1,86 @@
+.bucketlist {
+    max-width: 800px;
+    margin-inline: auto;
+    display: grid;
+    gap: 2rem;
+
+    .group {
+
+    }
+
+    h6 {
+        font: 500 .875rem/1 system-ui;
+        position: relative;
+        font-size: .875rem;
+        margin: 0;
+        padding-block-end: 2rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 1rem;
+            left: 0;
+            width: 1rem;
+            border-bottom: 1px solid var(--divider);
+
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-block-end: .5rem;
+            color: var(--text-primary);
+        }
+
+        li::before {
+            content: '';
+            width: 1.25rem;
+            height: 1.25rem;
+            display: inline-flex;
+            color: limegreen;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            border: 1px solid var(--color-greyscale-500);
+            font-family: "Font Awesome 6 Pro";
+            font-weight: 700;
+            font-size: .75rem;
+            margin-inline-end: .5rem;
+            padding-block-start: 2px;
+            padding-inline-start: 2px;
+        }
+
+        sup {
+            position: relative;
+            top: -.25rem;
+            vertical-align: super;
+            font-size: 60%;
+            display: inline-block;
+            margin-inline-start: .125rem;
+            color: rebeccapurple;
+            font-style: italic;
+        }
+    }
+
+    .columns--2 {
+        columns: 2 24ch;
+    }
+
+    cite {
+        display: block;
+        margin-block-start: 1rem;
+        font-size: 75%;
+        color: var(--text-placeholder);
+    }
+
+    .completed li::before {
+        content: '\f00c';
+        
+    }
+}

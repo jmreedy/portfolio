@@ -1,0 +1,31 @@
+.quote {
+    background: #f3f5f7;
+    padding-block: 10rem;
+}
+
+blockquote {
+    position: relative;
+    max-width: 65rem;
+    margin-inline: auto;
+    display: grid;
+    gap: .5rem;
+    place-items: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: -2rem auto;
+        width: 2rem;
+        translate: -50% 0;
+        border: 1px solid var(--divider);
+        border-width: 1px 0;
+    }
+
+    p {
+        font: 600 2rem/1 "League Spartan", sans-serif;
+    }
+    cite {
+        font: 400 1rem/1 "Cabin", sans-serif;
+
+    }
+}

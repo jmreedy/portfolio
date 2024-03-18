@@ -1,0 +1,60 @@
+form {
+
+    --input-border: #B3BBC1;
+    --input-border-focused: #00f;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
+    max-width: 50rem;
+    margin: 0 auto;
+
+    .w100 {
+        grid-column: 1 / -1;
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+    
+        .right {
+            margin-left: auto;
+        }
+    }
+}
+
+.input__item {
+    position: relative;
+
+    label {
+        position: absolute;
+        inset: -.5rem auto auto .75rem;
+        background: white;
+        padding-inline: .5rem;
+        font-size: .75rem;
+        text-transform: uppercase;
+
+        sup {
+            color: red;
+        }
+    }
+
+    input,
+    textarea {
+        height: 3rem;
+        border-radius: .25rem;
+        width: 100%;
+        padding-inline: 1rem;
+        border: 1px solid var(--input-border);
+        transition: 200ms all ease;
+
+        &:focus {
+            border-width: 2px;
+            border-color: var(--input-border-focused);
+        }
+    }
+
+    textarea {
+        resize: vertical;
+    }
+}
