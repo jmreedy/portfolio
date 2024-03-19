@@ -4,10 +4,6 @@
     display: grid;
     gap: 2rem;
 
-    .group {
-
-    }
-
     h6 {
         font: 500 .875rem/1 system-ui;
         position: relative;
@@ -32,6 +28,7 @@
         padding: 0;
 
         li {
+            font-family: var(--font-body);
             display: flex;
             align-items: center;
             margin-block-end: .5rem;

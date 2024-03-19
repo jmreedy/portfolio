@@ -15,12 +15,13 @@ main {
             margin-block-end: 2rem;
 
             h2 {
-                font-size: 2rem;
+                font: 700 2.5rem/1 var(--font-hero);
                 margin-block-end: .5rem;
             }
 
             p {
-                font: 400 1.125rem/1.6 inherit;
+                color: var(--text-secondary);
+                font: 400 1.125rem/1.6 var(--font-body);
             }
         }
         
@@ -42,4 +43,38 @@ main {
     //     place-items: center;
     //     height: 100vh;
     // }
+}
+
+.rewind {
+    display: grid;
+    place-items: center;
+    height: 100dvh;
+
+    font: 200 1rem/1 var(--font-body);
+    color: var(--text-placeholder);
+
+    a {
+        position: relative;
+        color: var(--text-placeholder);
+        text-decoration: none;
+        transition: 200ms opacity ease;
+        opacity: 1;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 100% 0 auto;
+            border-bottom: 1px solid var(--divider);
+            transition: 200ms inset ease;
+        }
+
+        &:hover {
+            opacity: .5;
+
+            &::after {
+                inset: 100% 100% auto 0;
+                
+            }
+        }
+    }
 }

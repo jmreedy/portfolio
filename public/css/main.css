@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Box sizing rules */
-@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=League+Spartan:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 *,
 *::before,
 *::after {
@@ -64,7 +64,7 @@ textarea:not([rows]) {
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
-:target {
+section:target {
   scroll-margin-block: 5ex;
 }
 
@@ -82,7 +82,7 @@ textarea:not([rows]) {
   --brand-blue: #3E78B2;
   --brand-navy: #004BA8;
   --brand-pink: #EFBCD5;
-  --text-primary: var(--color-greyscale-900);
+  --text-primary: var(--color-greyscale-800);
   --text-secondary: var(--color-greyscale-700);
   --text-placeholder: var(--color-greyscale-600);
   --title-primary: #0000ff;
@@ -95,6 +95,12 @@ textarea:not([rows]) {
   color: var(--text-error);
 }
 
+:root {
+  --font-title: "Noto Sans", sans-serif;
+  --font-body: "Lato", sans-serif;
+  --font-hero: "League Spartan", sans-serif;
+}
+
 html,
 body {
   margin: 0;
@@ -102,7 +108,8 @@ body {
 }
 
 html {
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-body);
+  color: var(--text-primary);
   min-height: 100vh;
   scroll-behavior: smooth;
 }
@@ -182,7 +189,7 @@ aside .mark {
   fill: var(--brand-blue);
 }
 aside h1 {
-  font: 700 2rem/1 "League Spartan", sans-serif;
+  font: 600 2rem/1 var(--font-hero);
 }
 aside h1 small {
   margin: 0;
@@ -190,7 +197,7 @@ aside h1 small {
 aside small {
   color: var(--text-secondary);
   display: block;
-  font: 400 0.75rem/1.375 "Inter", sans-serif;
+  font: 400 0.75rem/1.375 var(--font-body);
   margin-block: 0.25rem 1rem;
 }
 aside footer {
@@ -219,7 +226,7 @@ aside p {
 .nav--primary .nav__item {
   position: relative;
   color: var(--color-greyscale-800);
-  font: 700 1.375rem/1 "League Spartan", system-ui;
+  font: 600 1.25rem/1 var(--font-hero);
   text-decoration: none;
   width: -moz-fit-content;
   width: fit-content;
@@ -252,13 +259,13 @@ aside p {
 
 .nav--secondary {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.25rem;
   border-left: 1px solid var(--divider);
   margin-block: 0.5rem;
   margin-inline-start: 0.25rem;
 }
 .nav--secondary a {
-  font: 400 0.875rem/1.375 "Inter", system-ui;
+  font: 400 0.875rem/1.375 var(--font-body);
   text-decoration: none;
   color: var(--text-secondary);
   transition: 200ms all ease;
@@ -329,11 +336,12 @@ main section header {
   margin-block-end: 2rem;
 }
 main section header h2 {
-  font-size: 2rem;
+  font: 700 2.5rem/1 var(--font-hero);
   margin-block-end: 0.5rem;
 }
 main section header p {
-  font: 400 1.125rem/1.6 inherit;
+  color: var(--text-secondary);
+  font: 400 1.125rem/1.6 var(--font-body);
 }
 main section.large {
   max-width: 65rem;
@@ -345,14 +353,44 @@ main section.full {
   max-width: none;
 }
 
+.rewind {
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+  font: 200 1rem/1 var(--font-body);
+  color: var(--text-placeholder);
+}
+.rewind a {
+  position: relative;
+  color: var(--text-placeholder);
+  text-decoration: none;
+  transition: 200ms opacity ease;
+  opacity: 1;
+}
+.rewind a::after {
+  content: "";
+  position: absolute;
+  inset: 100% 0 auto;
+  border-bottom: 1px solid var(--divider);
+  transition: 200ms inset ease;
+}
+.rewind a:hover {
+  opacity: 0.5;
+}
+.rewind a:hover::after {
+  inset: 100% 100% auto 0;
+}
+
 .proficiencies > header {
   padding-block-end: 4rem;
   border-bottom: 1px solid var(--divider);
 }
 
 .tiles {
-  --prof-icon: var(--brand-pink);
-  --prof-rating: var(--brand-navy);
+  --prof-icon: #219ebc;
+  --prof-title: #003049;
+  --prof-body: var(--text-primary);
+  --prof-rating: #fcbf49;
   position: relative;
   list-style-type: none;
   margin: 0;
@@ -387,13 +425,13 @@ main section.full {
   color: var(--prof-icon);
 }
 .tiles h4 {
-  color: var(--text-primary);
-  font-size: 1.5rem;
+  font: 800 1.25rem/1 var(--font-title);
   margin-block-end: 0.5rem;
+  color: var(--prof-title);
 }
 .tiles p {
-  color: var(--text-secondary);
-  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-size: 1rem;
 }
 .tiles .rating {
   margin-top: auto;
@@ -420,7 +458,14 @@ main section.full {
   max-width: 50rem;
   margin-inline: auto;
 }
+.list--proficiencies header h3 {
+  font-family: var(--font-title);
+}
+.list--proficiencies header p {
+  font-size: 0.875rem;
+}
 .list--proficiencies h5 {
+  font-family: var(--font-title);
   margin-block-end: 0.5em;
 }
 .list--proficiencies ul {
@@ -481,6 +526,7 @@ main section.full {
   padding: 0;
 }
 .bucketlist ul li {
+  font-family: var(--font-body);
   display: flex;
   align-items: center;
   margin-block-end: 0.5rem;
@@ -540,30 +586,33 @@ main section.full {
   border-radius: 0.25rem;
 }
 
-form {
+.contact {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact__header {
+  margin-block-end: 0;
+}
+
+.contact__form {
   --input-border: #B3BBC1;
   --input-border-focused: #00f;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem 1rem;
   max-width: 50rem;
+  width: 100%;
   margin: 0 auto;
 }
-form .w100 {
+.contact__form .w100 {
   grid-column: 1/-1;
 }
-form footer {
-  width: 100%;
-  display: flex;
-}
-form footer .right {
-  margin-left: auto;
-}
 
-.input__item {
+.form__item {
   position: relative;
 }
-.input__item label {
+.form__item label {
   position: absolute;
   inset: -0.5rem auto auto 0.75rem;
   background: white;
@@ -571,11 +620,11 @@ form footer .right {
   font-size: 0.75rem;
   text-transform: uppercase;
 }
-.input__item label sup {
+.form__item label sup {
   color: red;
 }
-.input__item input,
-.input__item textarea {
+.form__item input,
+.form__item textarea {
   height: 3rem;
   border-radius: 0.25rem;
   width: 100%;
@@ -583,13 +632,62 @@ form footer .right {
   border: 1px solid var(--input-border);
   transition: 200ms all ease;
 }
-.input__item input:focus,
-.input__item textarea:focus {
+.form__item input:focus,
+.form__item textarea:focus {
   border-width: 2px;
   border-color: var(--input-border-focused);
 }
-.input__item textarea {
+.form__item textarea {
   resize: vertical;
+}
+
+.contact__footer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.contact__footer p {
+  font-size: 1rem;
+  flex-basis: 100%;
+  color: var(--text-secondary);
+}
+.contact__footer a {
+  color: var(--text-primary);
+  text-underline-offset: 0.25em;
+  text-decoration-size: 1px;
+}
+
+.contact__button {
+  border-radius: 0.25rem;
+  border: none;
+  color: var(--white);
+  background: var(--brand-blue);
+  padding-inline: 3rem;
+  transition: 200ms background ease;
+  height: 3rem;
+}
+.contact__button:hover {
+  cursor: pointer;
+  background: color-mix(in lch, var(--brand-blue), var(--brand-navy) 20%);
+}
+
+.contact__social {
+  position: relative;
+  display: flex;
+  gap: 0.25rem;
+  text-align: right;
+}
+.contact__social small {
+  position: absolute;
+  inset: auto 0 calc(100% + 0.5rem) auto;
+  font-size: 0.75rem;
+}
+.contact__social .fa-brands {
+  font-size: 2rem;
+  width: 2rem;
+  aspect-ratio: 1;
+  text-align: center;
 }
 
 .quote {
@@ -619,4 +717,14 @@ blockquote p {
 }
 blockquote cite {
   font: 400 1rem/1 "Cabin", sans-serif;
+}
+
+.awards .group {
+  display: flex;
+  gap: 1rem;
+}
+.awards .group > div {
+  width: 100%;
+  height: 100px;
+  background: pink;
 }/*# sourceMappingURL=main.css.map */

@@ -7,8 +7,10 @@
 
 .tiles {
 
-    --prof-icon: var(--brand-pink);
-    --prof-rating: var(--brand-navy);
+    --prof-icon: #219ebc;
+    --prof-title: #003049;
+    --prof-body: var(--text-primary);
+    --prof-rating: #fcbf49;
 
     position: relative;
     list-style-type: none;
@@ -44,18 +46,20 @@
 
         > i {
             color: var(--prof-icon);
+            // color: inherit;
         }
     }
 
     h4 {
-        color: var(--text-primary);
-        font-size: 1.5rem;
+        font: 800 1.25rem/1 var(--font-title);
         margin-block-end: .5rem;
+        color: var(--prof-title);
+        // color: inherit;
     }
 
     p {
-        color: var(--text-secondary);
-        font-size: .875rem;
+        color: var(--text-primary);
+        font-size: 1rem;
     }
 
     .rating {
@@ -86,7 +90,18 @@
     max-width: 50rem;
     margin-inline: auto;
 
+    header {
+        h3 {
+            font-family: var(--font-title);
+        }
+
+        p {
+            font-size: .875rem;
+        }
+    }
+
     h5 {
+        font-family: var(--font-title);
         margin-block-end: .5em;
     }
 

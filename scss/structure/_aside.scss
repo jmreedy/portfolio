@@ -61,7 +61,7 @@ aside {
 
 
     h1 {
-        font: 700 2rem/1 "League Spartan", sans-serif;
+        font: 600 2rem/1 var(--font-hero);
 
         small {
             margin: 0;
@@ -72,7 +72,7 @@ aside {
     small {
         color: var(--text-secondary);
         display: block;
-        font: 400 .75rem/1.375 "Inter", sans-serif;
+        font: 400 .75rem/1.375 var(--font-body);
         margin-block: .25rem 1rem;
     }
 
@@ -108,7 +108,7 @@ aside {
     .nav__item {
         position: relative;
         color: var(--color-greyscale-800);
-        font: 700 1.375rem/1 "League Spartan", system-ui;
+        font: 600 1.25rem/1 var(--font-hero);
         text-decoration: none;
         width: fit-content;
 
@@ -149,13 +149,13 @@ aside {
 
 .nav--secondary {
     display: grid;
-    gap: .5rem;
+    gap: .25rem;
     border-left: 1px solid var(--divider);
     margin-block: .5rem;
     margin-inline-start: .25rem;
 
     a {
-        font: 400 .875rem/1.375 "Inter", system-ui;
+        font: 400 .875rem/1.375 var(--font-body);
         text-decoration: none;
         color: var(--text-secondary);
         transition: 200ms all ease;
