@@ -97,19 +97,79 @@
 .contact__social {
     position: relative;
     display: flex;
-    gap: .25rem;
+    gap: .75rem;
     text-align: right;
+    margin-inline-start: auto;
 
-    small {
+    a {
+        position: relative;
+        color: var(--color-greyscale-700);
+        transition: 200ms color ease;
+
+        &:hover {
+            color: color-mix(in lch, var(--color-greyscale-700), white 25%);
+        }
+    }
+
+    p {
         position: absolute;
         inset: auto 0 calc(100% + .5rem) auto;
         font-size: .75rem;
+        white-space: nowrap;
     }
 
     .fa-brands {
         font-size: 2rem;
-        width: 2rem;
         aspect-ratio: 1;
         text-align: center;
     }
+
+    small {
+        --tooltip-bg: var(--color-greyscale-900);
+        
+        position: absolute;
+        inset: auto auto calc(100% - .25rem) 50%;
+        background: var(--tooltip-bg);
+        width: fit-content;
+        translate: -50% 0; 
+        color: white;
+        padding-inline: 1rem;
+        padding-block: .5rem;
+        border-radius: .25rem;
+        box-shadow: 0 0 1rem 0 rgb(0 0 0 / .2);
+        opacity: 0;
+        visibility: hidden;
+        transition: 200ms all ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: calc(100% - .625rem) auto auto 50%;
+            translate: -50% 0;
+            width: .75rem;
+            aspect-ratio: 1;
+            rotate: 45deg;
+            background: var(--tooltip-bg);
+        }
+    }
+
+    a:hover small {
+        opacity: 1;
+        visibility: visible;
+        inset: auto auto calc(100% + .125rem) 50%;
+    }
 }
+
+// small {
+//     .fa-facebook + &  { --tooltip-bg: #3B5998; }
+//     .fa-instagram + & { --tooltip-bg: #C32AA3; }
+//     .fa-steam + &     { --tooltip-bg: #171A21; }
+//     .fa-linkedin + &  { --tooltip-bg: #0A66C2; }
+//     .fa-discord + &   { --tooltip-bg: #5865f2; }
+//     .fa-lastfm + &    { --tooltip-bg: #BA0000; }
+//     .fa-dribbble + &  { --tooltip-bg: #EA4C89; }
+//     .fa-github + &    { --tooltip-bg: #222222; }
+//     .fa-figma + &     { --tooltip-bg: #1ABCFE; }
+//     .fa-spotify + &   { --tooltip-bg: #1DB954; }
+//     .fa-gitlab + &    { --tooltip-bg: #E24329; }
+// }
