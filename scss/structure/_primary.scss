@@ -1,12 +1,11 @@
 main {
     display: grid;
     justify-items: center;
-    gap: 10rem;
+    gap: 8rem;
     padding-block-start: 8rem;
 
     section {
         max-width: 50rem;
-        margin-inline: clamp(1.5rem, 5%, auto);
         width: 100%;
             
         header {
@@ -22,6 +21,7 @@ main {
             p {
                 color: var(--text-secondary);
                 font: 400 1.125rem/1.6 var(--font-body);
+                text-wrap: pretty;
             }
         }
         

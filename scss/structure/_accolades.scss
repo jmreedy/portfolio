@@ -23,6 +23,7 @@ blockquote {
 
     p {
         font: 600 2rem/1 "League Spartan", sans-serif;
+        margin: 0;
     }
     cite {
         font: 400 1rem/1 "Cabin", sans-serif;
@@ -30,17 +31,155 @@ blockquote {
     }
 }
 
-.awards {
+.pro-bono {
+    margin-block-start: 5rem;
+    margin-inline: auto;
+
+    h3 {
+        font-size: 1.5rem;
+    }
+   
+    .grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+}
+
+.pro-bono__item {
+    display: grid;
+    place-items: center;
+    flex: 1;
+    text-decoration: none;
+
+    img {
+        transition: 300ms rotate ease;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        img {
+            rotate: 1deg;
+        }
+
+        h4 {
+            box-shadow: inset 0 0 4px 2px rgb(0 0 0 / .4);
+            background: color-mix(in lch, var(--color-greyscale-900), white 20%);
+
+            &::before {
+                // animation: 300ms expose-left;
+                // animation-fill-mode: forwards;
+
+                transform: scale(1.1) rotate(-10deg);
+                opacity: 1;
+                inset: auto auto 65% -.25rem;
+            }
+
+            &::after {
+                // animation: 225ms expose-right 75ms;
+                // animation-fill-mode: forwards;
+
+                transform: scale(1.1) rotate(14deg);
+                opacity: 1;
+                inset: auto -.5rem 70% auto;
+            }
+        }
+    }
+
+}
+
+.pro-bono__details {
+    display: grid;
+    gap: .5rem;
+    justify-items: center;
+    text-align: center;
+    color: var(--text-primary);
+
+    h4 {
+        position: relative;
+        display: grid;
+        place-items: center;
+        background: var(--color-greyscale-900);
+        color: white;
+        text-align: center;
+        height: 4rem;
+        border-radius: 2rem;
+        width: fit-content;
+        padding-inline: 3rem;
+        margin-block-end: 1rem;
+        font-size: 1rem;
+        font-family: var(--font-title);
+        transition: 300ms all;
+        box-shadow: inset 0 0 0 0 transparent;
+
+        &::before,
+        &::after {
+            position: absolute;
+            font-family: "Font Awesome 6 Sharp";
+            font-size: 1.5rem;
+            color: #E2B410;
+            text-shadow: 1px 1px 2px rgb(0 0 0 / .4);
+            opacity: 0;
+            
+        }
+
+        &::before {
+            content: '\f091';
+            font-size: 1.75rem;
+            inset: auto auto 20% 1rem;
+            transition: 300ms all;
+        }
+
+        &::after {
+            content: '\f762';
+            inset: auto 1.5rem 20% auto;
+            font-size: 2.25rem;
+            transition: 225ms all 75ms;
+        }
+
+        span {
+            display: grid;
+            place-items: center;
+            position: absolute;
+            top: -.875rem;
+            background: var(--brand-blue);
+            border-radius: 2rem;
+            height: 1.5rem;
+            color: var(--white);
+            padding-inline: 1rem;
+            box-shadow: 0 2px 2px rgb(0 0 0 / .2);
+            font-family: var(--font-body);
+        }
+
+        span::before {
+            // content: '';
+            position: absolute;
+            inset: -.875rem auto -.875rem calc(50% - 1rem);
+            width: 2rem;
+            border: dotted #E2B410;
+            border-width: .375rem 0;
+        }
+    }
     
+    h5 {
+        position: relative;
+        font: 800 1rem/1 var(--font-body);
+        margin-block-start: .5rem;
 
-    .group {
-        display: flex;
-        gap: 1rem;
+        &::before {
+            content: '';
+            position: absolute;
+            inset: auto auto calc(100% + 1rem) calc(50% - 1rem);
+            width: 2rem;
+            border-top: 1px solid var(--divider);
+        }
+    }
 
-        > div {
-            width: 100%;
-            height: 100px;
-            background: pink;
+    a {
+
+        &:hover {
+            text-decoration: none;
         }
     }
 }

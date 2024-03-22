@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Box sizing rules */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 *,
 *::before,
 *::after {
@@ -96,9 +96,11 @@ section:target {
 }
 
 :root {
-  --font-title: "Noto Sans", sans-serif;
+  --font-title: "Mulish", sans-serif;
   --font-body: "Lato", sans-serif;
   --font-hero: "League Spartan", sans-serif;
+  --font-icon: "Font Awesome 6 Pro";
+  --font-numbers: "Kode Mono", monospace;
 }
 
 html,
@@ -112,6 +114,7 @@ html {
   color: var(--text-primary);
   min-height: 100vh;
   scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
 }
 
 body {
@@ -126,8 +129,34 @@ a:visited {
   color: var(--text-link);
 }
 
+a:not([href]):hover {
+  color: inherit;
+}
+
 .hidden {
   display: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-hero);
+  font-weight: 700;
+}
+
+p {
+  margin-block-end: 0.8em;
+}
+
+.flex {
+  display: flex;
+}
+
+* + * {
+  margin-block-end: 0;
 }
 
 .masthead {
@@ -322,12 +351,11 @@ label:hover {
 main {
   display: grid;
   justify-items: center;
-  gap: 10rem;
+  gap: 8rem;
   padding-block-start: 8rem;
 }
 main section {
   max-width: 50rem;
-  margin-inline: clamp(1.5rem, 5%, auto);
   width: 100%;
 }
 main section header {
@@ -342,6 +370,7 @@ main section header h2 {
 main section header p {
   color: var(--text-secondary);
   font: 400 1.125rem/1.6 var(--font-body);
+  text-wrap: pretty;
 }
 main section.large {
   max-width: 65rem;
@@ -423,6 +452,7 @@ main section.full {
 }
 .tiles li > i {
   color: var(--prof-icon);
+  margin-block-end: 1rem;
 }
 .tiles h4 {
   font: 800 1.25rem/1 var(--font-title);
@@ -537,7 +567,7 @@ main section.full {
   width: 1.25rem;
   height: 1.25rem;
   display: inline-flex;
-  color: limegreen;
+  color: var(--brand-blue);
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -547,7 +577,7 @@ main section.full {
   font-size: 0.75rem;
   margin-inline-end: 0.5rem;
   padding-block-start: 2px;
-  padding-inline-start: 2px;
+  padding-inline-start: 1px;
 }
 .bucketlist ul sup {
   position: relative;
@@ -755,17 +785,132 @@ blockquote::before {
 }
 blockquote p {
   font: 600 2rem/1 "League Spartan", sans-serif;
+  margin: 0;
 }
 blockquote cite {
   font: 400 1rem/1 "Cabin", sans-serif;
 }
 
-.awards .group {
-  display: flex;
-  gap: 1rem;
+.pro-bono {
+  margin-block-start: 5rem;
+  margin-inline: auto;
 }
-.awards .group > div {
-  width: 100%;
-  height: 100px;
-  background: pink;
+.pro-bono h3 {
+  font-size: 1.5rem;
+}
+.pro-bono .grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.pro-bono__item {
+  display: grid;
+  place-items: center;
+  flex: 1;
+  text-decoration: none;
+}
+.pro-bono__item img {
+  transition: 300ms rotate ease;
+}
+.pro-bono__item:hover {
+  cursor: pointer;
+}
+.pro-bono__item:hover img {
+  rotate: 1deg;
+}
+.pro-bono__item:hover h4 {
+  box-shadow: inset 0 0 4px 2px rgba(0, 0, 0, 0.4);
+  background: color-mix(in lch, var(--color-greyscale-900), white 20%);
+}
+.pro-bono__item:hover h4::before {
+  transform: scale(1.1) rotate(-10deg);
+  opacity: 1;
+  inset: auto auto 65% -0.25rem;
+}
+.pro-bono__item:hover h4::after {
+  transform: scale(1.1) rotate(14deg);
+  opacity: 1;
+  inset: auto -0.5rem 70% auto;
+}
+
+.pro-bono__details {
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+  text-align: center;
+  color: var(--text-primary);
+}
+.pro-bono__details h4 {
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: var(--color-greyscale-900);
+  color: white;
+  text-align: center;
+  height: 4rem;
+  border-radius: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-inline: 3rem;
+  margin-block-end: 1rem;
+  font-size: 1rem;
+  font-family: var(--font-title);
+  transition: 300ms all;
+  box-shadow: inset 0 0 0 0 transparent;
+}
+.pro-bono__details h4::before, .pro-bono__details h4::after {
+  position: absolute;
+  font-family: "Font Awesome 6 Sharp";
+  font-size: 1.5rem;
+  color: #E2B410;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+}
+.pro-bono__details h4::before {
+  content: "\f091";
+  font-size: 1.75rem;
+  inset: auto auto 20% 1rem;
+  transition: 300ms all;
+}
+.pro-bono__details h4::after {
+  content: "\f762";
+  inset: auto 1.5rem 20% auto;
+  font-size: 2.25rem;
+  transition: 225ms all 75ms;
+}
+.pro-bono__details h4 span {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: -0.875rem;
+  background: var(--brand-blue);
+  border-radius: 2rem;
+  height: 1.5rem;
+  color: var(--white);
+  padding-inline: 1rem;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-body);
+}
+.pro-bono__details h4 span::before {
+  position: absolute;
+  inset: -0.875rem auto -0.875rem calc(50% - 1rem);
+  width: 2rem;
+  border: dotted #E2B410;
+  border-width: 0.375rem 0;
+}
+.pro-bono__details h5 {
+  position: relative;
+  font: 800 1rem/1 var(--font-body);
+  margin-block-start: 0.5rem;
+}
+.pro-bono__details h5::before {
+  content: "";
+  position: absolute;
+  inset: auto auto calc(100% + 1rem) calc(50% - 1rem);
+  width: 2rem;
+  border-top: 1px solid var(--divider);
+}
+.pro-bono__details a:hover {
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */

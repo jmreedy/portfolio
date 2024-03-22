@@ -40,7 +40,7 @@
             width: 1.25rem;
             height: 1.25rem;
             display: inline-flex;
-            color: limegreen;
+            color: var(--brand-blue);
             justify-content: center;
             align-items: center;
             border-radius: 4px;
@@ -50,7 +50,7 @@
             font-size: .75rem;
             margin-inline-end: .5rem;
             padding-block-start: 2px;
-            padding-inline-start: 2px;
+            padding-inline-start: 1px;
         }
 
         sup {
