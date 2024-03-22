@@ -31,8 +31,7 @@
     li {
         position: relative;
         z-index: 1;
-        display: flex;
-        flex-flow: column;
+        display: grid;
         gap: 1rem;
         padding-block: 2rem;
 
@@ -45,9 +44,9 @@
         }
 
         > i {
+            justify-self: flex-start;
             color: var(--prof-icon);
             margin-block-end: 1rem;
-            // color: inherit;
         }
     }
 
@@ -55,7 +54,6 @@
         font: 800 1.25rem/1 var(--font-title);
         margin-block-end: .5rem;
         color: var(--prof-title);
-        // color: inherit;
     }
 
     p {
@@ -78,9 +76,26 @@
         display: grid;
         place-items: center;
         border-radius: 4px;
-        padding-inline: .25rem;
+        padding-inline: .5rem;
         font-size: 75%;
         background: var(--color-greyscale-200);
+        color: var(--text-primary);
+
+    }
+}
+
+.fa-server.slash {
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -1.5rem auto -1.125rem calc(50% - .5rem);
+        rotate: 45deg;
+        border: 4px solid var(--page-bg);
+        background: var(--text-primary);
+        border-radius: .25rem;
+        width: 1rem;
     }
 }
 

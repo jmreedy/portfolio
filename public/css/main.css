@@ -69,6 +69,10 @@ section:target {
 }
 
 :root {
+  --page-bg: #ffffff;
+}
+
+:root {
   --white: #FFFFFF;
   --color-greyscale-100: #F3F5F7;
   --color-greyscale-200: #D9DBDE;
@@ -79,7 +83,7 @@ section:target {
   --color-greyscale-700: #585B5E;
   --color-greyscale-800: #3E4145;
   --color-greyscale-900: #24272B;
-  --brand-blue: #3E78B2;
+  --brand-blue: #219ebc;
   --brand-navy: #004BA8;
   --brand-pink: #EFBCD5;
   --text-primary: var(--color-greyscale-800);
@@ -438,8 +442,7 @@ main section.full {
 .tiles li {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-flow: column;
+  display: grid;
   gap: 1rem;
   padding-block: 2rem;
 }
@@ -451,6 +454,7 @@ main section.full {
   border-bottom: 1px solid var(--divider);
 }
 .tiles li > i {
+  justify-self: flex-start;
   color: var(--prof-icon);
   margin-block-end: 1rem;
 }
@@ -476,9 +480,24 @@ main section.full {
   display: grid;
   place-items: center;
   border-radius: 4px;
-  padding-inline: 0.25rem;
+  padding-inline: 0.5rem;
   font-size: 75%;
   background: var(--color-greyscale-200);
+  color: var(--text-primary);
+}
+
+.fa-server.slash {
+  position: relative;
+}
+.fa-server.slash::after {
+  content: "";
+  position: absolute;
+  inset: -1.5rem auto -1.125rem calc(50% - 0.5rem);
+  rotate: 45deg;
+  border: 4px solid var(--page-bg);
+  background: var(--text-primary);
+  border-radius: 0.25rem;
+  width: 1rem;
 }
 
 .list--proficiencies {
