@@ -11,3 +11,30 @@
 @import 'structure/work';
 @import 'structure/contact';
 @import 'structure/accolades';
+
+
+.mirror {
+    width: 100vw;
+    height: 100dvh;
+    background: black;
+    display: grid;
+    place-items: end center;
+    padding: 5vh 2rem;
+
+    .copy {
+        text-align: center;
+    }
+
+    h1 { 
+        font-size: clamp(2rem, 5vw, 3rem);
+        color: white;
+        margin-block-end: .5em;
+    }
+
+    p {
+        font-size: clamp(1rem, 5vw, 1.25rem);
+        color: #757575;
+    }
+
+
+}

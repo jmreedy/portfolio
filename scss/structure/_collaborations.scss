@@ -53,6 +53,11 @@
                 color: var(--text-placeholder);
                 font-style: italic;
             }
+
+            span {
+                padding-inline-start: .3em;
+                color: var(--text-placeholder);
+            }
         }
 
         li::before {
