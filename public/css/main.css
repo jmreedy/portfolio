@@ -357,6 +357,7 @@ main {
   justify-items: center;
   gap: 8rem;
   padding-block-start: 8rem;
+  padding-inline: 2rem;
 }
 main section {
   max-width: 50rem;
@@ -366,6 +367,7 @@ main section header {
   max-width: 50rem;
   margin-inline: auto;
   margin-block-end: 2rem;
+  width: 100%;
 }
 main section header h2 {
   font: 700 2.5rem/1 var(--font-hero);
@@ -390,7 +392,7 @@ main section.full {
   display: grid;
   place-items: center;
   height: 100dvh;
-  font: 200 1rem/1 var(--font-body);
+  font: 400 1rem/1 var(--font-body);
   color: var(--text-placeholder);
 }
 .rewind a {
@@ -408,7 +410,7 @@ main section.full {
   transition: 200ms inset ease;
 }
 .rewind a:hover {
-  opacity: 0.5;
+  color: var(--brand-blue);
 }
 .rewind a:hover::after {
   inset: 100% 100% auto 0;
@@ -496,16 +498,25 @@ main section.full {
   rotate: 45deg;
   border: 4px solid var(--page-bg);
   background: var(--text-primary);
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   width: 1rem;
 }
 
 .list--proficiencies {
+  position: relative;
   margin-block-start: 2rem;
   padding-block-start: 4rem;
   border-top: 1px solid var(--divider);
   max-width: 50rem;
   margin-inline: auto;
+}
+.list--proficiencies::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(100% + 0.25rem) 0 auto;
+  z-index: 2;
+  width: 2rem;
+  background: var(--page-bg);
 }
 .list--proficiencies header h3 {
   font-family: var(--font-title);
@@ -518,19 +529,24 @@ main section.full {
   margin-block-end: 0.5em;
 }
 .list--proficiencies ul {
+  position: relative;
+  left: -2rem;
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
-.list--proficiencies ul li::after {
-  content: "•";
-  margin-inline: 0.5rem;
-  color: pink;
+.list--proficiencies ul li {
+  position: relative;
+  margin-inline-start: 2rem;
 }
-.list--proficiencies ul li:last-of-type::after {
-  display: none;
+.list--proficiencies ul li::before {
+  content: "•";
+  position: absolute;
+  inset: 0 calc(100% + 0.25rem) 0 auto;
+  margin-inline: 0.5rem;
+  color: var(--brand-blue);
 }
 .list--proficiencies.vertical {
   display: grid;
@@ -674,7 +690,7 @@ main section.full {
 }
 .form__item label {
   position: absolute;
-  inset: -0.5rem auto auto 0.75rem;
+  inset: -0.5rem auto auto 0.5rem;
   background: white;
   padding-inline: 0.5rem;
   font-size: 0.75rem;
@@ -689,16 +705,18 @@ main section.full {
   border-radius: 0.25rem;
   width: 100%;
   padding-inline: 1rem;
-  border: 1px solid var(--input-border);
+  border: none;
+  box-shadow: inset 0 0 0 1px var(--divider);
   transition: 200ms all ease;
 }
 .form__item input:focus,
 .form__item textarea:focus {
-  border-width: 2px;
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--brand-blue);
   border-color: var(--input-border-focused);
 }
 .form__item textarea {
-  resize: vertical;
+  padding: 1rem;
 }
 
 .contact__footer {
@@ -713,9 +731,13 @@ main section.full {
   color: var(--text-secondary);
 }
 .contact__footer a {
-  color: var(--text-primary);
+  color: var(--text-secondary);
   text-underline-offset: 0.25em;
   text-decoration-size: 1px;
+}
+.contact__footer a:hover {
+  color: var(--text-primary);
+  text-decoration: none;
 }
 
 .contact__button {
@@ -734,24 +756,29 @@ main section.full {
 
 .contact__social {
   position: relative;
-  display: flex;
-  gap: 0.75rem;
   text-align: right;
   margin-inline-start: auto;
 }
-.contact__social a {
+.contact__social .nav--social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block-start: 0.5rem;
+}
+.contact__social .social__item {
   position: relative;
   color: var(--color-greyscale-700);
   transition: 200ms color ease;
 }
-.contact__social a:hover {
+.contact__social .social__item:hover {
   color: color-mix(in lch, var(--color-greyscale-700), white 25%);
 }
-.contact__social p {
+.contact__social span {
   position: absolute;
-  inset: auto 0 calc(100% + 0.5rem) auto;
+  inset: auto 0 100% auto;
   font-size: 0.75rem;
   white-space: nowrap;
+  margin: 0;
 }
 .contact__social .fa-brands {
   font-size: 2rem;
@@ -794,6 +821,7 @@ main section.full {
 .quote {
   background: #f3f5f7;
   padding-block: 10rem;
+  border-radius: 0.5rem;
 }
 
 blockquote {

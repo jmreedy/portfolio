@@ -3,6 +3,7 @@ main {
     justify-items: center;
     gap: 8rem;
     padding-block-start: 8rem;
+    padding-inline: 2rem;
 
     section {
         max-width: 50rem;
@@ -12,6 +13,7 @@ main {
             max-width: 50rem;
             margin-inline: auto;
             margin-block-end: 2rem;
+            width: 100%;
 
             h2 {
                 font: 700 2.5rem/1 var(--font-hero);
@@ -50,7 +52,7 @@ main {
     place-items: center;
     height: 100dvh;
 
-    font: 200 1rem/1 var(--font-body);
+    font: 400 1rem/1 var(--font-body);
     color: var(--text-placeholder);
 
     a {
@@ -69,7 +71,7 @@ main {
         }
 
         &:hover {
-            opacity: .5;
+            color: var(--brand-blue);
 
             &::after {
                 inset: 100% 100% auto 0;
