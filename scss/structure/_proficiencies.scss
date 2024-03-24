@@ -17,7 +17,7 @@
     margin: 0;
     padding: 0;
     display: grid;
-    gap: 2rem;
+    gap: 0 2rem;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 
     &::after {
@@ -31,9 +31,11 @@
     li {
         position: relative;
         z-index: 1;
-        display: grid;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
         gap: 1rem;
-        padding-block: 2rem;
+        padding-block: 4rem;
 
         &::after {
             content: '';
@@ -44,9 +46,7 @@
         }
 
         > i {
-            justify-self: flex-start;
             color: var(--prof-icon);
-            margin-block-end: 1rem;
         }
     }
 
@@ -59,6 +59,8 @@
     p {
         color: var(--text-primary);
         font-size: 1rem;
+        margin: 0;
+        text-wrap: pretty;
     }
 
     .rating {
@@ -150,6 +152,7 @@
                 inset: 0 calc(100% + .25rem) 0 auto;
                 margin-inline: .5rem;
                 color: var(--brand-blue);
+                transform: scale(.8);
             }
         }
     }

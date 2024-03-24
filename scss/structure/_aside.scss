@@ -108,7 +108,7 @@ aside {
     .nav__item {
         position: relative;
         color: var(--color-greyscale-800);
-        font: 600 1.25rem/1 var(--font-hero);
+        font: 700 1.25rem/1 var(--font-hero);
         text-decoration: none;
         width: fit-content;
 
@@ -155,9 +155,9 @@ aside {
     margin-inline-start: .25rem;
 
     a {
-        font: 400 .875rem/1.375 var(--font-body);
+        font: 300 .875rem/1.375 var(--font-body);
         text-decoration: none;
-        color: var(--text-secondary);
+        color: var(--text-primary);
         transition: 200ms all ease;
         border-left: 0 solid transparent;
         padding-inline-start: 1rem;

@@ -35,7 +35,7 @@
         inset: -.5rem auto auto .5rem;
         background: white;
         padding-inline: .5rem;
-        font-size: .75rem;
+        font: 400 .75rem/1 var(--font-body);
         text-transform: uppercase;
 
         sup {
@@ -80,8 +80,10 @@
 
     a {
         color: var(--text-secondary);
+        font-weight: 400;
         text-underline-offset: .25em;
         text-decoration-size: 1px;
+        letter-spacing: .01em;
 
         &:hover {
             color: var(--text-primary);
@@ -92,6 +94,7 @@
 
 
 .contact__button {
+    font-weight: 400;
     border-radius: .25rem;
     border: none;
     color: var(--white);
@@ -130,8 +133,10 @@
     }
 
     span {
+        font-weight: 400;
+        color: var(--text-placeholder);
         position: absolute;
-        inset: auto 0 100% auto;
+        inset: auto 0 calc(100% + .25rem) auto;
         font-size: .75rem;
         white-space: nowrap;
         margin: 0;

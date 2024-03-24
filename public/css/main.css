@@ -115,6 +115,7 @@ body {
 
 html {
   font-family: var(--font-body);
+  font-weight: 300;
   color: var(--text-primary);
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -259,7 +260,7 @@ aside p {
 .nav--primary .nav__item {
   position: relative;
   color: var(--color-greyscale-800);
-  font: 600 1.25rem/1 var(--font-hero);
+  font: 700 1.25rem/1 var(--font-hero);
   text-decoration: none;
   width: -moz-fit-content;
   width: fit-content;
@@ -298,9 +299,9 @@ aside p {
   margin-inline-start: 0.25rem;
 }
 .nav--secondary a {
-  font: 400 0.875rem/1.375 var(--font-body);
+  font: 300 0.875rem/1.375 var(--font-body);
   text-decoration: none;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   transition: 200ms all ease;
   border-left: 0 solid transparent;
   padding-inline-start: 1rem;
@@ -375,7 +376,7 @@ main section header h2 {
 }
 main section header p {
   color: var(--text-secondary);
-  font: 400 1.125rem/1.6 var(--font-body);
+  font: 300 1.125rem/1.6 var(--font-body);
   text-wrap: pretty;
 }
 main section.large {
@@ -392,7 +393,7 @@ main section.full {
   display: grid;
   place-items: center;
   height: 100dvh;
-  font: 400 1rem/1 var(--font-body);
+  font: 430000 1rem/1 var(--font-body);
   color: var(--text-placeholder);
 }
 .rewind a {
@@ -431,7 +432,7 @@ main section.full {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 2rem;
+  gap: 0 2rem;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 .tiles::after {
@@ -444,9 +445,11 @@ main section.full {
 .tiles li {
   position: relative;
   z-index: 1;
-  display: grid;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
   gap: 1rem;
-  padding-block: 2rem;
+  padding-block: 4rem;
 }
 .tiles li::after {
   content: "";
@@ -456,9 +459,7 @@ main section.full {
   border-bottom: 1px solid var(--divider);
 }
 .tiles li > i {
-  justify-self: flex-start;
   color: var(--prof-icon);
-  margin-block-end: 1rem;
 }
 .tiles h4 {
   font: 800 1.25rem/1 var(--font-title);
@@ -468,6 +469,8 @@ main section.full {
 .tiles p {
   color: var(--text-primary);
   font-size: 1rem;
+  margin: 0;
+  text-wrap: pretty;
 }
 .tiles .rating {
   margin-top: auto;
@@ -547,6 +550,7 @@ main section.full {
   inset: 0 calc(100% + 0.25rem) 0 auto;
   margin-inline: 0.5rem;
   color: var(--brand-blue);
+  transform: scale(0.8);
 }
 .list--proficiencies.vertical {
   display: grid;
@@ -571,7 +575,7 @@ main section.full {
   gap: 2rem;
 }
 .bucketlist h6 {
-  font: 500 0.875rem/1 system-ui;
+  font: 500 0.875rem/1 var(--font-title);
   position: relative;
   font-size: 0.875rem;
   margin: 0;
@@ -598,7 +602,7 @@ main section.full {
 }
 .bucketlist ul li a {
   color: var(--text-primary);
-  text-underline-offset: 0.125rem;
+  text-underline-offset: 0.25rem;
   text-decoration-color: var(--divider);
 }
 .bucketlist ul li a:hover {
@@ -652,13 +656,13 @@ main section.full {
 .work__grid {
   display: grid;
   gap: 0.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 .work__grid div {
   display: grid;
   place-items: center;
   background: #f3f5f7;
-  height: 200px;
+  aspect-ratio: 1;
   border-radius: 0.25rem;
 }
 
@@ -693,7 +697,7 @@ main section.full {
   inset: -0.5rem auto auto 0.5rem;
   background: white;
   padding-inline: 0.5rem;
-  font-size: 0.75rem;
+  font: 400 0.75rem/1 var(--font-body);
   text-transform: uppercase;
 }
 .form__item label sup {
@@ -732,8 +736,10 @@ main section.full {
 }
 .contact__footer a {
   color: var(--text-secondary);
+  font-weight: 400;
   text-underline-offset: 0.25em;
   text-decoration-size: 1px;
+  letter-spacing: 0.01em;
 }
 .contact__footer a:hover {
   color: var(--text-primary);
@@ -741,6 +747,7 @@ main section.full {
 }
 
 .contact__button {
+  font-weight: 400;
   border-radius: 0.25rem;
   border: none;
   color: var(--white);
@@ -774,8 +781,10 @@ main section.full {
   color: color-mix(in lch, var(--color-greyscale-700), white 25%);
 }
 .contact__social span {
+  font-weight: 400;
+  color: var(--text-placeholder);
   position: absolute;
-  inset: auto 0 100% auto;
+  inset: auto 0 calc(100% + 0.25rem) auto;
   font-size: 0.75rem;
   white-space: nowrap;
   margin: 0;
@@ -842,7 +851,7 @@ blockquote::before {
   border-width: 1px 0;
 }
 blockquote p {
-  font: 600 2rem/1 "League Spartan", sans-serif;
+  font: 600 1.5rem/1 "League Spartan", sans-serif;
   margin: 0;
 }
 blockquote cite {
