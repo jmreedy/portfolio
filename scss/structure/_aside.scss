@@ -65,11 +65,14 @@ aside {
 
         small {
             margin: 0;
+            display: block;
+            font: 300 1rem/1 var(--font-body);
+            color: var(--text-secondary);
         }
     }
 
 
-    small {
+    p {
         color: var(--text-secondary);
         display: block;
         font: 400 .75rem/1.375 var(--font-body);
@@ -85,16 +88,15 @@ aside {
             width: 3rem;
         }
 
-        small {
-            color: var(--text-secondary);
-        }
-
         a {
             color: var(--text-link);
         }
     }
 
     p {
+        display: flex;
+        align-items: center;
+        gap: .25em;
         margin-block-end: 1em;
     }
 }

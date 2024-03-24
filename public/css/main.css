@@ -79,7 +79,7 @@ section:target {
   --color-greyscale-300: #BFC2C4;
   --color-greyscale-400: #A5A8AB;
   --color-greyscale-500: #8C8E91;
-  --color-greyscale-600: #727478;
+  --color-greyscale-600: #6f7073;
   --color-greyscale-700: #585B5E;
   --color-greyscale-800: #3E4145;
   --color-greyscale-900: #24272B;
@@ -115,11 +115,11 @@ body {
 
 html {
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--text-primary);
   min-height: 100vh;
   scroll-behavior: smooth;
-  scroll-padding-top: 8rem;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -227,8 +227,11 @@ aside h1 {
 }
 aside h1 small {
   margin: 0;
+  display: block;
+  font: 300 1rem/1 var(--font-body);
+  color: var(--text-secondary);
 }
-aside small {
+aside p {
   color: var(--text-secondary);
   display: block;
   font: 400 0.75rem/1.375 var(--font-body);
@@ -242,13 +245,13 @@ aside footer .fa-stack {
   margin-block-end: 0.5rem;
   width: 3rem;
 }
-aside footer small {
-  color: var(--text-secondary);
-}
 aside footer a {
   color: var(--text-link);
 }
 aside p {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
   margin-block-end: 1em;
 }
 
@@ -356,8 +359,8 @@ label:hover {
 main {
   display: grid;
   justify-items: center;
-  gap: 8rem;
-  padding-block-start: 8rem;
+  gap: 10rem;
+  padding-block-start: 5rem;
   padding-inline: 2rem;
 }
 main section {
@@ -468,7 +471,7 @@ main section.full {
 }
 .tiles p {
   color: var(--text-primary);
-  font-size: 1rem;
+  font: 300 1rem/1.6 var(--font-body);
   margin: 0;
   text-wrap: pretty;
 }
@@ -724,6 +727,7 @@ main section.full {
 }
 
 .contact__footer {
+  grid-column: 1/-1;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -830,6 +834,7 @@ main section.full {
 .quote {
   background: #f3f5f7;
   padding-block: 10rem;
+  padding-inline: 4rem;
   border-radius: 0.5rem;
 }
 
@@ -853,13 +858,20 @@ blockquote::before {
 blockquote p {
   font: 600 1.5rem/1 "League Spartan", sans-serif;
   margin: 0;
+  text-align: center;
 }
-blockquote cite {
-  font: 400 1rem/1 "Cabin", sans-serif;
+blockquote footer {
+  font-weight: 400;
+}
+blockquote .source {
+  color: #ca0000;
+}
+blockquote .supplemental {
+  color: var(--text-placeholder);
 }
 
 .pro-bono {
-  margin-block-start: 5rem;
+  margin-block-start: 2rem;
   margin-inline: auto;
 }
 .pro-bono h3 {
