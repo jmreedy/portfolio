@@ -80,3 +80,16 @@ main {
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+
+main {
+    padding-block: 6rem 0;
+    padding-inline: 0;
+
+    section header h2 {
+        font-size: 3rem;
+    }
+}
+
+}
