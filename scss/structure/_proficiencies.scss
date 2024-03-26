@@ -177,10 +177,16 @@
     }
 }
 
+@media screen and (max-width: 720px) {
+
+.tiles {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+}
 
 
-
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 480px) {
 
 .proficiencies > header {
     border: none;
@@ -189,7 +195,6 @@
 
 .tiles {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
 
     &::after {
         display: none;
@@ -197,22 +202,18 @@
     
     li {
         // background: var(--color-greyscale-100);
-        background: var(--white);
         border-radius: 1rem;
-        align-items: center;
-        padding-block: 3rem;
-        padding-inline: 3rem;
+        // align-items: center;
+        padding-block: 4rem;
+        // padding-inline: 2rem;
+        margin-inline: auto;
+        max-width: 358px;
         gap: 2rem;
-        text-align: center;
-        box-shadow: 0 .5rem 1rem -.5rem rgb(0 0 0 / .1);
-        border: 1px solid var(--color-greyscale-200);
+        // text-align: center;
         
         &::after {
-            display: none;
-        }
-
-        .fa-4x {
-            padding-block-start: 1rem;
+            // left: 50%;
+            // translate: -50% 0;
         }
 
         p {
@@ -220,18 +221,19 @@
         }
 
         .rating {
+            // display: none;
             position: relative;
-            background: var(--color-greyscale-800);
-            padding: 1rem 2rem;
-            border-radius: 3rem;
+            // background: var(--color-greyscale-800);
+            // padding: 1rem 2rem;
+            // border-radius: 3rem;
 
-            &::after {
-                content: '';
-                position: absolute;
-                inset: auto auto calc(100% + 1rem) calc(50% - 1rem);
-                width: 2rem;
-                border-top: 1px solid var(--divider);
-            }
+            // &::after {
+            //     content: '';
+            //     position: absolute;
+            //     inset: auto auto calc(100% + 1rem) calc(50% - 1rem);
+            //     width: 2rem;
+            //     border-top: 1px solid var(--divider);
+            // }
         }
 
         h4 {
@@ -243,6 +245,20 @@
 .list--proficiencies {
     border-top: none;
     padding-block-start: 0;
+
+    ul {
+        display: block;
+        // list-style-type: disc;
+        padding-inline-start: 1.25rem;
+
+        li {
+            font-weight: 300;
+        }
+
+        li::before {
+            // display: none;
+        }
+    }
 }
 
 }

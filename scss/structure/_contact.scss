@@ -8,6 +8,15 @@
     margin-block-end: 0;
 }
 
+.contact__legend {
+    font: 300 .875rem/1 var(--font-body);
+    color: var(--text-placeholder);
+    
+    sup {
+        color: red;
+    }
+}
+
 
 .contact__form {
 

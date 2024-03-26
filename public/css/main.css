@@ -111,6 +111,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 html {
@@ -171,13 +172,28 @@ p {
   background: rgba(255, 255, 255, 0.6);
   -webkit-backdrop-filter: blur(1rem);
           backdrop-filter: blur(1rem);
-  padding-inline: 2rem;
+  padding-inline: 1.5rem;
   height: 4rem;
   position: fixed;
   inset: 0 0 auto;
   z-index: 2;
   translate: 0 -100%;
   transition: 200ms translate linear;
+}
+.masthead .left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.masthead .left a {
+  color: var(--text-primary);
+}
+.masthead .left a::hover {
+  text-decoration: none;
+}
+
+.mark {
+  fill: var(--brand-blue);
 }
 
 .overlay {
@@ -218,9 +234,6 @@ aside header {
   display: grid;
   gap: 2rem;
   margin-block-end: 2rem;
-}
-aside .mark {
-  fill: var(--brand-blue);
 }
 aside h1 {
   font: 600 2rem/1 var(--font-hero);
@@ -583,50 +596,34 @@ main section.full {
   display: block;
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 720px) {
+  .tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 480px) {
   .proficiencies > header {
     border: none;
     padding: 0;
   }
   .tiles {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
   .tiles::after {
     display: none;
   }
   .tiles li {
-    background: var(--white);
     border-radius: 1rem;
-    align-items: center;
-    padding-block: 3rem;
-    padding-inline: 3rem;
+    padding-block: 4rem;
+    margin-inline: auto;
+    max-width: 358px;
     gap: 2rem;
-    text-align: center;
-    box-shadow: 0 0.5rem 1rem -0.5rem rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--color-greyscale-200);
-  }
-  .tiles li::after {
-    display: none;
-  }
-  .tiles li .fa-4x {
-    padding-block-start: 1rem;
   }
   .tiles li p {
     font-size: 0.875rem;
   }
   .tiles li .rating {
     position: relative;
-    background: var(--color-greyscale-800);
-    padding: 1rem 2rem;
-    border-radius: 3rem;
-  }
-  .tiles li .rating::after {
-    content: "";
-    position: absolute;
-    inset: auto auto calc(100% + 1rem) calc(50% - 1rem);
-    width: 2rem;
-    border-top: 1px solid var(--divider);
   }
   .tiles li h4 {
     margin-block-end: 1em;
@@ -634,6 +631,13 @@ main section.full {
   .list--proficiencies {
     border-top: none;
     padding-block-start: 0;
+  }
+  .list--proficiencies ul {
+    display: block;
+    padding-inline-start: 1.25rem;
+  }
+  .list--proficiencies ul li {
+    font-weight: 300;
   }
 }
 .bucketlist {
@@ -741,6 +745,14 @@ main section.full {
 
 .contact__header {
   margin-block-end: 0;
+}
+
+.contact__legend {
+  font: 300 0.875rem/1 var(--font-body);
+  color: var(--text-placeholder);
+}
+.contact__legend sup {
+  color: red;
 }
 
 .contact__form {
@@ -965,7 +977,6 @@ blockquote {
   max-width: 65rem;
   margin-inline: auto;
   display: grid;
-  gap: 0.25rem;
   place-items: center;
 }
 blockquote::before {
@@ -978,20 +989,38 @@ blockquote::before {
   border-width: 1px 0;
 }
 blockquote p {
-  font: 600 1.5rem/1.25 "League Spartan", sans-serif;
+  position: relative;
+  font: 600 2rem/1.25 "League Spartan", sans-serif;
   margin: 0;
   text-align: center;
 }
+blockquote p::before, blockquote p::after {
+  position: relative;
+  top: 0.5rem;
+  padding-inline: 0.2em;
+  color: var(--color-greyscale-300);
+  font: 500 3rem/1rem var(--font-hero);
+}
 blockquote footer {
+  display: grid;
   font-weight: 400;
   text-align: center;
+  gap: 0.25rem;
 }
 blockquote .source {
   color: #ca0000;
 }
 blockquote .supplemental {
-  color: var(--text-placeholder);
-  white-space: nowrap;
+  color: var(--text-primary);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.2;
+}
+blockquote .supplemental::before {
+  content: "(";
+}
+blockquote .supplemental::after {
+  content: ")";
 }
 
 .pro-bono {
@@ -1121,6 +1150,32 @@ blockquote .supplemental {
 @media (min-width: 640px) and (max-width: 940px) {
   .pro-bono .grid {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 430px) {
+  .quote {
+    margin-inline: -2rem;
+    padding-block: 12rem;
+    padding-inline: 3rem;
+  }
+  blockquote {
+    gap: 1rem;
+  }
+  blockquote p {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+  blockquote footer {
+    text-align: right;
+  }
+  .supplemental {
+    display: block;
+    text-wrap: pretty;
+    font-size: 0.875rem;
+    padding-inline-start: 2rem;
+  }
+  .supplemental::before, .supplemental::after {
+    display: none;
   }
 }
 .mirror {

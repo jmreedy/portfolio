@@ -10,7 +10,6 @@ blockquote {
     max-width: 65rem;
     margin-inline: auto;
     display: grid;
-    gap: .25rem;
     place-items: center;
 
     &::before {
@@ -24,14 +23,34 @@ blockquote {
     }
 
     p {
-        font: 600 1.5rem/1.25 "League Spartan", sans-serif;
+        position: relative;
+        font: 600 2rem/1.25 "League Spartan", sans-serif;
         margin: 0;
         text-align: center;
+
+        &::before,
+        &::after {
+            position: relative;
+            top: .5rem;
+            padding-inline: .2em;
+            color: var(--color-greyscale-300);
+            font: 500 3rem/1rem var(--font-hero);
+        }
+
+        // &::before {
+        //     content: '“';
+        // }
+
+        // &::after {
+        //     content: '”';
+        // }
     }
 
     footer {
+        display: grid;
         font-weight: 400;
         text-align: center;
+        gap: .25rem;
     }
 
     .source {
@@ -39,8 +58,13 @@ blockquote {
     }
 
     .supplemental {
-        color: var(--text-placeholder);
-        white-space: nowrap;
+        color: var(--text-primary);
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.2;
+
+        &::before { content: '('; }
+        &::after  { content: ')'; }
     }
 }
 
@@ -207,5 +231,41 @@ blockquote {
 //     display: flex;
 //     flex-flow: row nowrap;
 // }
+
+}
+
+
+@media (max-width: 430px) {
+
+.quote {
+    margin-inline: -2rem;
+    padding-block: 12rem;
+    padding-inline: 3rem;
+}
+
+blockquote {
+    gap: 1rem;
+
+    p {
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    footer {
+        text-align: right;
+    }
+}
+
+.supplemental {
+    display: block;
+    text-wrap: pretty;
+    font-size: .875rem;
+    padding-inline-start: 2rem;
+
+    &::before,
+    &::after {
+        display: none;
+    }
+}
 
 }
