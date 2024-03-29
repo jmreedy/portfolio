@@ -1,13 +1,12 @@
 .work__grid {
     display: grid;
     gap: .5rem;
-    grid-template-columns: repeat(2, 1fr);
 
     div {
         display: grid;
         place-items: center;
         background: #f3f5f7;
-        aspect-ratio: 1;
+        aspect-ratio: 16 / 9;
         border-radius: .25rem;
     }
 }

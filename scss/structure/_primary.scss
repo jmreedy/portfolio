@@ -1,8 +1,8 @@
 main {
     display: grid;
     justify-items: center;
-    gap: 10rem;
-    padding-block-start: 5rem;
+    gap: 8rem;
+    padding-block-start: 8rem;
     padding-inline: 2rem;
 
     section {
@@ -28,7 +28,7 @@ main {
         }
         
         &.large {
-            max-width: 65rem;
+            max-width: 60rem;
             
             header {
                 max-width: 50rem;
