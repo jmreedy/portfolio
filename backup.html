@@ -1,0 +1,542 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Reed: Design Unicorn</title>
+    <link rel="stylesheet" type="text/css" href="public/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ef50392aa0.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <a name="top"></a>
+    
+    <header class="masthead">
+        <div class="left">
+            <svg class="mark"
+                version="1.1"
+                x="0px" y="0px"
+                width="24px"
+                viewBox="0 0 396.4 457.5" style="enable-background:new 0 0 396.4 457.5;" xml:space="preserve">
+                    <path d="M395.7,450L378,418.1L325.1,320l-14.9-27.9c-1-1.9-0.3-4.2,1.5-5.2c21.5-15.1,39.2-32.8,51.6-53.9
+                    c12.4-21.1,19.4-45.4,19.4-73.8c0-90.8-71.9-155.1-161.8-158.9c-0.7,0-1.4,0-2.1-0.1c-0.3,0-0.5,0-0.8,0c-0.6,0-1.2,0-1.9,0
+                    s-1.2,0-1.9,0h-2.8L81.3,0c-22.6,0-41,18.3-41,41l0,154.2v5H10c-5.5,0-10,4.5-10,10V310c0,5.5,4.5,10,10,10h30.4v5.1l0,82.2
+                    c0,5.5,4.5,10,10,10h100.9c5.5,0,10-4.5,10-10l0-82.2c0-2.8,0-5,0-5h22.1c3.6,0,7,2,8.7,5.1l10.4,18.8l39.1,74.1l18.9,34.3
+                    c1.8,3.2,5.1,5.2,8.8,5.2h121.9C395.2,457.5,397.6,453.3,395.7,450z M121.4,372c0,3.2-2.6,5.8-5.8,5.8H86.2c-3.2,0-5.8-2.6-5.8-5.8
+                    V320h41V372z M323.5,418.1H293c-3.6,0-7-2-8.8-5.2l-41-77.5l-28.1-50.8c-1.8-3.2-5.1-5.1-8.8-5.1l-161.4,0.2c-2.8,0-5-2.2-5-5v-30
+                    c0-2.7,2.2-5,5-5c46.8-0.1,160.7-0.4,160.7-0.5c48.7-1.1,88-31.1,88-80.1c0-40.6-27-65.1-64.1-76.2c-0.5-0.2-0.9-0.3-1.4-0.4
+                    c-7.1-2-14.6-3.2-22.3-3.4c-0.5,0-1,0-1.5,0l-2.8,0c-0.1,0-0.2,0-0.3,0l-69.4,0.6c-5.7,0.1-10.4,4.7-10.4,10.5l0,59.1l0,19.8l0,31.1
+                    H80.4L80.3,60.5c0-11.3,9.2-20.5,20.5-20.5l111.2,0.1h0.2c0.5,0,1,0,1.4,0c0.2,0,0.4,0,0.6,0c0.5,0,1.1,0,1.6,0c1,0,2.1,0,3.1,0.1
+                    c68.7,2.8,123.8,49.6,123.8,119c0,55.4-35.1,93.6-84.3,111.1c-2.9,1-4.2,4.4-2.7,7.1l72.2,133.2C329.8,414,327.3,418.1,323.5,418.1z
+                    M161.5,200.2l0-75.6c0-2.8,2.3-5.1,5.1-5.1l11.9-0.1h0l23.8-0.4h0c0.4,0,0.9,0,1.3,0c0.2,0,0.4,0,0.6,0c0,0,0.1,0,0.1,0h0.3
+                    c4.2,0,49,0,49,40.1c0,41-42.2,40.8-53.5,41h-33.6C163.8,200.2,161.5,200.2,161.5,200.2z"/>
+            </svg>
+            <a href="mailto:hello@jmreedy.com">hello@jmreedy.com</a>
+        </div>
+        <label for="nav-toggle">
+            <i class="fa-light fa-bars fa-lg"></i>
+        </label>
+    </header>
+    <input type="checkbox" id="nav-toggle" class="hidden">
+    <div class="overlay"></div>
+    <aside>
+        <label for="nav-toggle" class="btn--close">
+            <i class="fa-light fa-arrow-left"></i>
+        </label>
+        <header>
+            <svg class="mark"
+                 version="1.1"
+                 x="0px" y="0px"
+                 width="56px"
+	             viewBox="0 0 396.4 457.5" style="enable-background:new 0 0 396.4 457.5;" xml:space="preserve">
+                    <path d="M395.7,450L378,418.1L325.1,320l-14.9-27.9c-1-1.9-0.3-4.2,1.5-5.2c21.5-15.1,39.2-32.8,51.6-53.9
+                    c12.4-21.1,19.4-45.4,19.4-73.8c0-90.8-71.9-155.1-161.8-158.9c-0.7,0-1.4,0-2.1-0.1c-0.3,0-0.5,0-0.8,0c-0.6,0-1.2,0-1.9,0
+                    s-1.2,0-1.9,0h-2.8L81.3,0c-22.6,0-41,18.3-41,41l0,154.2v5H10c-5.5,0-10,4.5-10,10V310c0,5.5,4.5,10,10,10h30.4v5.1l0,82.2
+                    c0,5.5,4.5,10,10,10h100.9c5.5,0,10-4.5,10-10l0-82.2c0-2.8,0-5,0-5h22.1c3.6,0,7,2,8.7,5.1l10.4,18.8l39.1,74.1l18.9,34.3
+                    c1.8,3.2,5.1,5.2,8.8,5.2h121.9C395.2,457.5,397.6,453.3,395.7,450z M121.4,372c0,3.2-2.6,5.8-5.8,5.8H86.2c-3.2,0-5.8-2.6-5.8-5.8
+                    V320h41V372z M323.5,418.1H293c-3.6,0-7-2-8.8-5.2l-41-77.5l-28.1-50.8c-1.8-3.2-5.1-5.1-8.8-5.1l-161.4,0.2c-2.8,0-5-2.2-5-5v-30
+                    c0-2.7,2.2-5,5-5c46.8-0.1,160.7-0.4,160.7-0.5c48.7-1.1,88-31.1,88-80.1c0-40.6-27-65.1-64.1-76.2c-0.5-0.2-0.9-0.3-1.4-0.4
+                    c-7.1-2-14.6-3.2-22.3-3.4c-0.5,0-1,0-1.5,0l-2.8,0c-0.1,0-0.2,0-0.3,0l-69.4,0.6c-5.7,0.1-10.4,4.7-10.4,10.5l0,59.1l0,19.8l0,31.1
+                    H80.4L80.3,60.5c0-11.3,9.2-20.5,20.5-20.5l111.2,0.1h0.2c0.5,0,1,0,1.4,0c0.2,0,0.4,0,0.6,0c0.5,0,1.1,0,1.6,0c1,0,2.1,0,3.1,0.1
+                    c68.7,2.8,123.8,49.6,123.8,119c0,55.4-35.1,93.6-84.3,111.1c-2.9,1-4.2,4.4-2.7,7.1l72.2,133.2C329.8,414,327.3,418.1,323.5,418.1z
+                    M161.5,200.2l0-75.6c0-2.8,2.3-5.1,5.1-5.1l11.9-0.1h0l23.8-0.4h0c0.4,0,0.9,0,1.3,0c0.2,0,0.4,0,0.6,0c0,0,0.1,0,0.1,0h0.3
+                    c4.2,0,49,0,49,40.1c0,41-42.2,40.8-53.5,41h-33.6C163.8,200.2,161.5,200.2,161.5,200.2z"/>
+            </svg>
+            <h1>Jason Reed<small>Design Technologist</small></h1>
+        </header>
+
+        <nav class="nav--primary">
+            <a class="nav__item" href="#about">About</a>
+            <a class="nav__item" href="#proficiencies">Proficiencies</a>
+            <a class="nav__item" href="#reviews">Accolades</a>
+            <div class="nav__group">                    
+                <a class="nav__item" href="#work">Work</a>
+                <nav class="nav--secondary">
+                    <a href="#0">MarketWatch</a></span>
+                    <a href="#0">Total Expert</a>
+                    <a href="#0">Chalkboard Wedding</a>
+                    <a href="#0">Misc.</a>
+                </nav>
+            </div>
+            <a class="nav__item" href="#collaborations">Collaborations</a>
+            <a class="nav__item" href="#contact">Contact</a>
+            <span>
+                <a class="nav__item" href="public/docs/jason-reed-resume-2024.pdf" target="_blank">Resume</a>
+            </span>
+        </nav>
+
+        <footer>
+            <span class="fa-stack fa-2x">
+                <i class="fa-solid fa-robot fa-stack-1x" style="color: charcoal;"></i>
+                <i class="fa-regular fa-ban fa-stack-2x" style="color: tomato;"></i>
+            </span>
+            <p>Designed, developed, and written without aid from our AI robot overlords.</p>
+            <p>Imagine what I could do with their help...</p>
+            <p>XOXO <i class="fa-solid fa-heart" style="font-size: 80%;"></i> 2024</p>
+        </footer>
+
+    </aside>
+
+    <main>
+        <section class="about">
+            <header>
+                <h2><a name="about">Hello, World.</a></h2>
+                <!-- <h2><a name="about">Woah... Déjà Vu.</a></h2> -->
+                <p><strong>jmreedy</strong> is the online persona of a guy named Jason who enjoys making websites for a living. Currently, he finds himself building out a design system and component library for the folks over at Total Expert. In a previous life, he lead design and front-end development for MarketWatch; making it a more beautiful and engaging place to gather financial news.</p>
+
+                <p>Whilst not writing code or drawing pictures in Figma, he enjoys building virtual pinball machines in-between chasing after his three energetic children.</p>
+            
+                <figure>
+                    <img src="public/img/reed-2.png" />
+                    <figcaption>The closest I ever came to a career as a professional athlete.</figcaption>
+                </figure>
+            </header>
+        </section>
+
+        <section class="proficiencies large">
+            <header>
+                <h2><a name="proficiencies">The Elevator Pitch</a></h2>
+                <p>The way I see it, history would suggest that most product designers usually aren't capable of supporting development efforts once merge requests start to take flight. Meanwhile, engineers don't often find themselves with extra time to obsess over type scales and font weights. Lucky for you, I've built my career off being the expection to both. I find great solace between the two specialties with an ability to bridge the ilustrious gap.</p>
+            </header>
+
+            <div>
+                <ul class="tiles">
+                    <li style="color: #c1121f;">
+                        <i class="fa-light fa-palette fa-4x"></i>
+                        <div class="copy">
+                            <h4>Design Debonair</h4>
+                            <p>The world deserves beautiful and well thought out experiences. From niche SaaS applications to major financial media outlets that reach millions; my 16 year tenure designing across the web has been privy to it all.</p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </li>
+
+                    <li style="color: #8338ec;">
+                        <i class="fa-light fa-code fa-4x"></i>
+                        <div class="copy">
+                            <h4>Markup Magician</h4>
+                            <p>My ability to write beautifully scemantic, production ready HTML &amp; CSS is something I enjoy and take pride in. Best yet, this frees up your full-stack engineers to do the work they actually want to do.</p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </li>
+
+                    <li style="color: #003049;">
+                        <i class="fa-brands fa-figma fa-4x"></i>
+                        <div class="copy">
+                            <h4>Figma Fanboy</h4>
+                            <p>You're only ever as good as tools you use and I obsess over keeping up to date with design's new daily driver; learning how to squeeze every ounce of productity from what Figma has to offer. </p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </li>
+
+                    <li style="color: #2a9d8f;">
+                        <i class="fa-light fa-atom fa-4x"></i>
+                        <div class="copy">
+                            <h4>Systems Savant</h4>
+                            <p>This line of work thrives off of reusable patterns. I have a proven track record building successful design systems that speed up development time while simplifying end-user experiences as a result.</p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </li>
+
+                    <li style="color: #e63946;">
+                        <i class="fa-light fa-users fa-4x"></i>
+                        <div class="copy">
+                            <h4>A11y Advocate</h4>
+                            <p>I've championed previous efforts to update legacy products to meet or exceed WCAG 2.1 guidelines. All the while provoking new conversations for policies moving forward that coincide with ADA compliance.</p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </li>
+
+                    <li style="color: #00b4d8;">
+                        <i class="fa-light fa-laptop-mobile fa-4x"></i>
+                        <div class="copy">
+                            <h4>Responsive Rockstar</h4>
+                            <p>With CSS flexbox and grid, you should never write your markup more than once. Abiding by this mindset, I have cut previous legacy codebases in half by removing the need for a mobile counterpart</p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </li>
+                    <!-- <li style="color: #00b4d8;">
+                        <i class="fa-light fa-server fa-4x slash"></i>
+                        <div class="copy">
+                            <h4>Backend Buffoon</h4>
+                            <p>There isn't enough time in the day to be good at everything and I am certainly no exception. Let's just say you don't want me anywhere near your cloud service instances&hellip;trust me.</p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <small class="pill">Would Not Recommend</small>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+
+            <section class="list--proficiencies">
+                <header>
+                    <h3>The TL;DR&hellip; Version</h3>
+                    <!-- <h3>The TLDR Version</h3> -->
+                    <!-- <p>You're busy, I can respect that.</p> -->
+                </header>
+
+                <div class="group">
+                    <h5>Languages</h5>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS/SCSS</li>
+                        <li>JavaScript (working knowledge)</li>
+                    </ul>
+                </div>
+
+                <div class="group">
+                    <h5>Professional Abiliites</h5>
+                    <ul>
+                        <li>UX/UI Design</li>
+                        <li>Front-End Developement</li>
+                        <li>Design Systems</li>
+                        <li>Rapid Prototyping</li>
+                        <li>Information Architecture</li>
+                        <li>Wireframing</li>
+                        <li>Accessibility Standards</li>
+                        <li>Responsive Design</li>
+                        <li>Project Management</li>
+                        <li>Copywriting</li>
+                        <li>Public Speaking</li>
+                        <li>Usability Research</li>
+                    </ul>
+                </div>
+
+                <div class="group">
+                    <h5>Software</h5>
+                    <ul>
+                        <li>Figma</li>
+                        <li>Adobe Createive Suite</li>
+                        <li>Atlassian Product Suite</li>
+                        <li>VS Code</li>
+                        <li>Sketch</li>
+                        <li>GitHub/GitLab</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <section class="work large">
+            <header>
+                <h2><a name="work">Pretty Pictures</a></h2>
+                <p>I draw, and I do things. Here is a collection of some of them.</p>
+            </header>
+            
+            <div class="work__grid">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+        </section>
+
+        <section class="accolades large">
+            <header>
+                <h2><a name="reviews">The Reviews Are In</a></h2>
+                <p>You’re only as good as the people standing next to you. Let&apos;s see what they have to say about me.</p>
+            </header>
+
+            <div class="quote">
+                <!-- <blockquote cite="https://www.linkedin.com/in/michaelfrey/">
+                    <p>Jason Reed is a perfectionist's perfectionist.</p>
+                    <footer class="byline">
+                        <span class="source">&hellip;my former manager</span>
+                        <cite class="supplemental">I&apos;m about 78% sure it was intended as a complement</cite>
+                    </footer>
+                </blockquote> -->
+                
+                <blockquote cite="">
+                    <p>I really don’t see the need to include a quote from me in your portfolio.</p>
+                    <footer class="byline">
+                        <span class="source">&hellip;my wife</span>
+                        <cite class="supplemental">(who happens to be <a href="https://www.phalendesign.com/" target="blank"><em>waaay</em> more talented</a> than me)</ci>
+                    </footer>
+                </blockquote>
+
+                <!-- <blockquote cite="">
+                    <p>My dad can beat you up because his muscles are bigger than yours.</p>
+                    <footer class="byline">
+                        &hellip;some random kid in my daughter&apos;s kindergarten class
+                        <span class="supplemental">(completely true and entirely unsolicited)</span>
+                    </footer>
+                </blockquote> -->
+
+                <!-- <blockquote cite="">
+                    <p>I appreciated how late you kept the rest of the team up whenever we launched new products; just to fix design bugs that nobody but you cared about.</p>
+                    <footer class="byline">
+                        <span class="source">&hellip;...the guy who sat next to me before the world shut down</span>
+                        <cite class="supplemental"> (his 2019 resolution was to be less passive aggressive)</cite>
+                    </footer>
+                </blockquote> -->
+
+                <!-- <blockquote cite="Isaac Johnson">
+                    <p>Talk about a guy who will happily jump into something way over his head, realize he can&apos;t swim, and stubbornly find a way to make it back to shore anyways.</p>
+                    <footer class="byline">
+                        <span class="source">&hellip;another former manager</span>
+                        <cite class="supplemental"> (two separate times in fact; he consciously choose to work with me again)</cite>
+                    </footer>
+                </blockquote> -->
+            </div>
+
+            <section class="pro-bono large">
+                <header>
+                    <h3>Pro Bono Extracurriculars</h3>
+                    <p>There&apos;s nothing quite like voluntarily staying up all night for a great cause; all while consuming copious amounts of caffeine and Doritos. Winning was just icing on the cake.</p>
+                </header>
+
+                <img src="img/owc-pc.jpg" alt="Overnight Website Challenge Logo" />
+
+                <div class="grid">
+                    <a class="pro-bono__item" href="#0" target="_blank">
+                        <div class="pro-bono__details">
+                            <h4><span>2011</span>Overall Winner</h4>
+                            <h5>TST Media (Team Captain)</h5>
+                            <!-- <hr /> -->
+                            <small>Nonprofit: Bloomington United for Youth</small>
+                        </div>
+                    </a>
+                    <a class="pro-bono__item" href="#0" target="_blank">
+
+                        <div class="pro-bono__details">
+                            <h4><span>2012</span>Overall Winner</h4>
+                            <h5>Two Unicorns, One Moon (Team Captain)</h5>
+                            <!-- <hr /> -->
+                            <small>Nonprofit: West African Medical Missions</small>
+                        </div>
+                    </a>
+                    <a class="pro-bono__item peoples-choice" href="https://www.northmpls.org/" target="_blank">
+                        
+                        <div class="pro-bono__details">
+                            <h4><span>2013</span>People&apos;s Choice Winner</h4>
+                            <h5>One Dollar, Bob. (Team Captain)</h5>
+                            <!-- <hr /> -->
+                            <small>Nonprofit: NorthMPLS.org</small>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </section>
+        
+        <section>
+            <header>
+                <!-- <h2><a name="collaborations">Cool Company Bucket List</a></h2> -->
+                <h2><a name="collaborations">Stop, Collaborate and Listen</a></h2>
+                <!-- <p>You get to work with a lot of cool people on a lot of cool projects in a career spanning three decades, nearly too many to recall. Here&apos;s the short list of the first few that come to mind.</p> -->
+                <!-- <p>In a career spanning across three decades, you get to work on a lot of cool projects with a lot of even cooler people. Here&apos;s a small sample of where the collaborative ticks have landed thus far.</p> -->
+                <p>In a career spanning across three decades, you get to work on a lot of cool projects with a lot of even cooler people. Here&apos;s a small excerpt of where the bucket list stands today.</p>
+            </header>
+
+            <div class="bucketlist">
+                <div class="group todo">
+                    <h6>Todo</h6>
+                    <ul>
+                        <li><a href="https://www.lego.com/" target="_blank">The LEGO Group</a></li>
+                        <li><a href="https://www.nasa.gov/" target="_blank">NASA</a></li>
+                        <li><a href="https://www.valvesoftware.com/" target="_blank">Valve Software</a></li>
+                        <li><a href="mirror.html" target="_blank">Your Company</a> <span>(ironic, I know)</span></li>
+                    </ul>
+                </div>
+
+                <div class="group completed">
+                    <h6>Completed</h6>
+                    <ul class="columns--2 completed">
+                        <li><a href="https://www.barrons.com/" target="_blank">Barron&apos;s</a><sup>2</sup></li>
+                        <li><a href="https://www.chicagotribune.com/" target="_blank">Chicago Tribune</a><sup>1</sup></li>
+                        <li><a href="https://www.dowjones.com/" target="_blank">Dow Jones</li>
+                        <li><a href="https://www.fcbarcelona.com/en/" target="_blank">FC Barcelona</a><sup>1</sup></li>
+                        <li><a href="https://www.fnlondon.com/" target="_blank">Financial News</a><sup>2</sup></li>
+                        <li><a href="https://www.lifetime.life/" target="_blank">Lifetime Fitness</a><sup>1</sup></li>
+                        <li><a href="https://www.mansionglobal.com/" target="_blank">Mansion Global</a><sup>2</sup></li>
+                        <li><a href="https://www.marketwatch.com/" target="_blank">MarketWatch</a><sup>2</sup></li>
+                        <li><a href="https://www.metrocouncil.org/" target="_blank">Minneapolis Metropolitan Council</a><sup>1</sup></li>
+                        <li><a href="https://www.timberwolves.com/" target="_blank">Minnesota Timberwolves</li>
+                        <li><a href="https://www.wild.com/" target="_blank">Minnesota Wild</a><sup>1</sup></li>
+                        <li><a href="https://www.musclemilk.com/" target="_blank">Muscle Milk</a><sup>1</sup></li>
+                        <li><a href="https://www.nerdery.com/" target="_blank">The Nerdery</li>
+                        <li><a href="https://www.theworld.org/" target="_blank">Public Radio International</li>
+                        <li><a href="https://www.phillipsdistilling.com/" target="_blank">Phillips Distilling Company</a><sup>1</sup></li>
+                        <li><a href="https://www.realtor.com/" target="_blank">Realtor.com</a><sup>2</sup></li>
+                        <li><a href="https://www.redbull.com/" target="_blank">Red Bull</a><sup>1</sup></li>
+                        <li><a href="https://www.sportsengine.com/" target="_blank">SportsEngine</li>
+                        <li><a href="https://www.startribune.com/" target="_blank">Star Tribune</a><sup>1</sup></li>
+                        <li><a href="https://www.torspo.com/" target="_blank">Torspo Hockey International</a><sup>1</sup></li>
+                        <li><a href="https://www.totalexpert.com/" target="_blank">Total Expert</li>
+                        <li><a href="https://www.warrior.com/" target="_blank">Warrior Hockey</a><sup>1</sup></li>
+                        <li><a href="https://www.gophersports.com/" target="_blank">University of Minnesota Athletics</a><sup>1</sup></li>
+                        <li><a href="https://www.uspondhockey.com/" target="_blank">US Pond Hockey Championships</a><sup>1</sup></li>
+                        <li><a href="https://www.usahockey.com/" target="_blank">USA Hockey</a><sup>1</sup></li>
+                        <li><a href="https://www.wsj.com/" target="_blank">The Wall Street Journal</a><sup>2</sup></li>
+                    </ul>
+                    <cite>
+                        <sup>1</sup>As an employee of SportsEngine (2008-2013)
+                        <br />
+                        <sup>2</sup>As an employee of Dow Jones (2013-2022)</cite>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <header class="contact__header">
+                <h2><a name="contact">Let&apos;s Chat</a></h2>
+                <p>Here's to hoping I can help you do something cool on the internet. What did you have in mind?</p>
+                <small class="contact__legend"><sup>*</sup>Denotes Required Fields</small>
+            </header>
+
+            <form class="contact__form" action="https://formspree.io/f/mkndvdgy" method="POST">
+                <div class="form__item">
+                    <label for="name">Your Name<sup>*</sup></label>
+                    <input id="name" name="name" type="text" autocomplete="name" required />
+                </div>
+                <div class="form__item">
+                    <label for="email">Email<sup>*</sup></label>
+                    <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required />
+                </div>
+                <div class="form__item w100">
+                    <label for="subject">Subject<sup>*</sup></label>
+                    <input id="subject" name="subject" type="text" autocomplete="off" required />
+                </div>
+                <div class="form__item w100">
+                    <label for="message">Message<sup>*</sup></label>
+                    <div class="auto-expand">
+                        <textarea id="message" name="message" name="message" autocomplete="off"></textarea>
+                    </div>
+                </div>
+            
+                <footer class="contact__footer">
+                    <button class="contact__button" type="submit">Say Hello</button>
+                    <div class="contact__social">
+                        <span>Wanna snoop? Don&apos;t we all. These are great places to get started.</span>
+                        <nav class="nav--social">
+                            <a class="social__item" href="https://codepen.io/jmreedy" target="_blank">
+                                <i class="fa-brands fa-codepen"></i>
+                                <small>Codepen</small>
+                            </a>
+                            <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
+                                <i class="fa-brands fa-dribbble"></i>
+                                <small>Dribbble</small>
+                            </a>
+                            <a class="social__item" href="https://www.facebook.com/jmreedy" target="_blank">
+                                <i class="fa-brands fa-facebook"></i>
+                                <small>Facebook</small>
+                            </a>
+                            <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
+                                <i class="fa-brands fa-figma"></i>
+                                <small>Figma</small>
+                            </a>
+                            <a class="social__item" href="https://github.com/jmreedy" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <small>GitHub</small>
+                            </a>
+                            <a class="social__item" href="https://www.instagram.com/weekendinteriors" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                                <small>Instagram</small>
+                            </a>
+                            <a class="social__item" href="https://www.last.fm/user/jmreedy" target="_blank">
+                                <i class="fa-brands fa-lastfm"></i>
+                                <small>Last.fm</small>
+                            </a>
+                            <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <small>LinkedIn</small>
+                            </a>
+                            <a class="social__item" href="https://open.spotify.com/user/jmreedy" target="_blank">
+                                <i class="fa-brands fa-spotify"></i>
+                                <small>Spotify</small>
+                            </a>
+                            <a class="social__item" href="https://steamcommunity.com/id/jmreedy/" target="_blank">
+                                <i class="fa-brands fa-steam"></i>
+                                <small>Steam</small>
+                            </a>
+                            
+                            <!-- <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
+                                <i class="fa-brands fa-discord"></i>
+                                <small>Discord</small>
+                            </a> -->
+                            <!-- <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
+                                <i class="fa-brands fa-gitlab"></i>
+                                <small>GitLab</small>
+                            </a> -->
+                            
+                            <!-- <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
+                                <i class="fa-brands fa-pinterest"></i>
+                                <small>Pinterest</small>
+                            </a> -->
+                        </nav>
+                    </div>
+                    <p class="contact__email"><a class="text--link" href="mailto:hello@jmreedy.com">hello@jmreedy.com</a> if you want to get straight to the point.</p>
+                </footer>
+            </form>
+        </section>
+
+        <section class="rewind">
+            
+            <p><i class="fa-solid fa-cassette-vhs"></i> Please be kind, <a href="#top">rewind</a>.</p>
+        </section>
+    </main>
+</body>
+</html>

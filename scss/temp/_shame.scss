@@ -1,0 +1,77 @@
+.collaborations {
+
+    .section__body {
+        gap: 2rem;
+    }
+}
+
+.checklist {
+    li {
+        position: relative;
+        margin-block-end: .5rem;
+        padding-inline-start: 2rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 1px solid #8C8E91;
+            border-radius: 2px;
+            margin-inline-end: .5rem;
+            font-family: var(--font-icon);
+            color: #32CD32;
+            font-size: 80%;
+            text-align: center;
+        }
+
+        span {
+            padding-inline-start: .3em;
+            color: var(--text-body-secondary);
+        }
+    }
+
+    a {
+        position: relative;
+        top: -.2em;
+        color: var(--text-body-primary);
+        text-underline-offset: .25em;
+        text-decoration-color: #BFC2C4;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    sup {
+        font-style: italic;
+        color: var(--text-body-secondary);
+        font-size: 60%;
+        padding-inline-start: .25em;
+    }
+}
+
+cite {
+    display: grid;
+    gap: .25em;
+    font-size: .75rem;
+    margin-block-start: 1.5rem;
+    color: #7c7c7c;
+}
+
+.columns--2 {
+    columns: 2;
+}
+
+.completed li::before {
+    content: '\f00c';
+}
+
+@media screen and (max-width: 640px) {
+    
+.columns--2 {
+    columns: 1;
+}
+
+}

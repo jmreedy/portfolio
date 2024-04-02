@@ -1,0 +1,35 @@
+.list--proficiencies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+    gap: .5rem;
+    padding: 0;
+}
+
+.proficiency__item {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    padding: 4.5rem 2rem;
+    gap: 1rem;
+    border: 1px solid var(--divider);
+    box-shadow: 0 12px 8px -8px rgb(0 0 0 / 10%);
+
+    i {
+        margin-block-end: 1rem;
+        color: var(--brand);
+        height: 4rem;
+        aspect-ratio: 1;
+    }
+
+    h4 {
+        font: 800 1.5rem/1.375 var(--font-title);
+    }
+
+    p {
+        font: 300 1rem/1.6 var(--font-body);
+        text-wrap: pretty;
+    }
+}
+

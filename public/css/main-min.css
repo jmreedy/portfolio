@@ -125,6 +125,7 @@ html {
 
 body {
   position: relative;
+  -webkit-padding-start: 20rem;
   padding-inline-start: 20rem;
 }
 
@@ -154,6 +155,7 @@ h6 {
 }
 
 p {
+  -webkit-margin-after: 0.8em;
   margin-block-end: 0.8em;
 }
 
@@ -162,6 +164,7 @@ p {
 }
 
 * + * {
+  -webkit-margin-after: 0;
   margin-block-end: 0;
 }
 
@@ -233,6 +236,7 @@ aside::after {
 aside header {
   display: grid;
   gap: 2rem;
+  -webkit-margin-after: 2rem;
   margin-block-end: 2rem;
 }
 aside h1 {
@@ -245,10 +249,12 @@ aside h1 small {
   color: var(--text-placeholder);
 }
 aside footer {
+  -webkit-margin-before: auto;
   margin-block-start: auto;
   font-size: 0.75rem;
 }
 aside footer .fa-stack {
+  -webkit-margin-after: 0.5rem;
   margin-block-end: 0.5rem;
   width: 3rem;
 }
@@ -264,6 +270,7 @@ aside footer p i {
   color: var(--color-greyscale-300);
 }
 aside footer p:last-of-type {
+  -webkit-margin-after: 0;
   margin-block-end: 0;
 }
 
@@ -278,6 +285,7 @@ aside footer p:last-of-type {
   font: 700 1.25rem/1 var(--font-hero);
   text-decoration: none;
   width: -moz-fit-content;
+  width: -webkit-fit-content;
   width: fit-content;
 }
 .nav--primary .nav__item::after {
@@ -290,6 +298,7 @@ aside footer p:last-of-type {
 .nav--primary .nav__item + i {
   color: var(--text-link);
   font-size: 0.875rem;
+  -webkit-margin-start: 0.25rem;
   margin-inline-start: 0.25rem;
 }
 .nav--primary .nav__item:hover, .nav--primary .nav__item:focus-visible {
@@ -311,6 +320,7 @@ aside footer p:last-of-type {
   gap: 0.25rem;
   border-left: 1px solid var(--divider);
   margin-block: 0.5rem;
+  -webkit-margin-start: 0.25rem;
   margin-inline-start: 0.25rem;
 }
 .nav--secondary a {
@@ -319,10 +329,12 @@ aside footer p:last-of-type {
   color: var(--text-placeholder);
   transition: 200ms all ease;
   border-left: 0 solid transparent;
+  -webkit-padding-start: 1rem;
   padding-inline-start: 1rem;
 }
 .nav--secondary a:hover, .nav--secondary a:focus-visible {
   font-weight: 500;
+  -webkit-padding-start: 1.25rem;
   padding-inline-start: 1.25rem;
   border-left: 0.25rem solid var(--text-link);
   outline: none;
@@ -372,6 +384,7 @@ main {
   display: grid;
   justify-items: center;
   gap: 8rem;
+  -webkit-padding-before: 8rem;
   padding-block-start: 8rem;
   padding-inline: 2rem;
 }
@@ -382,11 +395,13 @@ main section {
 main section header {
   max-width: 50rem;
   margin-inline: auto;
+  -webkit-margin-after: 2rem;
   margin-block-end: 2rem;
   width: 100%;
 }
 main section header h2 {
   font: 700 2.5rem/1 var(--font-hero);
+  -webkit-margin-after: 0.5rem;
   margin-block-end: 0.5rem;
 }
 main section header p {
@@ -446,6 +461,7 @@ main section.full {
 }
 
 .proficiencies > header {
+  -webkit-padding-after: 4rem;
   padding-block-end: 4rem;
   border-bottom: 1px solid var(--divider);
 }
@@ -524,7 +540,9 @@ main section.full {
 
 .list--proficiencies {
   position: relative;
+  -webkit-margin-before: 2rem;
   margin-block-start: 2rem;
+  -webkit-padding-before: 4rem;
   padding-block-start: 4rem;
   border-top: 1px solid var(--divider);
   max-width: 50rem;
@@ -547,6 +565,7 @@ main section.full {
 .list--proficiencies h5 {
   font-family: var(--font-title);
   font-size: 1rem;
+  -webkit-margin-after: 1em;
   margin-block-end: 1em;
 }
 .list--proficiencies ul {
@@ -560,6 +579,7 @@ main section.full {
 }
 .list--proficiencies ul li {
   position: relative;
+  -webkit-margin-start: 2rem;
   margin-inline-start: 2rem;
   font-weight: 300;
 }
@@ -569,6 +589,7 @@ main section.full {
   inset: 0 calc(100% + 0.25rem) 0 auto;
   margin-inline: 0.5rem;
   color: var(--brand-blue);
+  -webkit-transform: scale(0.8);
   transform: scale(0.8);
 }
 
@@ -602,14 +623,17 @@ main section.full {
     position: relative;
   }
   .tiles li h4 {
+    -webkit-margin-after: 2em;
     margin-block-end: 2em;
   }
   .list--proficiencies {
     border-top: none;
+    -webkit-padding-before: 0;
     padding-block-start: 0;
   }
   .list--proficiencies ul {
     display: block;
+    -webkit-padding-start: 1.25rem;
     padding-inline-start: 1.25rem;
   }
   .list--proficiencies ul li {
@@ -627,6 +651,7 @@ main section.full {
   position: relative;
   font-size: 0.875rem;
   margin: 0;
+  -webkit-padding-after: 2rem;
   padding-block-end: 2rem;
 }
 .bucketlist h6::after {
@@ -646,6 +671,7 @@ main section.full {
   font-family: var(--font-body);
   display: flex;
   align-items: center;
+  -webkit-margin-after: 0.5rem;
   margin-block-end: 0.5rem;
 }
 .bucketlist ul li a {
@@ -662,11 +688,13 @@ main section.full {
   vertical-align: super;
   font-size: 60%;
   display: inline-block;
+  -webkit-margin-start: 0.125rem;
   margin-inline-start: 0.125rem;
   color: var(--text-placeholder);
   font-style: italic;
 }
 .bucketlist ul li span {
+  -webkit-padding-start: 0.3em;
   padding-inline-start: 0.3em;
   color: var(--text-placeholder);
 }
@@ -683,16 +711,21 @@ main section.full {
   font-family: "Font Awesome 6 Pro";
   font-weight: 700;
   font-size: 0.75rem;
+  -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
+  -webkit-padding-before: 2px;
   padding-block-start: 2px;
+  -webkit-padding-start: 1px;
   padding-inline-start: 1px;
 }
 .bucketlist .columns--2 {
   -moz-columns: 2 24ch;
+       -webkit-columns: 2 24ch;
        columns: 2 24ch;
 }
 .bucketlist cite {
   display: block;
+  -webkit-margin-before: 1rem;
   margin-block-start: 1rem;
   font-size: 75%;
   color: var(--text-placeholder);
@@ -719,6 +752,7 @@ main section.full {
 }
 
 .contact__header {
+  -webkit-margin-after: 0;
   margin-block-end: 0;
 }
 
@@ -821,12 +855,14 @@ main section.full {
 .contact__social {
   position: relative;
   text-align: right;
+  -webkit-margin-start: auto;
   margin-inline-start: auto;
 }
 .contact__social .nav--social {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  -webkit-margin-before: 0.5rem;
   margin-block-start: 0.5rem;
 }
 .contact__social .social__item {
@@ -857,6 +893,7 @@ main section.full {
   inset: auto auto calc(100% - 0.25rem) 50%;
   background: var(--tooltip-bg);
   width: -moz-fit-content;
+  width: -webkit-fit-content;
   width: fit-content;
   translate: -50% 0;
   color: white;
@@ -999,6 +1036,7 @@ blockquote .supplemental::after {
 }
 
 .pro-bono {
+  -webkit-margin-before: 2rem;
   margin-block-start: 2rem;
   margin-inline: auto;
 }
@@ -1031,11 +1069,13 @@ blockquote .supplemental::after {
   background: color-mix(in lch, var(--color-greyscale-900), white 20%);
 }
 .pro-bono__item:hover h4::before {
+  -webkit-transform: scale(1.1) rotate(-10deg);
   transform: scale(1.1) rotate(-10deg);
   opacity: 1;
   inset: auto auto 65% -0.25rem;
 }
 .pro-bono__item:hover h4::after {
+  -webkit-transform: scale(1.1) rotate(14deg);
   transform: scale(1.1) rotate(14deg);
   opacity: 1;
   inset: auto -0.5rem 70% auto;
@@ -1058,8 +1098,10 @@ blockquote .supplemental::after {
   height: 4rem;
   border-radius: 2rem;
   width: -moz-fit-content;
+  width: -webkit-fit-content;
   width: fit-content;
   padding-inline: 3rem;
+  -webkit-margin-after: 1rem;
   margin-block-end: 1rem;
   font-size: 1rem;
   font-family: var(--font-title);
@@ -1109,6 +1151,7 @@ blockquote .supplemental::after {
 .pro-bono__details h5 {
   position: relative;
   font: 800 1rem/1 var(--font-body);
+  -webkit-margin-before: 0.5rem;
   margin-block-start: 0.5rem;
 }
 .pro-bono__details h5::before {
@@ -1147,6 +1190,7 @@ blockquote .supplemental::after {
     display: block;
     text-wrap: pretty;
     font-size: 0.875rem;
+    -webkit-padding-start: 2rem;
     padding-inline-start: 2rem;
   }
   .supplemental::before, .supplemental::after {
@@ -1167,9 +1211,10 @@ blockquote .supplemental::after {
 .mirror h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   color: white;
+  -webkit-margin-after: 0.5em;
   margin-block-end: 0.5em;
 }
 .mirror p {
   font-size: clamp(1rem, 5vw, 1.25rem);
   color: #757575;
-}/*# sourceMappingURL=main.css.map */
+}
