@@ -98,6 +98,19 @@
       "oAP" : "\/favicon.ico",
       "oF" : 0
     },
+    "\/img\/jason.png" : {
+      "ft" : 32768,
+      "iS" : 1105595,
+      "oA" : 0,
+      "oAP" : "\/img\/jason.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
     "\/img\/now.jpg" : {
       "ft" : 16384,
       "iS" : 27261,
@@ -217,12 +230,28 @@
       "oAP" : "\/partials\/_proficiencies.html",
       "oF" : 0
     },
+    "\/partials\/_quote.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/partials\/_quote.html",
+      "oF" : 0
+    },
     "\/partials\/_rewind.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/partials\/_rewind.html",
+      "oF" : 0
+    },
+    "\/partials\/_work.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/partials\/_work.html",
       "oF" : 0
     },
     "\/public\/css\/main-min.css" : {
@@ -386,6 +415,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/scss\/components\/_lists.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/components\/_quote.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/components\/_quote.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

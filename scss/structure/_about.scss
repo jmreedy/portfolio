@@ -6,6 +6,8 @@ figure {
 
 figcaption {
     font: 400 .875rem var(--font-body);
+    max-width: 50rem;
+    margin-inline: auto;
     margin-block-start: .5rem;
 }
 

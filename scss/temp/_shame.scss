@@ -52,7 +52,7 @@
     }
 }
 
-cite {
+.checklist__citation {
     display: grid;
     gap: .25em;
     font-size: .75rem;
@@ -61,7 +61,7 @@ cite {
 }
 
 .columns--2 {
-    columns: 2;
+    columns: 2 240px;
 }
 
 .completed li::before {
@@ -73,5 +73,84 @@ cite {
 .columns--2 {
     columns: 1;
 }
+
+}
+
+
+
+
+
+
+
+.pro-bono {
+    .section__body {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    figure {
+        margin-block: auto;
+    }
+
+    img {
+        width: 300px;
+    }
+}
+
+.list--awards {
+    display: grid;
+    gap: 2rem;
+}
+
+.award__item {
+    position: relative;
+    width: 100%;
+    min-height: 75px;
+    border: 1px solid var(--divider);
+    border-radius: 4px;
+    display: grid;
+    gap: .25rem;
+    padding-block: 1.5rem 1rem;
+    padding-inline: 3rem;
+    transition: 200ms border-color;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        border-color: var(--text-body-primary);
+    }
+
+    span {
+        position: absolute;
+        inset: auto 4rem calc(100% - 1rem);
+        background: var(--text-body-primary);
+        color: var(--white);
+        letter-spacing: .1em;
+        display: grid;
+        place-items: center;
+        border-radius: 2rem;
+        border: 4px solid var(--page-bg);
+        text-transform: uppercase;
+        height: 2rem;
+        font-size: .75rem;
+
+        &.pc {
+            background: var(--brand);
+        }
+    }
+
+    h6 {
+        margin: 0;
+        font: 700 1rem/1 var(--font-title);
+        color: var(--text-body-primary);
+    }
+    
+    small {
+        font: 400 .75rem/1 var(--font-body);
+        color: var(--text-body-secondary);
+    }
+
 
 }
