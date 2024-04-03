@@ -1,1 +1,1 @@
-!function($){$('[data-hook="qa"]').click((function(){$(this).toggleClass("expanded")}))}(jQuery);
+!function($){$('[data-hook="qa"]').click((function(){$(this).parent("div").toggleClass("expanded")}))}(jQuery);

@@ -84,7 +84,7 @@ section:target {
   --page-bg: var(--white);
   --text-body-primary: var(--color-greyscale-900);
   --text-body-secondary: var(--color-greyscale-600);
-  --quote-bg: rgb( 0 0 0 / 5%);
+  --quote-bg: rgb( 0 0 0 / 10%);
   --input-border: var(--color-greyscale-200);
 }
 
@@ -194,6 +194,14 @@ h1 {
   color: var(--text-body-primary);
   font: 700 2rem/1 var(--font-hero);
 }
+h1 a {
+  color: var(--text-body-primary);
+  text-decoration: none;
+}
+h1 a:focus-visible {
+  color: var(--brand);
+  outline: 0;
+}
 h1 small {
   display: block;
   color: var(--text-body-secondary);
@@ -228,7 +236,7 @@ h1 small {
 
 .nav--secondary {
   gap: 0.5rem;
-  border-right: 1px solid var(--divider);
+  box-shadow: inset -1px 0 0 0 var(--divider);
   margin-block-start: 1rem;
 }
 .nav--secondary .secondary__item {
@@ -241,6 +249,7 @@ h1 small {
 .nav--secondary .secondary__item:hover, .nav--secondary .secondary__item:focus-visible {
   border-width: 0 0.25rem 0 0;
   color: var(--brand);
+  outline: none;
 }
 
 .legal {
@@ -337,8 +346,10 @@ section p:not(:last-of-type) {
 
 .rewind {
   display: grid;
-  place-items: center;
+  justify-items: center;
+  align-items: end;
   height: 100vh;
+  padding-block: 5rem;
 }
 .rewind a {
   position: relative;
@@ -553,6 +564,11 @@ figure figcaption {
 .checklist a:hover {
   text-decoration: none;
 }
+.checklist a:focus-visible {
+  color: var(--brand);
+  text-decoration-color: var(--brand);
+  outline: none;
+}
 .checklist sup {
   font-style: italic;
   color: var(--text-body-secondary);
@@ -751,6 +767,9 @@ button:focus-visible {
   color: var(--text-body-primary);
   font-weight: 400;
 }
+.contact__email a:hover {
+  text-decoration: none;
+}
 
 .quote .section__body {
   box-shadow: 0 0 0 100vmax var(--quote-bg);
@@ -845,21 +864,18 @@ blockquote span a:hover {
   text-align: center;
   text-decoration: none;
 }
-.award__item:hover {
-  border-color: var(--text-body-primary);
-}
 .award__item span {
   position: absolute;
-  inset: auto 2rem calc(100% - 1rem);
+  inset: auto 2rem calc(100% - 0.75rem);
+  box-shadow: 0 0 0 0.5rem var(--page-bg);
   background: var(--award-bg);
   color: var(--white);
   letter-spacing: 0.1em;
   display: grid;
   place-items: center;
-  border-radius: 2rem;
-  border: 4px solid var(--page-bg);
+  border-radius: 0.25rem;
   text-transform: uppercase;
-  height: 2rem;
+  height: 1.5rem;
   font-size: 0.75rem;
 }
 .award__item h6 {
@@ -879,7 +895,7 @@ blockquote span a:hover {
   width: 100%;
 }
 .list--projects .project__item {
-  background: pink;
+  background: rgba(0, 0, 0, 0.15);
   aspect-ratio: 1;
   border-radius: 0.5rem;
 }
@@ -891,6 +907,15 @@ blockquote span a:hover {
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --page-bg: var(--color-greyscale-900);
+    --quote-bg: rgb(0 0 0 / 10%);
+    --text-body-primary: var(--color-greyscale-300);
+    --text-body-secondary: var(--color-greyscale-500);
+    --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
+    --tooltip-bg: pink;
+    --input-border: var(--color-greyscale-700);
+  }
+  #darkmode:checked ~ main {
     --page-bg: var(--color-greyscale-900);
     --quote-bg: rgb(0 0 0 / 10%);
     --text-body-primary: var(--color-greyscale-300);

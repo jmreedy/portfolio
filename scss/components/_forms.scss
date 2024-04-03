@@ -181,5 +181,9 @@ button {
     a {
         color: var(--text-body-primary);
         font-weight: 400;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 }

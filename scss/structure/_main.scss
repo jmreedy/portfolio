@@ -61,8 +61,10 @@ section {
 
 .rewind {
     display: grid;
-    place-items: center;
+    justify-items: center;
+    align-items: end;
     height: 100vh;
+    padding-block: 5rem;
 
     a {
         position: relative;

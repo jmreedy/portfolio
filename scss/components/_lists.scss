@@ -99,6 +99,12 @@
         &:hover {
             text-decoration: none;
         }
+
+        &:focus-visible {
+            color: var(--brand);
+            text-decoration-color: var(--brand);
+            outline: none;
+        }
     }
 
     sup {

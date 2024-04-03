@@ -41,22 +41,18 @@
     text-align: center;
     text-decoration: none;
 
-    &:hover {
-        border-color: var(--text-body-primary);
-    }
-
     span {
         position: absolute;
-        inset: auto 2rem calc(100% - 1rem);
+        inset: auto 2rem calc(100% - .75rem);
+        box-shadow: 0 0 0 .5rem var(--page-bg);
         background: var(--award-bg);
         color: var(--white);
         letter-spacing: .1em;
         display: grid;
         place-items: center;
-        border-radius: 2rem;
-        border: 4px solid var(--page-bg);
+        border-radius: .25rem;
         text-transform: uppercase;
-        height: 2rem;
+        height: 1.5rem;
         font-size: .75rem;
     }
 
@@ -81,7 +77,7 @@
     width: 100%;
 
     .project__item {
-        background: pink;
+        background: rgb(0 0 0 / 15%);
         aspect-ratio: 1;
         border-radius: .5rem;
     }
