@@ -22,4 +22,9 @@
 --text-body-primary:  var(--color-greyscale-900);
 --text-body-secondary: var(--color-greyscale-600);
 
+// --quote-bg: color-mix(in lch, var(--page-bg), black 5%);
+--quote-bg: rgb( 0 0 0 / 5%);
+
+--input-border: var(--color-greyscale-200);
+
 }

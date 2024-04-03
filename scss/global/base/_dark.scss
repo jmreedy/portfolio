@@ -1,0 +1,32 @@
+@media (prefers-color-scheme: dark) {
+
+:root {
+
+--page-bg: var(--color-greyscale-900);
+--quote-bg: rgb(0 0 0 / 10%);
+
+--text-body-primary: var(--color-greyscale-300);
+--text-body-secondary: var(--color-greyscale-500);
+
+--divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
+
+--tooltip-bg: pink;
+
+--input-border: var(--color-greyscale-700);
+
+// --quote-bg: color-mix(in lch, var(--page-bg), black 10%);
+
+}
+
+.pro-bono img {
+
+    &:first-of-type {
+        display: none;
+    }
+
+    &:last-of-type {
+        display: block;
+    }
+}
+
+}

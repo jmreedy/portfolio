@@ -1,19 +1,26 @@
 figure {
+    display: grid;
+    gap: 1rem;
+
     img {
-        border-radius: 8px;
+        border-radius: .5rem;
+        // box-shadow: 0 0 0 .5rem color-mix(in lch, var(--page-bg), black 20%);
+    }
+    
+    figcaption {
+        font: 300 .875rem var(--font-body);
+        color: var(--text-body-secondary);
+        max-width: 50rem;
+        width: 100%;
+        margin-inline: auto;
     }
 }
 
-figcaption {
-    font: 400 .875rem var(--font-body);
-    max-width: 50rem;
-    margin-inline: auto;
-    margin-block-start: .5rem;
-}
+
 
 .qa {
 
-    --qa-border: var(--color-greyscale-200);
+    --qa-border: var(--divider);
     --qa-border-active: var(--brand);
 
     display: grid;
@@ -41,18 +48,25 @@ figcaption {
         border-color: var(--qa-border-active);
 
         dt::after {
-            content: '-';
+            // content: '\f068';
+            rotate: -45deg;
         }
     }
 
     dt {
         position: relative;
         font: 600 1rem/1.5 var(--font-title);
+        padding-inline-end: 2rem;
 
         &::after {
-            content: '+';
+            content: '\2b';
             position: absolute;
-            inset: 0 0 0 auto;
+            inset: .3125em 0 auto auto;
+            display: grid;
+            place-items: center;
+            color: var(--brand);
+            font: 300 1rem/1 var(--font-icon);
+            transition: 200ms rotate linear;
         }
     
         &:hover {
@@ -67,6 +81,6 @@ figcaption {
     p {
         padding-block: .5rem;
         color: var(--text-body-secondary);
-        font: 400 .875rem/1.5 var(--font-body);
+        font: 400 .875rem/1.6 var(--font-body);
     }
 }

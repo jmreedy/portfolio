@@ -21,7 +21,7 @@
 <body>
 
 
-
+<a name="top"></a>
 <aside>
     <svg class="mark"
          version="1.1"
@@ -47,46 +47,44 @@
     </h1>
 
     <nav class="nav--primary">
-        <a class="nav__item" href="#name">About</a>
-        <a class="nav__item" href="#name">Proficiencies</a>
+        <a class="primary__item" href="#about">About</a>
+        <a class="primary__item" href="#proficiencies">Proficiencies</a>
         
         <div class="nav__group">
-            <a class="nav__item" href="#name">Work</a>
+            <a class="primary__item" href="#work">Work</a>
             <nav class="nav--secondary">
-                <a class="nav__item" href="#name">MarketWatch</a>
-                <a class="nav__item" href="#name">Mosby Design System</a>
-                <a class="nav__item" href="#name">Total Expert Mobile App</a>
-                <a class="nav__item" href="#name">Chalkboard Wedding</a>
+                <a class="secondary__item" href="#name">MarketWatch</a>
+                <a class="secondary__item" href="#name">Mosby Design System</a>
+                <a class="secondary__item" href="#name">Total Expert Mobile App</a>
+                <a class="secondary__item" href="#name">Chalkboard Wedding</a>
             </nav>
         </div>
-        <a class="nav__item" href="#collaborations">Collaborations</a>
-        <a class="nav__item" href="#name">Reviews</a>
-        <a class="nav__item" href="#name">Contact</a>
-        <a class="nav__item" href="public/docs/jason-reed-resume-2024.pdf" target="_blank">Resume</a>
+        <a class="primary__item" href="#collaborations">Collaborations</a>
+        <a class="primary__item" href="#reviews">Reviews</a>
+        <a class="primary__item" href="#contact">Contact</a>
+        <a class="primary__item" href="public/docs/jason-reed-resume-2024.pdf" target="_blank">Resume</a>
     </nav>
 
     <footer class="legal">
-        <span class="fa-stack fa-2x">
-            <i class="fa-solid fa-robot fa-stack-1x" style="color: charcoal;"></i>
-            <i class="fa-regular fa-ban fa-stack-2x" style="color: tomato;"></i>
-        </span>
-        <p>Designed, developed, and written without any help from our AI robot overlords</p>
+        <i class="fa-solid fa-robot fa-2x" style="color: charcoal;"></i>
+        <p>Designed, developed, and written without the help of our AI robot overlords.</p>
         <p>...imagine what i could do with their help.</p>
-        <p>XOXO<i class="fa-solid fa-heart" style="color: lightgrey;"></i>2024</p>
+        <p>XOXO<i class="fa-solid fa-heart" style="color: lightpink;"></i>2024</p>
     </footer>
 </aside>
 
 <main>
     <section class="section--primary">
+        <a name="about"></a>
         <header>
             <h2>Hello, World.</h2>
-            <p>Whaddap fellow nerds, thanks for stopping by. I&apos;ll assume you&apos;ve stumbled upon my humble collection of work because you&apos;re in the market for a web design/development unicorn. Either that, or you are my mother trying to explain what I do at a random church dinner party (hi Mom!)</p>
+            <p>How do you do, fellow nerds? Thanks for stopping by. I&apos;ll assume you&apos;ve stumbled upon my humble collection of work because you&apos;re in the market for a web design/development unicorn. Either that, or you are my mother trying to explain what I do at a random church dinner party (hi Mom!)</p>
             <p>I&apos;ve always had an appreciation for design and the bug hit me at an early age; spending most of my free time designing things like video games, D&D dungeons, dream houses and beyond. As time progressed, I found myself falling more and more in love with the complicated art of creating functional user interfaces and the experiences that coincide with them. Which is where my focus sits today.</p> 
             <p>So why hire me; what makes me special? Carry on my intrepid inquisitor, let&apos;s venture down this path together.</p>
         </header>
     
         <figure class="width--lg">
-            <img src="img/jason.png" alt="Jason as an adorable toddler holding a basketball in front of a red radio flyer wagon amidst a obviously fake wooded backdrop" />
+            <img src="public/img/reed-2.jpg" alt="Jason as an adorable toddler holding a basketball in front of a red radio flyer wagon amidst a obviously fake wooded backdrop" />
             <figcaption>The closest I ever came to a career as a professional athlete.</figcaption>
         </figure>
     
@@ -161,6 +159,7 @@
     
     </section>
     <section class="section--primary proficiencies">
+            <a name="proficiencies"></a>
             <header>
                 <h2>The Elevator Pitch</h2>
                 <p>The way I see it, history would suggest that most product designers usually aren't capable of supporting development efforts once merge requests start to take flight. Meanwhile, engineers don't often find themselves with extra time to obsess over things like type scales and font weights.</p>
@@ -254,16 +253,24 @@
                 </div>
             </section>
         </section>
-    <section class="section--primary">
+    <section class="section--primary work">
+                <a name="work"></a>
                 <header>
                     <h2>Pretty Pictures</h2>
                     <p>Enough about me, here&apos;s what you really came here for.</p>
                 </header>
             
-                <section class="section--secondary collaborations">
+                <ul class="list--projects">
+                    <li class="project__item"></li>
+                    <li class="project__item"></li>
+                    <li class="project__item"></li>
+                    <li class="project__item"></li>
+                </ul>
+            </section>
+    <section class="section--primary collaborations">
                     <a name="collaborations"></a>
                     <header>
-                        <h3>Stop, Collaborate &amp; Listen</h3>
+                        <h2>Stop, Collaborate &amp; Listen</h2>
                         <p>In a career spanning across three decades, you get to work on a lot of cool projects with a lot of even cooler people. Here's a small excerpt of where the bucket list stands today.</p>
                     </header>
                 
@@ -318,178 +325,178 @@
                             </cite>
                         </div>
                     </div>
-                </section>
-            
                 
-                <section class="section--secondary pro-bono">
-                    <header>
-                        <h3>Pro Bono Extracurriculars</h3>
-                        <p>There&apos;s nothing quite like voluntarily staying up all night for a great cause; all while consuming copious amounts of caffeine and Doritos. Winning was just icing on the cake.</p>
-                    </header>
-            
-                    <div class="section__body">
-                        <figure>
-                            <img src="img/owc.jpg" />
-                        </figure>
-                        <ul class="list--awards">
-                            <li>
-                                <a href="#0" class="award__item">
-                                    <span>2011 Overall Winner</span>
-                                    <h6>TST Media - Team Captain</h6>
-                                    <small>Nonprofit: Bloomington United for Youth</small>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#0" class="award__item">
-                                    <span>2012 Overall Winner</span>
-                                    <h6>Two Unicorns, One Moon - Team Captain</h6>
-                                    <small>Nonprofit: Bloomington United for Youth</small>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#0" class="award__item">
-                                    <span class="pc">2013 People's Choice Winner</span>
-                                    <h6>One Dollar, Bob. - Team Captain</h6>
-                                    <small>Nonprofit: Bloomington United for Youth</small>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </section>
-    <section class="section--primary quote full">
-                    <header class="contact__header">
-                        <h2><a name="contact">The Reviews Are In</a></h2>
-                        <p>Don&apos;t take my word for it, here&apos;s what others have to say about me.</p>
-                    </header>
-                
-                    <div class="section__body md">
-                        <blockquote>
-                            <p>Jason Reed is a perfectionist&apos;s perfectionist. But he also knows where to draw the line between perfectionism and practicality.</p>
-                            <footer>
-                                <cite>My former manager</cite>
-                                <span>I&apos;m about 68% sure it was intended as a complement.</span>
-                            </footer>
-                        </blockquote>
-                
-                        <!-- <blockquote>
-                            <p>I appreciated how late you kept the rest of the team up whenever we launched new products; just to fix design bugs that nobody except you cared about.</p>
-                            <footer>
-                                <cite>The guy who sat next to me before the world shut down</cite>
-                                <span>His 2019 resolution was to be more passive aggressive.</span>
-                            </footer>
-                        </blockquote>
-                
-                        <blockquote>
-                            <p>Talk about a guy who will happily jump into something way over his head, realize he can&apos;t swim, and stubbornly find a way to make it back to shore anyways.</p>
-                            <footer>
-                                <cite>Another former manager</cite>
-                                <span>At two separate companies no less; he actively decided to work with me again.</span>
-                            </footer>
-                        </blockquote>
-                
-                        <blockquote>
-                            <p>I really don’t see the need to include a quote from me in your portfolio.</p>
-                            <footer>
-                                <cite>My wonderfully patient wife</cite>
-                                <span>She happens to be <a href="#0" target="_blank">way more talented</a> than me I am.</span>
-                            </footer>
-                        </blockquote>
-                
-                        <blockquote>
-                            <p>My dad can beat you up because his muscles are bigger than yours.</p>
-                            <footer>
-                                <cite>Some random kid in my daughter&apos;s kindergarten class</cite>
-                                <span>Completely true and entirely unsolicited.</span>
-                            </footer>
-                        </blockquote> -->
-                    </div>
-                
-                </section>
-    <section class="section--primary contact">
-                        <header class="contact__header">
-                            <h2><a name="contact">Let&apos;s Chat</a></h2>
-                            <p>Here's to hoping I can help you do something cool on the internet. What did you have in mind?</p>
-                            <!-- <small class="contact__legend">All fields are required.</small> -->
+                    <section class="section--secondary pro-bono">
+                        <header>
+                            <h3>Pro Bono Extracurriculars</h3>
+                            <p>There&apos;s nothing quite like voluntarily staying up all night for a great cause; all while consuming copious amounts of caffeine and Doritos. Winning was just icing on the cake.</p>
                         </header>
-                    
-                        <div class="section__body sm">
-                            <form class="contact__form" id="contact" action="https://formspree.io/f/mkndvdgy" method="POST">
-                                <div class="form__item">
-                                    <label for="name">Your Name</label>
-                                    <input id="name" name="name" type="text" autocomplete="name" required />
-                                </div>
-                                <div class="form__item">
-                                    <label for="email">Email</label>
-                                    <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required />
-                                </div>
-                                <div class="form__item full">
-                                    <label for="subject">Subject</label>
-                                    <input id="subject" name="subject" type="text" autocomplete="off" required />
-                                </div>
-                                <div class="form__item full">
-                                    <label for="message">Message</label>
-                                    <div class="auto-expand">
-                                        <textarea id="message" name="message" name="message" autocomplete="off"></textarea>
-                                    </div>
-                                </div>
-                            </form>
-                            
-                            <footer class="contact__footer full">
-                                <button class="contact__button" type="submit" for="contact">Say Hello</button>
-                                <div class="contact__social">
-                                    <span>Wanna snoop? Don&apos;t we all.</span>
-                                    <nav class="nav--social">
-                                        <a class="social__item" href="https://codepen.io/jmreedy" target="_blank">
-                                            <i class="fa-brands fa-codepen"></i>
-                                            <small>Codepen</small>
-                                        </a>
-                                        <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
-                                            <i class="fa-brands fa-dribbble"></i>
-                                            <small>Dribbble</small>
-                                        </a>
-                                        <a class="social__item" href="https://www.facebook.com/jmreedy" target="_blank">
-                                            <i class="fa-brands fa-facebook"></i>
-                                            <small>Facebook</small>
-                                        </a>
-                                        <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
-                                            <i class="fa-brands fa-figma"></i>
-                                            <small>Figma</small>
-                                        </a>
-                                        <a class="social__item" href="https://github.com/jmreedy" target="_blank">
-                                            <i class="fa-brands fa-github"></i>
-                                            <small>GitHub</small>
-                                        </a>
-                                        <a class="social__item" href="https://www.instagram.com/weekendinteriors" target="_blank">
-                                            <i class="fa-brands fa-instagram"></i>
-                                            <small>Instagram</small>
-                                        </a>
-                                        <a class="social__item" href="https://www.last.fm/user/jmreedy" target="_blank">
-                                            <i class="fa-brands fa-lastfm"></i>
-                                            <small>Last.fm</small>
-                                        </a>
-                                        <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                            <small>LinkedIn</small>
-                                        </a>
-                                        <a class="social__item" href="https://open.spotify.com/user/jmreedy" target="_blank">
-                                            <i class="fa-brands fa-spotify"></i>
-                                            <small>Spotify</small>
-                                        </a>
-                                        <a class="social__item" href="https://steamcommunity.com/id/jmreedy/" target="_blank">
-                                            <i class="fa-brands fa-steam"></i>
-                                            <small>Steam</small>
-                                        </a>
-                                    </nav>
-                                </div>
-                                <p><a class="text--link" href="mailto:hello@jmreedy.com">hello@jmreedy.com</a> if you want to get straight to the point.</p>
-                            </footer>
-                            
+                
+                        <div class="section__body">
+                            <figure>
+                                <img src="public/img/owc-light.png" />
+                                <img src="public/img/owc-dark.png" />
+                            </figure>
+                            <ul class="list--awards">
+                                <li>
+                                    <a href="#0" class="award__item">
+                                        <span>2011 Overall Winner</span>
+                                        <h6>TST Media - Team Captain</h6>
+                                        <small>Nonprofit: Bloomington United for Youth</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="award__item">
+                                        <span>2012 Overall Winner</span>
+                                        <h6>Two Unicorns, One Moon - Team Captain</h6>
+                                        <small>Nonprofit: Bloomington United for Youth</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="award__item">
+                                        <span class="pc">2013 People's Choice Winner</span>
+                                        <h6>One Dollar, Bob. - Team Captain</h6>
+                                        <small>Nonprofit: Bloomington United for Youth</small>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </section>
-    <section class="rewind">   
-                            <p><i class="fa-solid fa-cassette-vhs"></i> Please be kind, <a href="#top">rewind</a>.</p>
+                </section>
+    <section class="section--primary quote full">
+                        <a name="reviews"></a>
+                        <header class="contact__header">
+                            <h2><a name="contact">The Reviews Are In</a></h2>
+                            <p>Don&apos;t take my word for it, here&apos;s what others have to say about me.</p>
+                        </header>
+                    
+                        <div class="section__body md">
+                            <!-- <blockquote>
+                                <p>Jason Reed is a perfectionist&apos;s perfectionist. But he also knows where to draw the line between perfectionism and practicality.</p>
+                                <footer>
+                                    <cite>My former manager</cite>
+                                    <span>I&apos;m about 68% sure it was intended as a complement.</span>
+                                </footer>
+                            </blockquote> -->
+                    
+                            <blockquote>
+                                <p>I appreciate how late you keep the rest of us up whenever we launch a new product; just to fix design bugs that nobody except you cares about.</p>
+                                <footer>
+                                    <cite>The guy who sat next to me before the world shut down</cite>
+                                    <span>His 2019 resolution was to be more passive aggressive.</span>
+                                </footer>
+                            </blockquote>
+                    
+                            <!-- <blockquote>
+                                <p>Talk about a guy who will happily jump into something way over his head, realize he can&apos;t swim, and stubbornly find a way to make it back to shore anyways.</p>
+                                <footer>
+                                    <cite>Another former manager</cite>
+                                    <span>At two separate companies no less; he actively decided to work with me again.</span>
+                                </footer>
+                            </blockquote> -->
+                    
+                            <!-- <blockquote>
+                                <p>I really don’t see the need to include a quote from me in your portfolio.</p>
+                                <footer>
+                                    <cite>My wonderfully patient wife</cite>
+                                    <span>She happens to be <a href="#0" target="_blank">way more talented</a> than me I am.</span>
+                                </footer>
+                            </blockquote> -->
+                    
+                            <!-- <blockquote>
+                                <p>My dad can beat you up because his muscles are bigger than yours.</p>
+                                <footer>
+                                    <cite>Some random kid in my daughter&apos;s kindergarten class</cite>
+                                    <span>Completely true and entirely unsolicited.</span>
+                                </footer>
+                            </blockquote> -->
+                        </div>
+                    
+                    </section>
+    <section class="section--primary contact">
+                            <header class="contact__header">
+                                <h2><a name="contact">Let&apos;s Chat</a></h2>
+                                <p>Here's to hoping I can help you do something cool on the internet. What did you have in mind?</p>
+                                <!-- <small class="contact__legend">All fields are required.</small> -->
+                            </header>
+                        
+                            <div class="section__body sm">
+                                <form class="contact__form" id="contact" action="https://formspree.io/f/mkndvdgy" method="POST">
+                                    <div class="form__item">
+                                        <label for="name">Your Name</label>
+                                        <input id="name" name="name" type="text" autocomplete="name" required />
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="email">Email</label>
+                                        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required />
+                                    </div>
+                                    <div class="form__item full">
+                                        <label for="subject">Subject</label>
+                                        <input id="subject" name="subject" type="text" autocomplete="off" required />
+                                    </div>
+                                    <div class="form__item full">
+                                        <label for="message">Message</label>
+                                        <div class="auto-expand">
+                                            <textarea id="message" name="message" name="message" autocomplete="off"></textarea>
+                                        </div>
+                                    </div>
+                                </form>
+                                
+                                <footer class="contact__footer full">
+                                    <button class="contact__button" type="submit" for="contact">Say Hello</button>
+                                    <div class="contact__social">
+                                        <span>Wanna snoop? Don&apos;t we all.</span>
+                                        <nav class="nav--social">
+                                            <a class="social__item" href="https://codepen.io/jmreedy" target="_blank">
+                                                <i class="fa-brands fa-codepen"></i>
+                                                <small>Codepen</small>
+                                            </a>
+                                            <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
+                                                <i class="fa-brands fa-dribbble"></i>
+                                                <small>Dribbble</small>
+                                            </a>
+                                            <a class="social__item" href="https://www.facebook.com/jmreedy" target="_blank">
+                                                <i class="fa-brands fa-facebook"></i>
+                                                <small>Facebook</small>
+                                            </a>
+                                            <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
+                                                <i class="fa-brands fa-figma"></i>
+                                                <small>Figma</small>
+                                            </a>
+                                            <a class="social__item" href="https://github.com/jmreedy" target="_blank">
+                                                <i class="fa-brands fa-github"></i>
+                                                <small>GitHub</small>
+                                            </a>
+                                            <a class="social__item" href="https://www.instagram.com/weekendinteriors" target="_blank">
+                                                <i class="fa-brands fa-instagram"></i>
+                                                <small>Instagram</small>
+                                            </a>
+                                            <a class="social__item" href="https://www.last.fm/user/jmreedy" target="_blank">
+                                                <i class="fa-brands fa-lastfm"></i>
+                                                <small>Last.fm</small>
+                                            </a>
+                                            <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
+                                                <i class="fa-brands fa-linkedin"></i>
+                                                <small>LinkedIn</small>
+                                            </a>
+                                            <a class="social__item" href="https://open.spotify.com/user/jmreedy" target="_blank">
+                                                <i class="fa-brands fa-spotify"></i>
+                                                <small>Spotify</small>
+                                            </a>
+                                            <a class="social__item" href="https://steamcommunity.com/id/jmreedy/" target="_blank">
+                                                <i class="fa-brands fa-steam"></i>
+                                                <small>Steam</small>
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <p><a class="text--link" href="mailto:hello@jmreedy.com">hello@jmreedy.com</a> if you want to get straight to the point.</p>
+                                </footer>
+                                
+                            </div>
                         </section>
+    <section class="rewind">   
+                                <p>Please be kind, <a href="#top">rewind</a>.</p>
+                            </section>
     
 </main>
 

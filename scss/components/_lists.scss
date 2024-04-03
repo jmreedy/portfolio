@@ -18,7 +18,7 @@
 
     ul {
         position: relative;
-        left: -1rem;
+        left: -1.25rem; // This needs to be the same size as the width of the li::before
         display: flex;
         flex-wrap: wrap;
         gap: .5rem 0;
@@ -38,17 +38,97 @@
 
         --bullets: #C3C3C3;
 
-        font: 300 .875rem/1.375 var(--font-body);
+        font: 300 1rem/1.375 var(--font-body);
         color: var(--text-body-secondary);
 
         &::before {
             content: '•';
+            position: relative;
+            top: -1px;
             display: inline-block;
-            width: 1rem;
+            width: 1.25rem;
             text-align: center;
             font-size: 75%;
-            color: var(--bullets);
+            color: var(--brand);
         }
     }
 }
 
+
+.collaborations {
+
+    .section__body {
+        gap: 2rem;
+    }
+}
+
+.checklist {
+    li {
+        position: relative;
+        margin-block-end: .5rem;
+        padding-inline-start: 2rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 1px solid var(--input-border);
+            border-radius: 2px;
+            margin-inline-end: .5rem;
+            font-family: var(--font-icon);
+            color: limegreen;
+            font-size: 80%;
+            text-align: center;
+        }
+
+        span {
+            padding-inline-start: .3em;
+            color: var(--text-body-secondary);
+        }
+    }
+
+    a {
+        position: relative;
+        top: -.2em;
+        color: var(--text-body-primary);
+        text-underline-offset: .25em;
+        text-decoration-color: var(--input-border);
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    sup {
+        font-style: italic;
+        color: var(--text-body-secondary);
+        font-size: 60%;
+        padding-inline-start: .25em;
+    }
+}
+
+.checklist__citation {
+    display: grid;
+    gap: .25em;
+    font-size: .75rem;
+    margin-block-start: 1.5rem;
+    color: var(--text-body-secondary);
+}
+
+.columns--2 {
+    columns: 2 240px;
+}
+
+.completed li::before {
+    content: '\f00c';
+}
+
+@media screen and (max-width: 640px) {
+    
+.columns--2 {
+    columns: 1;
+}
+
+}

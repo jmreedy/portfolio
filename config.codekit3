@@ -56,14 +56,6 @@
       "oAP" : "\/backup.html",
       "oF" : 0
     },
-    "\/CNAME" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/CNAME",
-      "oF" : 0
-    },
     "\/favicon-16x16.png" : {
       "ft" : 32768,
       "iS" : 732,
@@ -97,58 +89,6 @@
       "oA" : 0,
       "oAP" : "\/favicon.ico",
       "oF" : 0
-    },
-    "\/img\/jason.png" : {
-      "ft" : 32768,
-      "iS" : 1105595,
-      "oA" : 0,
-      "oAP" : "\/img\/jason.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 90,
-      "rq" : 75
-    },
-    "\/img\/now.jpg" : {
-      "ft" : 16384,
-      "iS" : 27261,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/img\/now.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/img\/owc-pc.jpg" : {
-      "ft" : 16384,
-      "iS" : 16592,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/img\/owc-pc.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/img\/owc.jpg" : {
-      "ft" : 16384,
-      "iS" : 17087,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/img\/owc.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
     },
     "\/index.html" : {
       "cB" : 0,
@@ -336,17 +276,43 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
-    "\/public\/img\/reed-2.png" : {
+    "\/public\/img\/owc-dark.png" : {
       "ft" : 32768,
-      "iS" : 778374,
+      "iS" : 54711,
       "oA" : 0,
-      "oAP" : "\/public\/img\/reed-2.png",
+      "oAP" : "\/public\/img\/owc-dark.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 90,
+      "rq" : 75
+    },
+    "\/public\/img\/owc-light.png" : {
+      "ft" : 32768,
+      "iS" : 56246,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/owc-light.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/public\/img\/reed-2.jpg" : {
+      "ft" : 16384,
+      "iS" : 83157,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/reed-2.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
       "rq" : 75
     },
     "\/public\/js\/scripts-min.js" : {
@@ -445,6 +411,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/scss\/components\/_tiles.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/global\/base\/_dark.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/global\/base\/_dark.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

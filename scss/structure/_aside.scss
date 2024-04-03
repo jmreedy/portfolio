@@ -19,6 +19,7 @@ aside {
     padding: 4rem 3rem;
     background: white;
     text-align: right;
+    background: var(--page-bg);
 
     &::after {
         content: '';
@@ -28,13 +29,18 @@ aside {
     }
 
     .mark {
-        width: 3rem;
+        width: 4rem;
         fill: var(--brand);
     }
 
     nav {
         display: flex;
         flex-flow: column;
+        align-items: end;
+    
+        a {
+            text-decoration: none;
+        }
     }
 }
 
@@ -55,10 +61,30 @@ h1 {
     gap: 1rem;
     margin-block: 1rem;
     
-    .nav__item {
+    .primary__item {
+        position: relative;
         text-decoration: none;
         color: var(--nav-primary-color);
         font: var(--nav-primary-font);
+        text-align: right;
+        width: fit-content;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 100% 0 auto 100%;
+            border-bottom: 2px solid var(--brand);
+            transition: 200ms inset;
+        }
+
+        &:hover,
+        &:focus-visible {
+            outline: none;
+
+            &::after {
+                inset: 100% 0 auto;
+            }
+        }
     }
 }
 
@@ -67,10 +93,19 @@ h1 {
     gap: .5rem;
     border-right: 1px solid var(--divider);
     margin-block-start: 1rem;
-    padding-inline-end: 1rem;
 
-    .nav__item {
+    .secondary__item {
+        padding-inline-end: 1rem;
+        color: var(--text-body-secondary);
         font: var(--nav-secondary-font);
+        border-right: 0 solid var(--brand);
+        transition: 100ms border-width;
+
+        &:hover,
+        &:focus-visible {
+            border-width: 0 .25rem 0 0;
+            color: var(--brand);
+        }
     }
 }
 
@@ -87,7 +122,29 @@ h1 {
         }
     }
 
-    .fa-stack {
-        margin-block-end: .5rem;
+    .fa-robot {
+        position: relative;
+        display: inline-grid;
+        place-items: center;
+        width: 3rem;
+        aspect-ratio: 1;
+        border-radius: 3rem;
+        border: .25rem solid tomato;
+        margin-block-end: 1rem;
+
+        &::before {
+            position: relative;
+            top: -.125rem;
+            color: var(--text-body-primary);
+            // color: pink;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0 auto;
+            rotate: 45deg;
+            border-right: .375rem solid tomato;
+        }
     }
 }

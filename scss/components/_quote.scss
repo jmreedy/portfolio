@@ -1,7 +1,4 @@
 .quote .section__body {
-
-    --quote-bg: #F3F5F7;
-
     box-shadow: 0 0 0 100vmax var(--quote-bg);
     clip-path: inset(0 -100vmax);
     background: var(--quote-bg);

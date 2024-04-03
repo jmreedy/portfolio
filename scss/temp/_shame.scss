@@ -1,87 +1,3 @@
-.collaborations {
-
-    .section__body {
-        gap: 2rem;
-    }
-}
-
-.checklist {
-    li {
-        position: relative;
-        margin-block-end: .5rem;
-        padding-inline-start: 2rem;
-
-        &::before {
-            content: '';
-            position: absolute;
-            inset: 0 auto 0 0;
-            width: 1.25rem;
-            height: 1.25rem;
-            border: 1px solid #8C8E91;
-            border-radius: 2px;
-            margin-inline-end: .5rem;
-            font-family: var(--font-icon);
-            color: #32CD32;
-            font-size: 80%;
-            text-align: center;
-        }
-
-        span {
-            padding-inline-start: .3em;
-            color: var(--text-body-secondary);
-        }
-    }
-
-    a {
-        position: relative;
-        top: -.2em;
-        color: var(--text-body-primary);
-        text-underline-offset: .25em;
-        text-decoration-color: #BFC2C4;
-
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
-    sup {
-        font-style: italic;
-        color: var(--text-body-secondary);
-        font-size: 60%;
-        padding-inline-start: .25em;
-    }
-}
-
-.checklist__citation {
-    display: grid;
-    gap: .25em;
-    font-size: .75rem;
-    margin-block-start: 1.5rem;
-    color: #7c7c7c;
-}
-
-.columns--2 {
-    columns: 2 240px;
-}
-
-.completed li::before {
-    content: '\f00c';
-}
-
-@media screen and (max-width: 640px) {
-    
-.columns--2 {
-    columns: 1;
-}
-
-}
-
-
-
-
-
-
-
 .pro-bono {
     .section__body {
         display: flex;
@@ -95,7 +11,11 @@
     }
 
     img {
-        width: 300px;
+        width: 320px;
+
+        &:last-of-type {
+            display: none;
+        }
     }
 }
 
@@ -105,13 +25,16 @@
 }
 
 .award__item {
+
+    --award-bg: var(--brand);
+
     position: relative;
     width: 100%;
     min-height: 75px;
     border: 1px solid var(--divider);
     border-radius: 4px;
     display: grid;
-    gap: .25rem;
+    gap: .5rem;
     padding-block: 1.5rem 1rem;
     padding-inline: 3rem;
     transition: 200ms border-color;
@@ -124,8 +47,8 @@
 
     span {
         position: absolute;
-        inset: auto 4rem calc(100% - 1rem);
-        background: var(--text-body-primary);
+        inset: auto 2rem calc(100% - 1rem);
+        background: var(--award-bg);
         color: var(--white);
         letter-spacing: .1em;
         display: grid;
@@ -135,10 +58,6 @@
         text-transform: uppercase;
         height: 2rem;
         font-size: .75rem;
-
-        &.pc {
-            background: var(--brand);
-        }
     }
 
     h6 {
@@ -148,9 +67,26 @@
     }
     
     small {
-        font: 400 .75rem/1 var(--font-body);
+        font: 400 .875rem/1 var(--font-body);
         color: var(--text-body-secondary);
     }
 
 
+}
+
+.list--projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: .5rem;
+    width: 100%;
+
+    .project__item {
+        background: pink;
+        aspect-ratio: 1;
+        border-radius: .5rem;
+    }
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
 }

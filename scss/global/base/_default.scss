@@ -1,6 +1,7 @@
 html,
 body {
     font-family: var(--font-body);
+    background: var(--page-bg);
 }
 
 html {
@@ -10,6 +11,12 @@ html {
     min-height: 100vh;
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    padding-block-start: 5rem;
+}
+
+::selection {
+    background: hotpink;
+    color: white;
 }
 
 ul {
@@ -35,7 +42,7 @@ h6 {
 
 h5 {
     position: relative;
-    margin-block-end: 1rem;
+    margin-block-end: .75rem;
     // padding-block-end: 1rem;
     font-size: 1rem;
 

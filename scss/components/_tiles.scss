@@ -14,7 +14,8 @@
     padding: 4.5rem 2rem;
     gap: 1rem;
     border: 1px solid var(--divider);
-    box-shadow: 0 12px 8px -8px rgb(0 0 0 / 10%);
+    border-radius: .25rem;
+    box-shadow: 0 8px 12px -8px rgb(0 0 0 / 20%);
 
     i {
         margin-block-end: 1rem;

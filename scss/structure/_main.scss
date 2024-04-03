@@ -36,8 +36,7 @@ section {
 .section--primary {
     max-width: 70rem;
     margin-inline: auto;
-    padding-inline: 2.5rem;
-    min-height: 100px;
+    padding-inline: 1.5rem;
 }
 
 
@@ -64,6 +63,30 @@ section {
     display: grid;
     place-items: center;
     height: 100vh;
+
+    a {
+        position: relative;
+        color: var(--text-body-primary);
+        text-decoration: none;
+        font-weight: 400;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 100% 0 auto;
+            border-bottom: 2px solid var(--divider);
+            transition: 200ms all;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: var(--text-body-secondary);
+
+            &::after {
+                inset: 100% 100% auto 0
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1040px) {
@@ -73,9 +96,5 @@ section {
 
     main {
         margin: 0;
-    }
-
-    .section--primary {
-        padding-inline: clamp(1.5rem, 25vw, 2.5rem);
     }
 }
