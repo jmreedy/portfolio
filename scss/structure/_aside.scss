@@ -10,7 +10,7 @@ aside {
 
     position: fixed;
     inset: 0 auto 0 0;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     flex-flow: column nowrap;
     align-items: end;
@@ -20,6 +20,7 @@ aside {
     background: white;
     text-align: right;
     background: var(--page-bg);
+    transition: 400ms translate;
 
     &::after {
         content: '';
@@ -101,7 +102,7 @@ h1 {
 
 .nav--secondary {
     gap: .5rem;
-    box-shadow: inset -1px 0 0 0 var(--divider);
+    border-right: 1px solid var(--divider);
     margin-block-start: 1rem;
 
     .secondary__item {
@@ -157,5 +158,29 @@ h1 {
             rotate: 45deg;
             border-right: .375rem solid tomato;
         }
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    aside {
+        translate: calc(-100% - 1rem) 0;
+        box-shadow: 8px 0 16px -8px rgb(0 0 0 / 60%);
+        padding-block: 3rem;
+
+        &::after {
+            display: none;
+        }
+
+        &.active {
+            translate: 0;
+        }
+
+        .mark {
+            width: 2.5rem;
+        }
+    }
+
+    .noscroll {
+        overflow: hidden;
     }
 }

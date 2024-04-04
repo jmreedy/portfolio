@@ -61,10 +61,8 @@ section {
 
 .rewind {
     display: grid;
-    justify-items: center;
-    align-items: end;
+    place-items: center;
     height: 100vh;
-    padding-block: 5rem;
 
     a {
         position: relative;
@@ -82,7 +80,7 @@ section {
 
         &:hover {
             text-decoration: none;
-            color: var(--text-body-secondary);
+            color: var(--brand);
 
             &::after {
                 inset: 100% 100% auto 0
@@ -91,9 +89,26 @@ section {
     }
 }
 
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    backdrop-filter: blur(8px);
+    background: rgb(10 10 10 / 80%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms all;
+
+    aside.active ~ & {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 @media screen and (max-width: 1040px) {
-    aside {
-        translate: -100% 0;
+
+    html {
+        padding-block-start: 8rem;
     }
 
     main {

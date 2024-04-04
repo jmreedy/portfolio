@@ -9,22 +9,18 @@
 --color-greyscale-700: #585B5E;
 --color-greyscale-800: #3E4145;
 --color-greyscale-900: #24272B;
-
 --white: #FFFFFF;
-
---divider: var(--color-greyscale-200);
 
 --brand: #219EBC;
 
-
 --page-bg: var(--white);
+--masthead-bg: var(--white);
+--quote-bg: rgb( 0 0 0 / 5%);
 
 --text-body-primary:  var(--color-greyscale-900);
 --text-body-secondary: var(--color-greyscale-600);
 
-// --quote-bg: color-mix(in lch, var(--page-bg), black 5%);
---quote-bg: rgb( 0 0 0 / 10%);
-
 --input-border: var(--color-greyscale-200);
+--divider: var(--color-greyscale-200);
 
 }

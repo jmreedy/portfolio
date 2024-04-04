@@ -71,15 +71,19 @@
 }
 
 .list--projects {
+    max-width: 50rem;
     display: grid;
     grid-template-columns: repeat(2, minmax(320px, 1fr));
     gap: .5rem;
     width: 100%;
 
     .project__item {
-        background: rgb(0 0 0 / 15%);
-        aspect-ratio: 1;
-        border-radius: .5rem;
+        display: grid;
+        place-items: center;
+
+        img {
+            object-fit: fill;
+        }
     }
 
     @media screen and (max-width: 800px) {

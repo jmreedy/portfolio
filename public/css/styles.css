@@ -79,13 +79,14 @@ section:target {
   --color-greyscale-800: #3E4145;
   --color-greyscale-900: #24272B;
   --white: #FFFFFF;
-  --divider: var(--color-greyscale-200);
   --brand: #219EBC;
   --page-bg: var(--white);
+  --masthead-bg: var(--white);
+  --quote-bg: rgb( 0 0 0 / 5%);
   --text-body-primary: var(--color-greyscale-900);
   --text-body-secondary: var(--color-greyscale-600);
-  --quote-bg: rgb( 0 0 0 / 10%);
   --input-border: var(--color-greyscale-200);
+  --divider: var(--color-greyscale-200);
 }
 
 :root {
@@ -111,6 +112,7 @@ html,
 body {
   font-family: var(--font-body);
   background: var(--page-bg);
+  overflow-x: hidden;
 }
 
 html {
@@ -134,19 +136,23 @@ ul {
   list-style: none;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  margin: 0;
   font-family: var(--font-title);
   font-weight: 700;
-  margin: 0;
 }
 
 h5 {
-  position: relative;
   margin-block-end: 0.75rem;
   font-size: 1rem;
 }
@@ -160,7 +166,7 @@ aside {
   --nav-legal-font: 300 .75rem/1.375 var(--font-body);
   position: fixed;
   inset: 0 auto 0 0;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex-flow: column nowrap;
   align-items: end;
@@ -170,6 +176,7 @@ aside {
   background: white;
   text-align: right;
   background: var(--page-bg);
+  transition: 400ms translate;
 }
 aside::after {
   content: "";
@@ -236,7 +243,7 @@ h1 small {
 
 .nav--secondary {
   gap: 0.5rem;
-  box-shadow: inset -1px 0 0 0 var(--divider);
+  border-right: 1px solid var(--divider);
   margin-block-start: 1rem;
 }
 .nav--secondary .secondary__item {
@@ -286,6 +293,25 @@ h1 small {
   border-right: 0.375rem solid tomato;
 }
 
+@media screen and (max-width: 1040px) {
+  aside {
+    translate: calc(-100% - 1rem) 0;
+    box-shadow: 8px 0 16px -8px rgba(0, 0, 0, 0.6);
+    padding-block: 3rem;
+  }
+  aside::after {
+    display: none;
+  }
+  aside.active {
+    translate: 0;
+  }
+  aside .mark {
+    width: 2.5rem;
+  }
+  .noscroll {
+    overflow: hidden;
+  }
+}
 main {
   display: grid;
   margin-inline-start: 20rem;
@@ -346,10 +372,8 @@ section p:not(:last-of-type) {
 
 .rewind {
   display: grid;
-  justify-items: center;
-  align-items: end;
+  place-items: center;
   height: 100vh;
-  padding-block: 5rem;
 }
 .rewind a {
   position: relative;
@@ -366,15 +390,30 @@ section p:not(:last-of-type) {
 }
 .rewind a:hover {
   text-decoration: none;
-  color: var(--text-body-secondary);
+  color: var(--brand);
 }
 .rewind a:hover::after {
   inset: 100% 100% auto 0;
 }
 
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  backdrop-filter: blur(8px);
+  background: rgba(10, 10, 10, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: 400ms all;
+}
+aside.active ~ .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media screen and (max-width: 1040px) {
-  aside {
-    translate: -100% 0;
+  html {
+    padding-block-start: 8rem;
   }
   main {
     margin: 0;
@@ -447,6 +486,30 @@ figure figcaption {
   padding-block: 0.5rem;
   color: var(--text-body-secondary);
   font: 400 0.875rem/1.6 var(--font-body);
+  text-wrap: pretty;
+}
+
+.masthead {
+  position: fixed;
+  inset: 0.5rem 0.5rem auto;
+  z-index: 2;
+  background: var(--masthead-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  height: 4rem;
+  padding-inline: 1rem 1.5rem;
+  box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+}
+.masthead button {
+  color: var(--text-body-primary);
+}
+.masthead a {
+  color: var(--text-body-primary);
+  text-underline-offset: 0.375rem;
+  text-decoration-color: var(--text-body-secondary);
 }
 
 .list--proficiencies {
@@ -507,7 +570,7 @@ figure figcaption {
   content: "";
   position: absolute;
   inset: 0 auto 0 0;
-  z-index: 2;
+  z-index: 1;
   width: 1rem;
   background: var(--page-bg);
 }
@@ -653,7 +716,7 @@ textarea {
   resize: vertical;
 }
 
-button {
+.contact__button {
   height: 3rem;
   padding-inline: 3rem;
   border-radius: 0.5rem;
@@ -663,11 +726,11 @@ button {
   transition: 200ms background;
   white-space: nowrap;
 }
-button:hover {
+.contact__button:hover {
   background: color-mix(in lch, var(--brand), black 20%);
   cursor: pointer;
 }
-button:focus-visible {
+.contact__button:focus-visible {
   border: 2px solid var(--brand);
   box-shadow: inset 0 0 0 1px var(--white);
 }
@@ -772,10 +835,11 @@ button:focus-visible {
 }
 
 .quote .section__body {
+  display: grid;
   box-shadow: 0 0 0 100vmax var(--quote-bg);
   clip-path: inset(0 -100vmax);
   background: var(--quote-bg);
-  padding-block: 8rem;
+  padding-block: 10rem;
   padding-inline-start: clamp(5rem, 10vw, 10rem);
   min-height: 20rem;
   gap: 4rem;
@@ -783,6 +847,7 @@ button:focus-visible {
 
 blockquote {
   display: grid;
+  grid-area: 1/-1/1/-1;
   gap: 2rem;
 }
 blockquote p {
@@ -889,15 +954,18 @@ blockquote span a:hover {
 }
 
 .list--projects {
+  max-width: 50rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(320px, 1fr));
   gap: 0.5rem;
   width: 100%;
 }
 .list--projects .project__item {
-  background: rgba(0, 0, 0, 0.15);
-  aspect-ratio: 1;
-  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+}
+.list--projects .project__item img {
+  object-fit: fill;
 }
 @media screen and (max-width: 800px) {
   .list--projects {
@@ -909,16 +977,8 @@ blockquote span a:hover {
   :root {
     --page-bg: var(--color-greyscale-900);
     --quote-bg: rgb(0 0 0 / 10%);
-    --text-body-primary: var(--color-greyscale-300);
-    --text-body-secondary: var(--color-greyscale-500);
-    --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
-    --tooltip-bg: pink;
-    --input-border: var(--color-greyscale-700);
-  }
-  #darkmode:checked ~ main {
-    --page-bg: var(--color-greyscale-900);
-    --quote-bg: rgb(0 0 0 / 10%);
-    --text-body-primary: var(--color-greyscale-300);
+    --masthead-bg: rgb(26 26 26 / 80%);
+    --text-body-primary: var(--color-greyscale-200);
     --text-body-secondary: var(--color-greyscale-500);
     --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
     --tooltip-bg: pink;

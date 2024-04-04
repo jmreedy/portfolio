@@ -1,0 +1,24 @@
+.masthead {
+    position: fixed;
+    inset: .5rem .5rem auto;
+    z-index: 2;
+    background: var(--masthead-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .5rem;
+    height: 4rem;
+    padding-inline: 1rem 1.5rem;
+    box-shadow: 0 4px 16px -8px rgb(0 0 0 / 60%);
+    backdrop-filter: blur(8px);
+
+    button {
+        color: var(--text-body-primary);
+    }
+
+    a {
+        color: var(--text-body-primary);
+        text-underline-offset: .375rem;
+        text-decoration-color: var(--text-body-secondary);
+    }
+}

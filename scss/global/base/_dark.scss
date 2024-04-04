@@ -4,8 +4,9 @@
 
 --page-bg: var(--color-greyscale-900);
 --quote-bg: rgb(0 0 0 / 10%);
+--masthead-bg: rgb(26 26 26 / 80%);
 
---text-body-primary: var(--color-greyscale-300);
+--text-body-primary: var(--color-greyscale-200);
 --text-body-secondary: var(--color-greyscale-500);
 
 --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
@@ -13,24 +14,6 @@
 --tooltip-bg: pink;
 
 --input-border: var(--color-greyscale-700);
-
-// --quote-bg: color-mix(in lch, var(--page-bg), black 10%);
-
-}
-
-#darkmode:checked ~ main {
-    
-    --page-bg: var(--color-greyscale-900);
-    --quote-bg: rgb(0 0 0 / 10%);
-    
-    --text-body-primary: var(--color-greyscale-300);
-    --text-body-secondary: var(--color-greyscale-500);
-    
-    --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
-    
-    --tooltip-bg: pink;
-    
-    --input-border: var(--color-greyscale-700);
 
 }
 
