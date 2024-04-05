@@ -4,7 +4,6 @@ figure {
 
     img {
         border-radius: .5rem;
-        // box-shadow: 0 0 0 .5rem color-mix(in lch, var(--page-bg), black 20%);
     }
     
     figcaption {
@@ -48,7 +47,6 @@ figure {
         border-color: var(--qa-border-active);
 
         dt::after {
-            // content: '\f068';
             rotate: -45deg;
         }
     }
@@ -84,4 +82,70 @@ figure {
         font: 400 .875rem/1.6 var(--font-body);
         text-wrap: pretty;
     }
+}
+
+@media screen and (max-width: 430px) {
+
+
+
+.about {
+    padding: 0;
+    
+    > header {
+        position: relative;
+        z-index: 2;
+        margin: -25vh auto 0 0;
+        background: var(--page-bg);
+        width: calc(100% - 1rem);
+        padding-block: 3rem 0;
+        padding-inline: 1.5rem;
+        border-radius: 0 .5rem 0 0;
+    }
+
+    figure {
+        position: relative;
+        order: -1;
+        isolation: isolate;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+
+        &::before {
+            background: #003755;
+            mix-blend-mode: plus-lighter;
+            opacity: 1;
+            z-index: 2;
+        }
+
+        &::after {
+            background: linear-gradient(to top, rgb(0 0 0) 40%, rgb(0 0 0 / 25%) 125%);
+            opacity: .7;
+        }
+
+        img {
+            border-radius: 0;
+            height: 90dvh;
+            object-fit: cover;
+        }
+
+        figcaption {
+            position: absolute;
+            inset: auto 0 calc(25vh + 1rem);
+            width: 100%;
+            padding-inline: 1.5rem;
+            text-wrap: pretty;
+            z-index: 2;
+            color: var(--white);
+        }
+    }
+
+    section {
+        padding-inline: 1.5rem;
+    }
+}
+
 }

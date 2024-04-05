@@ -10,7 +10,7 @@ aside {
 
     position: fixed;
     inset: 0 auto 0 0;
-    z-index: 3;
+    z-index: 4;
     display: flex;
     flex-flow: column nowrap;
     align-items: end;
@@ -162,25 +162,27 @@ h1 {
 }
 
 @media screen and (max-width: 1040px) {
-    aside {
-        translate: calc(-100% - 1rem) 0;
-        box-shadow: 8px 0 16px -8px rgb(0 0 0 / 60%);
-        padding-block: 3rem;
 
-        &::after {
-            display: none;
-        }
+aside {
+    translate: calc(-100% - 1rem) 0;
+    box-shadow: 8px 0 16px -8px rgb(0 0 0 / 60%);
+    padding-block: 3rem;
 
-        &.active {
-            translate: 0;
-        }
-
-        .mark {
-            width: 2.5rem;
-        }
+    &::after {
+        display: none;
     }
 
-    .noscroll {
-        overflow: hidden;
+    &.active {
+        translate: 0;
     }
+
+    .mark {
+        width: 2.5rem;
+    }
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
 }

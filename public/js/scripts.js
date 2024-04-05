@@ -7,51 +7,27 @@
         $('aside').toggleClass('active');
         $('html').toggleClass('noscroll');
     });
-  
+
   
   })(jQuery);
-  
-  
-  // var offset = [0,0];
-  // var divPopup = document.getElementById ("popup");
-  // var isDown = false;
-  // divPopup.addEventListener('mousedown', function(e) {
-  //     isDown = true;
-  //     offset = [
-  //         divPopup.offsetLeft - e.clientX,
-  //         divPopup.offsetTop - e.clientY
-  //     ];
-  // }, true);
-  // document.addEventListener('mouseup', function() {
-  //     isDown = false;
-  // }, true);
-  
-  // document.addEventListener('mousemove', function(e) {
-  //     event.preventDefault();
-  //     if (isDown) {
-  //         divPopup.style.left = (e.clientX + offset[0]) + 'px';
-  //     }
-  // }, true);
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+const nav = document.querySelector(".masthead");
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+    if (lastScrollY >= 40) {
+        nav.classList.add("is-hidden");
+    }
+    
+    if (lastScrollY > window.scrollY && lastScrollY > 64) {
+        nav.classList.add("scroll-up");
+    }
+    if (lastScrollY < window.scrollY && lastScrollY > 64) {
+        nav.classList.remove("scroll-up");
+    }
+    if (lastScrollY <= 1) {
+        nav.classList.remove("is-hidden");
+    }
+
+    lastScrollY = window.scrollY;
+});
