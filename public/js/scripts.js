@@ -15,7 +15,7 @@ const nav = document.querySelector(".masthead");
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
-    if (lastScrollY >= 40) {
+    if (lastScrollY >= 72) {
         nav.classList.add("is-hidden");
     }
     
@@ -25,7 +25,7 @@ window.addEventListener("scroll", () => {
     if (lastScrollY < window.scrollY && lastScrollY > 64) {
         nav.classList.remove("scroll-up");
     }
-    if (lastScrollY <= 1) {
+    if (lastScrollY <= 8) {
         nav.classList.remove("is-hidden");
     }
 
