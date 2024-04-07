@@ -633,6 +633,38 @@ figure figcaption {
   text-wrap: pretty;
 }
 
+@media screen and (max-width: 430px) {
+  .proficiencies {
+    padding: 0;
+  }
+  .proficiencies > header,
+  .proficiencies .section--secondary {
+    padding-inline: 1.5rem;
+  }
+  .list--proficiencies {
+    display: flex;
+    padding-inline-start: 1.5rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    width: 100%;
+    scroll-padding-inline-start: 1.5rem;
+  }
+  .list--proficiencies .proficiency__item {
+    min-width: calc(100vw - 3rem);
+  }
+  .list--proficiencies .proficiency__item:last-of-type {
+    margin-inline-end: 1.5rem;
+  }
+  .list--proficiencies::-webkit-scrollbar {
+    display: none;
+  }
+  .overflow-snap--inline {
+    scroll-snap-type: inline mandatory;
+  }
+  .overflow-snap--inline > * {
+    scroll-snap-align: start;
+  }
+}
 .proficiencies .section__body {
   gap: 1.5rem;
 }

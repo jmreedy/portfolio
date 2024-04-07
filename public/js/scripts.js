@@ -15,7 +15,7 @@ const nav = document.querySelector(".masthead");
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
-    if (lastScrollY >= 72) {
+    if (lastScrollY >= 16) {
         nav.classList.add("is-hidden");
     }
     
