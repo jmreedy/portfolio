@@ -46,6 +46,16 @@ aside {
 }
 
 
+.brand {
+    display: grid;
+    gap: 1rem;
+    justify-items: end;
+
+    .mark {
+        width: 3rem;
+    }
+}
+
 h1 {
     color: var(--text-body-primary);
     font: 700 2rem/1 var(--font-hero);
@@ -183,6 +193,15 @@ aside {
 
 .noscroll {
     overflow: hidden;
+}
+
+}
+
+
+@media screen and (max-width: 430px) {
+
+.nav--secondary {
+    display: none;
 }
 
 }
