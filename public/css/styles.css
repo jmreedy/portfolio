@@ -675,28 +675,25 @@ figure figcaption {
   .proficiencies .section--secondary {
     padding-inline: 1.5rem;
   }
+  .proficiencies .section__body {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline-start: 1.5rem;
+  }
+  .proficiencies .section__body::-webkit-scrollbar {
+    display: none;
+  }
   .list--proficiencies {
     display: flex;
     padding-inline-start: 1.5rem;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    width: 100%;
-    scroll-padding-inline-start: 1.5rem;
   }
   .list--proficiencies .proficiency__item {
-    min-width: calc(100vw - 3rem);
+    width: calc(100vw - 3rem);
+    scroll-snap-align: start;
   }
   .list--proficiencies .proficiency__item:last-of-type {
     margin-inline-end: 1.5rem;
-  }
-  .list--proficiencies::-webkit-scrollbar {
-    display: none;
-  }
-  .overflow-snap--inline {
-    scroll-snap-type: inline mandatory;
-  }
-  .overflow-snap--inline > * {
-    scroll-snap-align: start;
   }
 }
 .proficiencies .section__body {

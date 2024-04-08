@@ -62,34 +62,30 @@
     .section--secondary {
         padding-inline: 1.5rem;
     }
+
+    .section__body {
+        width: 100%;
+        overflow-x: auto;
+        scroll-snap-type: inline mandatory;
+        scroll-padding-inline-start: 1.5rem;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
 }
 
 .list--proficiencies {
     display: flex;
     padding-inline-start: 1.5rem;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    width: 100%;
-    scroll-padding-inline-start: 1.5rem;
 
     .proficiency__item {
-        min-width: calc(100vw - 3rem);
+        width: calc(100vw - 3rem);
+        scroll-snap-align: start;
 
         &:last-of-type {
             margin-inline-end: 1.5rem;
         }
-    }
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-}
-
-.overflow-snap--inline {
-    scroll-snap-type: inline mandatory;
-
-    > * {
-        scroll-snap-align: start;
     }
 }
 
