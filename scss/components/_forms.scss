@@ -1,16 +1,17 @@
 .contact__form {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    display: flex;
+    flex-flow: row wrap;
     gap: 2rem 1rem;
     margin-block-end: 2rem;
 
     .full {
-        grid-column: 1 / -1;
+        flex-basis: 100%;
     }
 }
 
 .form__item {
     position: relative;
+    flex-grow: 1;
 
     label {
         position: absolute;
@@ -186,4 +187,12 @@ textarea {
             text-decoration: none;
         }
     }
+}
+
+@media screen and (max-width: 430px) {
+
+.contact__button {
+    flex-grow: 1;
+}
+
 }

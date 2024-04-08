@@ -1,25 +1,23 @@
 <header class="masthead">
-    <button class="btn--icon" type="button" data-hook="nav">
-        <i class="fa-light fa-align-left fa-lg fa-fw"></i>
-    </button>
-    <a class="masthead__email" href="mailto:hello@jmreedy.com">hello@jmreedy.com</a>
-</header>
-
-<aside>
     <div class="brand">
         <!-- @import 'logo-mark.kit' -->
         <h1>
-            <a href="#top">Jason Reed</a>
+            <a href="#about" data-hook="nav-item">Jason Reed</a>
             <small>Design Technologist</small>
         </h1>
     </div>
-    
+    <button class="btn--icon" type="button" data-hook="nav">
+        <i class="fa-light fa-bars fa-lg fa-fw"></i>
+    </button>
+</header>
+
+<aside>
     <nav class="nav--primary">
-        <a class="primary__item" href="#about">About</a>
-        <a class="primary__item" href="#proficiencies">Proficiencies</a>
+        <a class="primary__item" href="#about" data-hook="nav-item">About</a>
+        <a class="primary__item" href="#proficiencies" data-hook="nav-item">Proficiencies</a>
         
         <div class="nav__group">
-            <a class="primary__item" href="#work">Work</a>
+            <a class="primary__item" href="#work" data-hook="nav-item">Work</a>
             <nav class="nav--secondary">
                 <a class="secondary__item" href="#name">MarketWatch</a>
                 <a class="secondary__item" href="#name">Mosby Design System</a>
@@ -27,9 +25,9 @@
                 <a class="secondary__item" href="#name">Chalkboard Wedding</a>
             </nav>
         </div>
-        <a class="primary__item" href="#collaborations">Collaborations</a>
-        <a class="primary__item" href="#recommendations">Recommendations</a>
-        <a class="primary__item" href="#form">Contact</a>
+        <a class="primary__item" href="#collaborations" data-hook="nav-item">Collaborations</a>
+        <a class="primary__item" href="#recommendations" data-hook="nav-item">Recommendations</a>
+        <a class="primary__item" href="#form" data-hook="nav-item">Contact</a>
         <a class="primary__item" href="public/docs/jason-reed-resume-2024.pdf" target="_blank">Resume</a>
     </nav>
 

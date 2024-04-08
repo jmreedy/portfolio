@@ -8,6 +8,11 @@
         $('html').toggleClass('noscroll');
     });
 
+    $('[data-hook="nav-item"]').click(function(){
+        $('aside').removeClass('active');
+        $('html').removeClass('noscroll');
+    });
+
   
   })(jQuery);
 

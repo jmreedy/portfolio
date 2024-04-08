@@ -92,7 +92,7 @@ section {
 .overlay {
     position: fixed;
     inset: 0;
-    z-index: 3;
+    z-index: 1;
     backdrop-filter: blur(8px);
     background: rgb(15 15 15 / 90%);
     opacity: 0;
@@ -108,7 +108,7 @@ section {
 @media screen and (max-width: 960px) {
 
     html {
-        padding-block-start: 8rem;
+        padding-block-start: 6rem;
     }
 
     main {

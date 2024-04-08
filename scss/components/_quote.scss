@@ -65,3 +65,17 @@ blockquote {
         }
     }
 }
+
+@media screen and (max-width: 430px) {
+
+    .quote {
+
+        .section__body {
+            padding-inline: .5rem;
+        }
+
+        p::before {
+            inset: auto auto calc(100% + 2rem) 0;
+        }
+    }
+}

@@ -97,7 +97,7 @@ figure {
         width: calc(100% - 1rem);
         padding-block: 3rem 0;
         padding-inline: 1.5rem;
-        border-radius: 0 .5rem 0 0;
+        border-radius: 0 1rem 0 0;
     }
 
     figure {
@@ -135,7 +135,7 @@ figure {
             position: absolute;
             inset: auto 0 calc(25svh + 1rem);
             width: 100%;
-            padding-inline: 1.5rem;
+            padding-inline: 1.5rem 3rem;
             text-wrap: pretty;
             z-index: 2;
             color: var(--white);

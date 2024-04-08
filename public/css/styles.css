@@ -81,7 +81,7 @@ section:target {
   --white: #FFFFFF;
   --brand: #219EBC;
   --page-bg: var(--white);
-  --masthead-bg: rgb(255 255 255 / 98%);
+  --masthead-bg: rgb(255 255 255 / 75%);
   --quote-bg: rgb( 0 0 0 / 5%);
   --text-body-primary: var(--color-greyscale-900);
   --text-body-secondary: var(--color-greyscale-600);
@@ -166,13 +166,13 @@ aside {
   --nav-legal-font: 300 .75rem/1.375 var(--font-body);
   position: fixed;
   inset: 0 auto 0 0;
-  z-index: 4;
+  z-index: 1;
   display: flex;
   flex-flow: column nowrap;
   align-items: end;
   gap: 1rem;
   width: 20rem;
-  padding: 4rem 3rem;
+  padding: 12rem 3rem 4rem;
   background: white;
   text-align: right;
   background: var(--page-bg);
@@ -195,15 +195,6 @@ aside nav {
 }
 aside nav a {
   text-decoration: none;
-}
-
-.brand {
-  display: grid;
-  gap: 1rem;
-  justify-items: end;
-}
-.brand .mark {
-  width: 3em;
 }
 
 h1 {
@@ -322,6 +313,9 @@ h1 small {
   }
 }
 @media screen and (max-width: 430px) {
+  .nav--primary {
+    gap: 0.5rem;
+  }
   .nav--secondary {
     display: none;
   }
@@ -413,7 +407,7 @@ section p:not(:last-of-type) {
 .overlay {
   position: fixed;
   inset: 0;
-  z-index: 3;
+  z-index: 1;
   backdrop-filter: blur(8px);
   background: rgba(15, 15, 15, 0.9);
   opacity: 0;
@@ -427,7 +421,7 @@ aside.active ~ .overlay {
 
 @media screen and (max-width: 960px) {
   html {
-    padding-block-start: 8rem;
+    padding-block-start: 6rem;
   }
   main {
     margin: 0;
@@ -538,7 +532,7 @@ figure figcaption {
     width: calc(100% - 1rem);
     padding-block: 3rem 0;
     padding-inline: 1.5rem;
-    border-radius: 0 0.5rem 0 0;
+    border-radius: 0 1rem 0 0;
   }
   .about figure {
     position: relative;
@@ -570,7 +564,7 @@ figure figcaption {
     position: absolute;
     inset: auto 0 calc(25svh + 1rem);
     width: 100%;
-    padding-inline: 1.5rem;
+    padding-inline: 1.5rem 3rem;
     text-wrap: pretty;
     z-index: 2;
     color: var(--white);
@@ -582,37 +576,62 @@ figure figcaption {
 }
 .masthead {
   position: fixed;
-  inset: 1rem 1rem auto;
+  width: 319px;
+  padding-inline: 3rem calc(3rem - 1px);
+  display: grid;
   z-index: 3;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 4rem;
-  padding-inline: 1.5rem;
-  border-radius: 0.5rem;
   background: var(--masthead-bg);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  visibility: hidden;
-  transition: 600ms all;
+  border-bottom: 1px solid color-mix(in lch, var(--masthead-bg), black 20%);
+  backdrop-filter: blur(12px);
 }
 .masthead .btn--icon {
-  color: var(--color-greyscale-900);
+  color: var(--text-body-primary);
+  display: none;
 }
 .masthead a {
-  color: var(--color-greyscale-700);
+  color: var(--text-body-primary);
   text-decoration-color: var(--color-greyscale-400);
   text-underline-offset: 0.25rem;
 }
-.masthead.is-hidden:not(.scroll-up) {
-  translate: 0 -6rem;
+.masthead .brand {
+  display: grid;
+  justify-items: end;
+  gap: 1rem;
+  text-align: right;
+}
+.masthead svg {
+  width: 3rem;
+  fill: var(--brand);
+}
+.masthead h1 {
+  font-size: 1.75rem;
+}
+.masthead h1 small {
+  font-size: 0.75rem;
+  color: var(--text-body-secondary);
 }
 
 @media screen and (max-width: 960px) {
   .masthead {
-    opacity: 1;
-    visibility: visible;
+    inset: 0 0 auto;
+    width: auto;
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding-inline: 1.5rem;
+  }
+  .masthead .btn--icon {
+    display: block;
+  }
+  .masthead .brand {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  .masthead svg {
+    width: 2rem;
   }
 }
 .list--proficiencies {
@@ -796,17 +815,18 @@ figure figcaption {
   }
 }
 .contact__form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  display: flex;
+  flex-flow: row wrap;
   gap: 2rem 1rem;
   margin-block-end: 2rem;
 }
 .contact__form .full {
-  grid-column: 1/-1;
+  flex-basis: 100%;
 }
 
 .form__item {
   position: relative;
+  flex-grow: 1;
 }
 .form__item label {
   position: absolute;
@@ -969,6 +989,11 @@ textarea {
   text-decoration: none;
 }
 
+@media screen and (max-width: 430px) {
+  .contact__button {
+    flex-grow: 1;
+  }
+}
 .quote .section__body {
   display: grid;
   box-shadow: 0 0 0 100vmax var(--quote-bg);
@@ -1028,6 +1053,14 @@ blockquote span a:hover {
   text-decoration: none;
 }
 
+@media screen and (max-width: 430px) {
+  .quote .section__body {
+    padding-inline: 0.5rem;
+  }
+  .quote p::before {
+    inset: auto auto calc(100% + 2rem) 0;
+  }
+}
 .pro-bono .section__body {
   display: flex;
   gap: 2rem;
@@ -1112,7 +1145,7 @@ blockquote span a:hover {
   :root {
     --page-bg: var(--color-greyscale-900);
     --quote-bg: rgb(0 0 0 / 10%);
-    --masthead-bg: var(--color-greyscale-100);
+    --masthead-bg: rgb(36 39 43 / 75%);
     --text-body-primary: var(--color-greyscale-100);
     --text-body-secondary: var(--color-greyscale-500);
     --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);

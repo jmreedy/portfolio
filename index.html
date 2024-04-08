@@ -20,15 +20,8 @@
 </head>
 <body>
 
-<a name="top"></a>
+<a name="about"></a>
 <header class="masthead">
-    <button class="btn--icon" type="button" data-hook="nav">
-        <i class="fa-light fa-align-left fa-lg fa-fw"></i>
-    </button>
-    <a class="masthead__email" href="mailto:hello@jmreedy.com">hello@jmreedy.com</a>
-</header>
-
-<aside>
     <div class="brand">
         <svg class="mark"
              version="1.1"
@@ -49,17 +42,22 @@
             c4.2,0,49,0,49,40.1c0,41-42.2,40.8-53.5,41h-33.6C163.8,200.2,161.5,200.2,161.5,200.2z"/>
         </svg>
         <h1>
-            <a href="#top">Jason Reed</a>
+            <a href="#about" data-hook="nav-item">Jason Reed</a>
             <small>Design Technologist</small>
         </h1>
     </div>
-    
+    <button class="btn--icon" type="button" data-hook="nav">
+        <i class="fa-light fa-bars fa-lg fa-fw"></i>
+    </button>
+</header>
+
+<aside>
     <nav class="nav--primary">
-        <a class="primary__item" href="#about">About</a>
-        <a class="primary__item" href="#proficiencies">Proficiencies</a>
+        <a class="primary__item" href="#about" data-hook="nav-item">About</a>
+        <a class="primary__item" href="#proficiencies" data-hook="nav-item">Proficiencies</a>
         
         <div class="nav__group">
-            <a class="primary__item" href="#work">Work</a>
+            <a class="primary__item" href="#work" data-hook="nav-item">Work</a>
             <nav class="nav--secondary">
                 <a class="secondary__item" href="#name">MarketWatch</a>
                 <a class="secondary__item" href="#name">Mosby Design System</a>
@@ -67,9 +65,9 @@
                 <a class="secondary__item" href="#name">Chalkboard Wedding</a>
             </nav>
         </div>
-        <a class="primary__item" href="#collaborations">Collaborations</a>
-        <a class="primary__item" href="#recommendations">Recommendations</a>
-        <a class="primary__item" href="#form">Contact</a>
+        <a class="primary__item" href="#collaborations" data-hook="nav-item">Collaborations</a>
+        <a class="primary__item" href="#recommendations" data-hook="nav-item">Recommendations</a>
+        <a class="primary__item" href="#form" data-hook="nav-item">Contact</a>
         <a class="primary__item" href="public/docs/jason-reed-resume-2024.pdf" target="_blank">Resume</a>
     </nav>
 
@@ -83,7 +81,6 @@
 
 <main>
     <section class="section--primary about">
-        <a name="about"></a>
         <header>
             <h2>Hello, World.</h2>
             <p>How do you do, fellow nerds? Thanks for stopping by. I&apos;ll assume you&apos;ve stumbled upon my humble collection of work because you&apos;re in the market for a web design/development unicorn. Either that, or you are my mother trying to explain what I do at a random church dinner party (hi Mom!)</p>
@@ -429,62 +426,57 @@
                                             <textarea id="message" name="message" autocomplete="off"></textarea>
                                         </div>
                                     </div>
-                                </form>
-                                
-                                <footer class="contact__footer full">
                                     <button class="contact__button" type="submit" for="contact">Say Hello</button>
-                                    <div class="contact__social">
-                                        <span>Wanna snoop? Don&apos;t we all.</span>
-                                        <nav class="nav--social">
-                                            <a class="social__item" href="https://codepen.io/jmreedy" target="_blank">
-                                                <i class="fa-brands fa-codepen"></i>
-                                                <small>Codepen</small>
-                                            </a>
-                                            <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
-                                                <i class="fa-brands fa-dribbble"></i>
-                                                <small>Dribbble</small>
-                                            </a>
-                                            <a class="social__item" href="https://www.facebook.com/jmreedy" target="_blank">
-                                                <i class="fa-brands fa-facebook"></i>
-                                                <small>Facebook</small>
-                                            </a>
-                                            <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
-                                                <i class="fa-brands fa-figma"></i>
-                                                <small>Figma</small>
-                                            </a>
-                                            <a class="social__item" href="https://github.com/jmreedy" target="_blank">
-                                                <i class="fa-brands fa-github"></i>
-                                                <small>GitHub</small>
-                                            </a>
-                                            <a class="social__item" href="https://www.instagram.com/weekendinteriors" target="_blank">
-                                                <i class="fa-brands fa-instagram"></i>
-                                                <small>Instagram</small>
-                                            </a>
-                                            <a class="social__item" href="https://www.last.fm/user/jmreedy" target="_blank">
-                                                <i class="fa-brands fa-lastfm"></i>
-                                                <small>Last.fm</small>
-                                            </a>
-                                            <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
-                                                <i class="fa-brands fa-linkedin"></i>
-                                                <small>LinkedIn</small>
-                                            </a>
-                                            <a class="social__item" href="https://open.spotify.com/user/jmreedy" target="_blank">
-                                                <i class="fa-brands fa-spotify"></i>
-                                                <small>Spotify</small>
-                                            </a>
-                                            <a class="social__item" href="https://steamcommunity.com/id/jmreedy/" target="_blank">
-                                                <i class="fa-brands fa-steam"></i>
-                                                <small>Steam</small>
-                                            </a>
-                                        </nav>
-                                    </div>
-                                    <p class="contact__email"><a href="mailto:hello@jmreedy.com">hello@jmreedy.com</a> if you want to get straight to the point.</p>
-                                </footer>
-                                
+                                </form>
+                                        
+                                <nav class="nav--social">
+                                    <span>Wanna snoop? Don&apos;t we all.</span>
+                                    <a class="social__item" href="https://codepen.io/jmreedy" target="_blank">
+                                        <i class="fa-brands fa-codepen"></i>
+                                        <small>Codepen</small>
+                                    </a>
+                                    <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
+                                        <i class="fa-brands fa-dribbble"></i>
+                                        <small>Dribbble</small>
+                                    </a>
+                                    <a class="social__item" href="https://www.facebook.com/jmreedy" target="_blank">
+                                        <i class="fa-brands fa-facebook"></i>
+                                        <small>Facebook</small>
+                                    </a>
+                                    <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
+                                        <i class="fa-brands fa-figma"></i>
+                                        <small>Figma</small>
+                                    </a>
+                                    <a class="social__item" href="https://github.com/jmreedy" target="_blank">
+                                        <i class="fa-brands fa-github"></i>
+                                        <small>GitHub</small>
+                                    </a>
+                                    <a class="social__item" href="https://www.instagram.com/weekendinteriors" target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
+                                        <small>Instagram</small>
+                                    </a>
+                                    <a class="social__item" href="https://www.last.fm/user/jmreedy" target="_blank">
+                                        <i class="fa-brands fa-lastfm"></i>
+                                        <small>Last.fm</small>
+                                    </a>
+                                    <a class="social__item" href="https://www.linkedin.com/in/jmreedy" target="_blank">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                        <small>LinkedIn</small>
+                                    </a>
+                                    <a class="social__item" href="https://open.spotify.com/user/jmreedy" target="_blank">
+                                        <i class="fa-brands fa-spotify"></i>
+                                        <small>Spotify</small>
+                                    </a>
+                                    <a class="social__item" href="https://steamcommunity.com/id/jmreedy/" target="_blank">
+                                        <i class="fa-brands fa-steam"></i>
+                                        <small>Steam</small>
+                                    </a>
+                                </nav>
+                                <p class="contact__email"><a href="mailto:hello@jmreedy.com">hello@jmreedy.com</a> if you want to get straight to the point.</p>
                             </div>
                         </section>
     <section class="rewind">   
-      <p>Please be kind, <a href="#top">rewind</a>.</p>
+      <p>Please be kind, <a href="#about?deja=vu">rewind</a>.</p>
     </section>
     
 </main>
