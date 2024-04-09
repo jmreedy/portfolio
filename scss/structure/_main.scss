@@ -109,6 +109,7 @@ section {
 
     html {
         padding-block-start: 6rem;
+        scroll-padding-block-start: 6rem;
     }
 
     main {
@@ -138,5 +139,14 @@ section {
             font-size: 1rem;
         }
     }
+    
+}
+
+
+@media screen and (max-width: 430px) {
+
+html {
+    padding: 0;
+}
     
 }
