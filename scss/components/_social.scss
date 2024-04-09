@@ -11,8 +11,23 @@
 
 .social__heading {
     position: absolute;
-    inset: auto 0 calc(100% + .5rem) auto;
+    inset: auto 0 calc(100% + .75rem) auto;
     font-size: .875rem;
+    white-space: nowrap;
+    gap: .3em;
+    margin: 0;
+    text-align: right;
+    color: var(--text-body-secondary);
+
+    h3,
+    small {
+        display: inline;
+        font: 400 .875rem/1 var(--font-body);
+    }
+
+    h3 {
+        padding-inline-end: .3em;
+    }
 }
 
 .social__item {
@@ -62,7 +77,7 @@
         padding-block: .5rem;
         padding-inline: 1rem;
         background: var(--tooltip-bg);
-        border-radius: .5rem;
+        border-radius: .25rem;
         color: var(--white);
         transition: 200ms all 100ms;
     
@@ -82,6 +97,20 @@
     }
 }
 
+.social__item:hover {
+    .fa-facebook  { color: #3B5998; }
+    .fa-instagram { color: #C32AA3; }
+    .fa-steam     { color: #171A21; }
+    .fa-linkedin  { color: #0A66C2; }
+    .fa-discord   { color: #5865f2; }
+    .fa-lastfm    { color: #BA0000; }
+    .fa-dribbble  { color: #EA4C89; }
+    .fa-github    { color: #222222; }
+    .fa-figma     { color: #1ABCFE; }
+    .fa-spotify   { color: #1DB954; }
+    .fa-gitlab    { color: #E24329; }
+}
+
 
 
 @media screen and (max-width: 640px) {
@@ -97,6 +126,17 @@
     position: static;
     grid-column: 1 / -1;
     margin-block-end: .5rem;
+    text-align: left;
+
+    h3 {
+        font: 700 1rem/1.25 var(--font-title);
+        color: var(--text-body-primary);
+        display: block;
+    }
+
+    p {
+        font: 400 1rem/1.5 var(--font-body);
+    }
 }
 
 .social__item {

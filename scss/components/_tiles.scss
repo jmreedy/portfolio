@@ -25,7 +25,7 @@
     }
 
     h4 {
-        font: 800 1.5rem/1.375 var(--font-title);
+        font: 800 1.25rem/1.375 var(--font-title);
     }
 
     p {
@@ -52,7 +52,19 @@
         scroll-padding-inline-start: 1.5rem;
 
         &::-webkit-scrollbar {
-            display: none;
+            width: 100%;
+        }
+    
+        &::-webkit-scrollbar-track {
+            margin-inline: 1.5rem;
+            background: var(--divider);
+            border-top: .75rem solid var(--page-bg);
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background: var(--brand);
+            border-top: .75rem solid var(--page-bg);
+            
         }
     }
 }

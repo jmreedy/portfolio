@@ -1,7 +1,7 @@
 main {
     display: grid;
     margin-inline-start: 20rem;
-    gap: 6rem;
+    gap: 8rem;
 }
 
 
@@ -10,28 +10,32 @@ section {
     justify-items: center;
     width: 100%;
     margin-inline: auto;
+}
 
-    header {
-        margin: 0 auto 2rem;
-        max-width: 50rem;
-        width: 100%;
-    }
+.section__heading {
+    margin: 0 auto 2rem;
+    max-width: 50rem;
+    width: 100%;
 
     h2 {
         font: 700 2.5rem/1.25 var(--font-hero);
         color: var(--text-body-primary);
     }
 
+    h3 {
+        font: 700 1.125rem/1.25 var(--font-title);
+    }
+    
     p {
         font: 300 1.125rem/1.5 var(--font-body);
         color: var(--text-body-secondary);
+        margin-block-start: 1.25em;
 
-        &:not(:last-of-type) {
-            margin-block-end: 1.25em;
+        &:first-of-type {
+            margin-block-start: 0;
         }
     }
 }
-
 
 .section--primary {
     max-width: 70rem;
@@ -43,10 +47,6 @@ section {
 .section--secondary {
     margin-block-start: 3.5rem;
     max-width: 50rem;
-
-    h2 {
-        font-size: 1.125rem;
-    }
 }
 
 .section__body {
@@ -113,31 +113,13 @@ section {
 
     main {
         margin: 0;
-        gap: 3rem;
     }
 }
 
 @media screen and (max-width: 640px) {
-    html {
-        padding: 0;
-    }
-
-    main {
-        margin: 0;
-        gap: 3rem;
-    }
 
     .section--primary {
         padding-inline: 1.5rem;
-
-        h2 {
-            font-size: 2rem;
-        }
-
-        p {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
     }
 
     .section--secondary {
@@ -146,4 +128,15 @@ section {
             font-size: 1rem;
         }
     }
+
+    .section__heading {
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+    
 }

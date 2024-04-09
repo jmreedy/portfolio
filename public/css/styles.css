@@ -119,15 +119,16 @@ html {
   font-family: var(--font-body);
   font-weight: 400;
   color: var(--text-body-primary);
-  min-height: 100vh;
+  min-height: 100.1vh;
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+  scrollbar-gutter: stable;
   padding-block-start: 5rem;
   text-wrap: pretty;
 }
 
 ::selection {
-  background: hotpink;
+  background: var(--brand);
   color: white;
 }
 
@@ -348,7 +349,7 @@ h1 small {
 main {
   display: grid;
   margin-inline-start: 20rem;
-  gap: 6rem;
+  gap: 8rem;
 }
 
 section {
@@ -357,21 +358,26 @@ section {
   width: 100%;
   margin-inline: auto;
 }
-section header {
+
+.section__heading {
   margin: 0 auto 2rem;
   max-width: 50rem;
   width: 100%;
 }
-section h2 {
+.section__heading h2 {
   font: 700 2.5rem/1.25 var(--font-hero);
   color: var(--text-body-primary);
 }
-section p {
+.section__heading h3 {
+  font: 700 1.125rem/1.25 var(--font-title);
+}
+.section__heading p {
   font: 300 1.125rem/1.5 var(--font-body);
   color: var(--text-body-secondary);
+  margin-block-start: 1.25em;
 }
-section p:not(:last-of-type) {
-  margin-block-end: 1.25em;
+.section__heading p:first-of-type {
+  margin-block-start: 0;
 }
 
 .section--primary {
@@ -383,9 +389,6 @@ section p:not(:last-of-type) {
 .section--secondary {
   margin-block-start: 3.5rem;
   max-width: 50rem;
-}
-.section--secondary h2 {
-  font-size: 1.125rem;
 }
 
 .section__body {
@@ -449,28 +452,19 @@ aside.active ~ .overlay {
   }
   main {
     margin: 0;
-    gap: 3rem;
   }
 }
 @media screen and (max-width: 640px) {
-  html {
-    padding: 0;
-  }
-  main {
-    margin: 0;
-    gap: 3rem;
-  }
   .section--primary {
     padding-inline: 1.5rem;
   }
-  .section--primary h2 {
+  .section--secondary h3 {
+    font-size: 1rem;
+  }
+  .section__heading h2 {
     font-size: 2rem;
   }
-  .section--primary p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  .section--secondary h3 {
+  .section__heading p {
     font-size: 1rem;
   }
 }
@@ -639,7 +633,7 @@ figure figcaption {
     inset: 0 0 auto;
     width: auto;
     box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid color-mix(in lch, var(--masthead-bg), black 20%);
+    border-bottom: 1px solid color-mix(in lch, var(--masthead-bg), black 10%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -684,7 +678,7 @@ figure figcaption {
   aspect-ratio: 1;
 }
 .proficiency__item h4 {
-  font: 800 1.5rem/1.375 var(--font-title);
+  font: 800 1.25rem/1.375 var(--font-title);
 }
 .proficiency__item p {
   font: 300 1rem/1.6 var(--font-body);
@@ -706,7 +700,16 @@ figure figcaption {
     scroll-padding-inline-start: 1.5rem;
   }
   .proficiencies .section__body::-webkit-scrollbar {
-    display: none;
+    width: 100%;
+  }
+  .proficiencies .section__body::-webkit-scrollbar-track {
+    margin-inline: 1.5rem;
+    background: var(--divider);
+    border-top: 0.75rem solid var(--page-bg);
+  }
+  .proficiencies .section__body::-webkit-scrollbar-thumb {
+    background: var(--brand);
+    border-top: 0.75rem solid var(--page-bg);
   }
   .list--proficiencies {
     display: flex;
@@ -1033,8 +1036,21 @@ blockquote span a:hover {
 
 .social__heading {
   position: absolute;
-  inset: auto 0 calc(100% + 0.5rem) auto;
+  inset: auto 0 calc(100% + 0.75rem) auto;
   font-size: 0.875rem;
+  white-space: nowrap;
+  gap: 0.3em;
+  margin: 0;
+  text-align: right;
+  color: var(--text-body-secondary);
+}
+.social__heading h3,
+.social__heading small {
+  display: inline;
+  font: 400 0.875rem/1 var(--font-body);
+}
+.social__heading h3 {
+  padding-inline-end: 0.3em;
 }
 
 .social__item {
@@ -1077,7 +1093,7 @@ blockquote span a:hover {
   padding-block: 0.5rem;
   padding-inline: 1rem;
   background: var(--tooltip-bg);
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   color: var(--white);
   transition: 200ms all 100ms;
 }
@@ -1095,6 +1111,40 @@ blockquote span a:hover {
   border-radius: 4px;
 }
 
+.social__item:hover .fa-facebook {
+  color: #3B5998;
+}
+.social__item:hover .fa-instagram {
+  color: #C32AA3;
+}
+.social__item:hover .fa-steam {
+  color: #171A21;
+}
+.social__item:hover .fa-linkedin {
+  color: #0A66C2;
+}
+.social__item:hover .fa-discord {
+  color: #5865f2;
+}
+.social__item:hover .fa-lastfm {
+  color: #BA0000;
+}
+.social__item:hover .fa-dribbble {
+  color: #EA4C89;
+}
+.social__item:hover .fa-github {
+  color: #222222;
+}
+.social__item:hover .fa-figma {
+  color: #1ABCFE;
+}
+.social__item:hover .fa-spotify {
+  color: #1DB954;
+}
+.social__item:hover .fa-gitlab {
+  color: #E24329;
+}
+
 @media screen and (max-width: 640px) {
   .nav--social {
     display: grid;
@@ -1106,6 +1156,15 @@ blockquote span a:hover {
     position: static;
     grid-column: 1/-1;
     margin-block-end: 0.5rem;
+    text-align: left;
+  }
+  .social__heading h3 {
+    font: 700 1rem/1.25 var(--font-title);
+    color: var(--text-body-primary);
+    display: block;
+  }
+  .social__heading p {
+    font: 400 1rem/1.5 var(--font-body);
   }
   .social__item {
     display: grid;
@@ -1167,18 +1226,18 @@ blockquote span a:hover {
 }
 .award__item h6 {
   margin: 0;
-  font: 700 1rem/1 var(--font-title);
+  font: 700 1rem/1.25 var(--font-title);
   color: var(--text-body-primary);
 }
 .award__item small {
-  font: 400 0.875rem/1 var(--font-body);
+  font: 400 0.875rem/1.25 var(--font-body);
   color: var(--text-body-secondary);
 }
 
 .list--projects {
   max-width: 50rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
   gap: 0.5rem;
   width: 100%;
 }
