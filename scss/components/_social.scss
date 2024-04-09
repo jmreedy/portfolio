@@ -1,0 +1,110 @@
+.nav--social {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+    gap: .5rem;
+    flex: 1 0;
+    margin-block-start: 1rem;
+}
+
+.social__heading {
+    position: absolute;
+    inset: auto 0 calc(100% + .5rem) auto;
+    font-size: .875rem;
+}
+
+.social__item {
+    position: relative;
+    color: var(--text-body-secondary);
+    transition: 200ms color ease;
+    text-decoration: none;
+
+    &:focus-visible {
+        outline: none;
+
+        small {
+            opacity: 1;
+            visibility: visible;
+            inset: auto auto 100% 50%
+        }
+    }
+
+    i {
+        display: grid;
+        place-items: center;
+        width: 2rem;
+        aspect-ratio: 1;
+        font-size: 2rem;
+
+        &:hover {
+            color: color-mix(in lch, var(--text-body-primary), black 20%);
+            
+            & + small {
+                opacity: 1;
+                visibility: visible;
+                inset: auto auto 100% 50%
+            }
+        }
+    }
+
+    small {
+
+        --tooltip-bg: rgb(0 0 0);
+
+        position: absolute;
+        inset: auto auto calc(100% - .25rem) 50%;
+        isolation: isolate;
+        translate: -50% 0;
+        opacity: 0;
+        visibility: hidden;
+        padding-block: .5rem;
+        padding-inline: 1rem;
+        background: var(--tooltip-bg);
+        border-radius: .5rem;
+        color: var(--white);
+        transition: 200ms all 100ms;
+    
+        &::after {
+            content: '';
+            position: absolute;
+            inset: calc(100% - .75rem) auto auto 50%;
+            z-index: -1;
+            translate: -50% 0;
+            display: block;
+            width: 1rem;
+            aspect-ratio: 1;
+            rotate: 45deg;
+            background: var(--tooltip-bg);
+            border-radius: 4px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 640px) {
+
+.nav--social {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .25rem;
+    margin: 0;
+}
+
+.social__heading {
+    position: static;
+    grid-column: 1 / -1;
+    margin-block-end: .5rem;
+}
+
+.social__item {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    border: 1px solid var(--divider);
+    border-radius: .125rem;
+}
+
+}

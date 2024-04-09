@@ -65,13 +65,11 @@
 .checklist {
     li {
         position: relative;
+        display: flex;
         margin-block-end: .5rem;
-        padding-inline-start: 2rem;
 
         &::before {
             content: '';
-            position: absolute;
-            inset: 0 auto 0 0;
             width: 1.25rem;
             height: 1.25rem;
             border: 1px solid var(--input-border);
@@ -83,8 +81,11 @@
             text-align: center;
         }
 
-        span {
-            padding-inline-start: .3em;
+        &.your-company::after {
+            content: '(ironic, I know)';
+            padding-inline-start: .5em;
+            align-self: start;
+            font-size: .875em;
             color: var(--text-body-secondary);
         }
     }

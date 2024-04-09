@@ -13,6 +13,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
     padding-block-start: 5rem;
+    text-wrap: pretty;
 }
 
 ::selection {
@@ -29,6 +30,10 @@ ul {
 button {
     background: none;
     border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 h1,

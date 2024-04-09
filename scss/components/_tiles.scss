@@ -1,6 +1,6 @@
 .list--proficiencies {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: .5rem;
     padding: 0;
 }
@@ -34,26 +34,8 @@
     }
 }
 
-// @media screen and (max-width: 430px) {
 
-// .list--proficiencies {
-//     display: flex;
-//     flex-flow: row nowrap;
-//     width: calc(100vw);
-//     overflow-x: scroll;
-//     margin-inline: -1.5rem;
-//     padding-inline-start: 1.5rem;
-
-//     .proficiency__item {
-//         min-width: calc(100vw - 3rem);
-//         scroll-snap-align: start;
-//     }
-// }
-
-// }
-
-
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 640px) {
 
 .proficiencies {
     padding: 0;

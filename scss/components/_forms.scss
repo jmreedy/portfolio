@@ -1,3 +1,16 @@
+.contact {
+
+    .section--secondary {
+        margin-block-start: 0;
+        justify-items: start;
+        gap: 1rem;
+
+        header {
+            margin: 0;
+        }
+    }
+}
+
 .contact__form {
     display: flex;
     flex-flow: row wrap;
@@ -101,83 +114,10 @@ textarea {
     }
 }
 
-.nav--social {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
-    align-items: center;
-    gap: .75rem;
-    margin-block-start: .5rem;
-}
-
-.social__item {
-    position: relative;
-    color: var(--text-body-secondary);
-    transition: 200ms color ease;
-    text-decoration: none;
-
-    &:focus-visible {
-        outline: none;
-
-        small {
-            opacity: 1;
-            visibility: visible;
-            inset: auto auto 100% 50%
-        }
-    }
-
-    i {
-        display: grid;
-        place-items: center;
-        width: 2rem;
-        aspect-ratio: 1;
-        font-size: 2rem;
-
-        &:hover {
-            color: color-mix(in lch, var(--text-body-primary), black 20%);
-            
-            & + small {
-                opacity: 1;
-                visibility: visible;
-                inset: auto auto 100% 50%
-            }
-        }
-    }
-
-    small {
-        position: absolute;
-        inset: auto auto calc(100% - .25rem) 50%;
-        isolation: isolate;
-        translate: -50% 0;
-        opacity: 0;
-        visibility: hidden;
-        padding-block: .5rem;
-        padding-inline: 1rem;
-        background: var(--tooltip-bg);
-        border-radius: 4px;
-        color: var(--white);
-        transition: 200ms all 100ms;
-    
-        &::after {
-            content: '';
-            position: absolute;
-            inset: calc(100% - .75rem) auto auto 50%;
-            z-index: -1;
-            translate: -50% 0;
-            display: block;
-            width: 1rem;
-            aspect-ratio: 1;
-            rotate: 45deg;
-            background: var(--tooltip-bg);
-            border-radius: 4px;
-        }
-    }
-}
-
 .contact__email {
-    margin-block-start: 2rem;
     font-weight: 300;
     font-size: 1rem;
+    align-self: center;
 
     a {
         color: var(--text-body-primary);
@@ -189,10 +129,10 @@ textarea {
     }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 640px) {
 
 .contact__button {
-    flex-grow: 1;
+    flex: 1 0 100%;
 }
 
 }

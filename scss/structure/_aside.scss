@@ -160,9 +160,33 @@ h1 {
     }
 }
 
+.theme-toggle  {
+    position: relative;
+    width: 2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: .25rem solid var(--brand);
+    transition: 400ms all;
+    margin-block-end: 2rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0 50% 0 0;
+        border-radius: 50% 0 0 50%;
+        background: var(--brand);
+    }
+
+    .toggle-theme & {
+        rotate: 180deg;
+    }
+}
+
+
 @media screen and (max-width: 960px) {
 
 aside {
+    z-index: 10;
     translate: calc(-100% - 1rem) 0;
     box-shadow: 8px 0 16px -8px rgb(0 0 0 / 60%);
     padding-block: 3rem;

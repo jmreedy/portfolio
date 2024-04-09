@@ -23,7 +23,7 @@ section {
     }
 
     p {
-        font: 300 1.125rem/1.8 var(--font-body);
+        font: 300 1.125rem/1.5 var(--font-body);
         color: var(--text-body-secondary);
 
         &:not(:last-of-type) {
@@ -92,9 +92,9 @@ section {
 .overlay {
     position: fixed;
     inset: 0;
-    z-index: 1;
-    backdrop-filter: blur(8px);
-    background: rgb(15 15 15 / 90%);
+    z-index: 5;
+    // backdrop-filter: blur(8px);
+    background: rgb(15 15 15 / 95%);
     opacity: 0;
     visibility: hidden;
     transition: 400ms all;
@@ -117,7 +117,7 @@ section {
     }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 640px) {
     html {
         padding: 0;
     }
