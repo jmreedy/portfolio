@@ -15,28 +15,13 @@ figure {
     }
 }
 
-.about {
-    .section--secondary {
-        margin-block-start: 1.25rem;
-
-        p {
-            font: 300 1.125rem/1.5 var(--font-body);
-            color: var(--text-body-secondary);
-        }
-    }
-
-    header {
-        margin-block-start: 3rem;
-    }
-}
-
 .qa {
 
     --qa-border: var(--divider);
     --qa-border-active: var(--brand);
 
     display: grid;
-    gap: .5rem;
+    gap: .25rem;
     width: 100%;
 }
 

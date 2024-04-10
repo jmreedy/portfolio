@@ -124,8 +124,8 @@ h1 {
     margin-block-start: auto;
     font: var(--nav-legal-font);
 
-    p {
-        margin-block-end: 1rem;
+    p:not(:first-of-type) {
+        margin-block-start: 1rem;
 
         i {
             color: var(--text-body-secondary);
