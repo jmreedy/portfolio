@@ -49,13 +49,13 @@
     inset: 0 0 auto;
     width: auto;
     box-shadow: 0 4px 8px -4px rgb(0 0 0 / 20%);
-    border-bottom: 1px solid color-mix(in lch, var(--masthead-bg), black 10%);
+    border-bottom: 1px solid color-mix(in lch, var(--masthead-bg), black 5%);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 5rem;
     padding-block: 0;
-    padding-inline: 1.5rem;
+    padding-inline: 1.5rem 1rem;
 
     .btn--icon {
         display: block;

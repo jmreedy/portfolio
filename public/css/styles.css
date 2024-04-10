@@ -611,7 +611,8 @@ figure figcaption {
     width: calc(100% - 1rem);
     padding-block: 3rem 0;
     padding-inline: 1.5rem;
-    border-radius: 0 1rem 0 0;
+    box-shadow: 0 -12px 8px -8px rgba(0, 0, 0, 0.25);
+    border-top: 0.25rem solid var(--brand);
   }
   .about figure {
     position: relative;
@@ -701,13 +702,13 @@ figure figcaption {
     inset: 0 0 auto;
     width: auto;
     box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid color-mix(in lch, var(--masthead-bg), black 10%);
+    border-bottom: 1px solid color-mix(in lch, var(--masthead-bg), black 5%);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 5rem;
     padding-block: 0;
-    padding-inline: 1.5rem;
+    padding-inline: 1.5rem 1rem;
   }
   .masthead .btn--icon {
     display: block;
