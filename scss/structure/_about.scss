@@ -7,7 +7,7 @@ figure {
     }
     
     figcaption {
-        font: 400 .875rem var(--font-body);
+        font: 400 .875rem/1.5 var(--font-body);
         color: var(--text-body-secondary);
         max-width: 50rem;
         width: 100%;
@@ -83,7 +83,7 @@ figure {
 }
 
 @media screen and (max-width: 430px) {
-
+    
 .about {
     padding: 0;
     
@@ -124,7 +124,7 @@ figure {
 
         img {
             border-radius: 0;
-            height: 90svh;
+            height: 100svh;
             max-height: 800px;
             object-fit: cover;
         }

@@ -5,8 +5,10 @@
     padding-inline: 3rem calc(3rem - 1px);
     display: grid;
     z-index: 5;
+    -webkit-backdrop-filter: blur(8px);
+       -moz-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
     background: var(--masthead-bg);
-    backdrop-filter: blur(12px);
 
     .btn--icon {
         color: var(--text-body-primary);

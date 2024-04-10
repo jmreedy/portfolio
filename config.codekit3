@@ -580,7 +580,7 @@
       "sct" : 0
     },
     "\/scss\/styles.scss" : {
-      "aP" : 1,
+      "aP" : 0,
       "bl" : 0,
       "co" : 0,
       "dP" : 10,
@@ -590,7 +590,7 @@
       "oA" : 0,
       "oAP" : "\/public\/css\/styles.css",
       "oF" : 2,
-      "oS" : 3,
+      "oS" : 0,
       "pg" : 0,
       "sct" : 0
     },
