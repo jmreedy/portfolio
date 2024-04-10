@@ -89,6 +89,55 @@ section:target {
   --divider: var(--color-greyscale-200);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-bg: var(--color-greyscale-900);
+    --quote-bg: rgb(0 0 0 / 10%);
+    --masthead-bg: rgb(36 39 43 / 75%);
+    --text-body-primary: var(--color-greyscale-100);
+    --text-body-secondary: var(--color-greyscale-500);
+    --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
+    --input-border: var(--color-greyscale-700);
+  }
+  .pro-bono img:first-of-type {
+    display: none;
+  }
+  .pro-bono img:last-of-type {
+    display: block;
+  }
+  .toggle-theme {
+    --page-bg: var(--white);
+    --masthead-bg: rgb(255 255 255 / 75%);
+    --quote-bg: rgb( 0 0 0 / 5%);
+    --text-body-primary: var(--color-greyscale-900);
+    --text-body-secondary: var(--color-greyscale-600);
+    --input-border: var(--color-greyscale-200);
+    --divider: var(--color-greyscale-200);
+  }
+  .toggle-theme .pro-bono img:first-of-type {
+    display: block;
+  }
+  .toggle-theme .pro-bono img:last-of-type {
+    display: none;
+  }
+}
+@media not (prefers-color-scheme: dark) {
+  .toggle-theme {
+    --page-bg: var(--color-greyscale-900);
+    --quote-bg: rgb(0 0 0 / 10%);
+    --masthead-bg: rgb(36 39 43 / 75%);
+    --text-body-primary: var(--color-greyscale-100);
+    --text-body-secondary: var(--color-greyscale-500);
+    --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
+    --input-border: var(--color-greyscale-700);
+  }
+  .toggle-theme .pro-bono img:first-of-type {
+    display: none;
+  }
+  .toggle-theme .pro-bono img:last-of-type {
+    display: block;
+  }
+}
 :root {
   --font-hero: "League Spartan", sans-serif;
   --font-title: "Mulish", sans-serif;
@@ -468,6 +517,9 @@ aside.active ~ .overlay {
   .section__heading p {
     font-size: 1rem;
   }
+  main {
+    gap: 3rem;
+  }
 }
 @media screen and (max-width: 430px) {
   html {
@@ -482,11 +534,22 @@ figure img {
   border-radius: 0.5rem;
 }
 figure figcaption {
-  font: 300 0.875rem var(--font-body);
+  font: 400 0.875rem var(--font-body);
   color: var(--text-body-secondary);
   max-width: 50rem;
   width: 100%;
   margin-inline: auto;
+}
+
+.about .section--secondary {
+  margin-block-start: 1.25rem;
+}
+.about .section--secondary p {
+  font: 300 1.125rem/1.5 var(--font-body);
+  color: var(--text-body-secondary);
+}
+.about header {
+  margin-block-start: 3rem;
 }
 
 .qa {
@@ -551,7 +614,7 @@ figure figcaption {
   .about > header {
     position: relative;
     z-index: 2;
-    margin: -15rem auto 0 0;
+    margin: -20svh auto 0 0;
     background: var(--page-bg);
     width: calc(100% - 1rem);
     padding-block: 3rem 0;
@@ -586,7 +649,7 @@ figure figcaption {
   }
   .about figure figcaption {
     position: absolute;
-    inset: auto 0 16rem;
+    inset: auto 0 calc(20svh + 1rem);
     width: 100%;
     padding-inline: 1.5rem 3rem;
     text-wrap: pretty;
@@ -596,6 +659,10 @@ figure figcaption {
   }
   .about section {
     padding-inline: 1.5rem;
+  }
+  .about .section--secondary p {
+    font-size: 1rem;
+    padding-inline-end: 1.5rem;
   }
 }
 .masthead {

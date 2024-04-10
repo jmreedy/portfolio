@@ -7,7 +7,7 @@ figure {
     }
     
     figcaption {
-        font: 300 .875rem var(--font-body);
+        font: 400 .875rem var(--font-body);
         color: var(--text-body-secondary);
         max-width: 50rem;
         width: 100%;
@@ -15,7 +15,20 @@ figure {
     }
 }
 
+.about {
+    .section--secondary {
+        margin-block-start: 1.25rem;
 
+        p {
+            font: 300 1.125rem/1.5 var(--font-body);
+            color: var(--text-body-secondary);
+        }
+    }
+
+    header {
+        margin-block-start: 3rem;
+    }
+}
 
 .qa {
 
@@ -92,7 +105,7 @@ figure {
     > header {
         position: relative;
         z-index: 2;
-        margin: -15rem auto 0 0;
+        margin: -20svh auto 0 0;
         background: var(--page-bg);
         width: calc(100% - 1rem);
         padding-block: 3rem 0;
@@ -133,7 +146,7 @@ figure {
 
         figcaption {
             position: absolute;
-            inset: auto 0 16rem;
+            inset: auto 0 calc(20svh + 1rem);
             width: 100%;
             padding-inline: 1.5rem 3rem;
             text-wrap: pretty;
@@ -145,6 +158,13 @@ figure {
 
     section {
         padding-inline: 1.5rem;
+    }
+
+    .section--secondary {
+        p {
+            font-size: 1rem;
+            padding-inline-end: 1.5rem;
+        }
     }
 }
 
