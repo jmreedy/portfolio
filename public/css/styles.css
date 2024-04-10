@@ -175,10 +175,6 @@ html {
   scroll-padding-top: 4rem;
 }
 
-body {
-  padding-block-start: 4rem;
-}
-
 ::selection {
   background: var(--brand);
   color: white;
@@ -401,6 +397,7 @@ h1 small {
 main {
   display: grid;
   margin-inline-start: 20rem;
+  padding-block-start: 4rem;
   gap: 8rem;
 }
 
@@ -500,11 +497,11 @@ aside.active ~ .overlay {
 
 @media screen and (max-width: 960px) {
   html {
-    padding-block-start: 6rem;
     scroll-padding-block-start: 6rem;
   }
   main {
     margin: 0;
+    padding-block-start: 6rem;
   }
 }
 @media screen and (max-width: 640px) {
@@ -525,8 +522,11 @@ aside.active ~ .overlay {
   }
 }
 @media screen and (max-width: 430px) {
-  html {
+  body {
     padding: 0;
+  }
+  main {
+    padding-block-start: 0;
   }
 }
 figure {
@@ -660,9 +660,10 @@ figure figcaption {
 .masthead {
   position: fixed;
   width: 319px;
+  padding-block-start: 4rem;
   padding-inline: 3rem calc(3rem - 1px);
   display: grid;
-  z-index: 4;
+  z-index: 5;
   background: var(--masthead-bg);
   backdrop-filter: blur(12px);
 }
@@ -703,6 +704,7 @@ figure figcaption {
     justify-content: space-between;
     align-items: center;
     height: 5rem;
+    padding-block: 0;
     padding-inline: 1.5rem;
   }
   .masthead .btn--icon {

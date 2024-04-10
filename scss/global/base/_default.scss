@@ -16,12 +16,7 @@ html {
     scroll-padding-top: 4rem;
 }
 
-body {
-    padding-block-start: 4rem;
-}
-
 ::selection {
-    // background: color-mix(in lch, var(--brand), white 30%);
     background: var(--brand);
     color: white;
 }
