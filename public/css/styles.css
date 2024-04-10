@@ -949,7 +949,7 @@ figure figcaption {
   color: tomato;
 }
 
-input,
+input:not([type=radio]),
 textarea {
   height: 3rem;
   box-shadow: inset 0 0 0 1px var(--divider);
@@ -963,7 +963,7 @@ textarea {
   caret-color: var(--text-body-primary);
   transition: 200ms all;
 }
-input:focus,
+input:not([type=radio]):focus,
 textarea:focus {
   border-color: var(--brand);
   box-shadow: inset 0 0 0 50vw var(--page-bg);
@@ -1033,13 +1033,13 @@ textarea {
   }
 }
 .quote .section__body {
+  position: relative;
   display: grid;
   box-shadow: 0 0 0 100vmax var(--quote-bg);
   clip-path: inset(0 -100vmax);
   background: var(--quote-bg);
   padding-block: 10rem;
   min-height: 20rem;
-  gap: 4rem;
 }
 
 blockquote {
@@ -1048,6 +1048,11 @@ blockquote {
   gap: 2rem;
   max-width: 50rem;
   margin-inline: auto;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 500ms all;
+  translate: 0 -1rem;
 }
 blockquote p {
   position: relative;
@@ -1065,6 +1070,9 @@ blockquote p::before {
   color: var(--brand);
 }
 blockquote footer {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.125rem;
   position: relative;
   text-wrap: pretty;
 }
@@ -1076,7 +1084,6 @@ blockquote footer::after {
   border-top: 1px solid var(--divider);
 }
 blockquote cite {
-  display: block;
   font: 500 1rem/1.375 var(--font-body);
   color: var(--brand);
 }
@@ -1091,6 +1098,46 @@ blockquote span a {
 }
 blockquote span a:hover {
   text-decoration: none;
+}
+
+fieldset {
+  position: absolute;
+  inset: auto auto 5rem 0;
+  order: 2;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  padding: 0;
+}
+fieldset input {
+  appearance: none;
+  cursor: pointer;
+  width: 0.875rem;
+  aspect-ratio: 1;
+  height: auto;
+  border-radius: 1rem;
+  border: 1px solid var(--text-body-secondary);
+  margin: 0;
+  box-shadow: none;
+  background: transparent;
+}
+fieldset input:checked {
+  background: var(--text-body-primary);
+}
+fieldset input:hover {
+  border-color: var(--text-body-primary);
+  background: var(--text-body-primary);
+}
+
+fieldset:has(input:nth-of-type(1):checked) ~ blockquote:nth-of-type(1),
+fieldset:has(input:nth-of-type(2):checked) ~ blockquote:nth-of-type(2),
+fieldset:has(input:nth-of-type(3):checked) ~ blockquote:nth-of-type(3),
+fieldset:has(input:nth-of-type(4):checked) ~ blockquote:nth-of-type(4),
+fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
+  opacity: 1;
+  visibility: visible;
+  translate: 0;
 }
 
 .nav--social {
@@ -1234,7 +1281,7 @@ blockquote span a:hover {
     display: block;
   }
   .social__heading p {
-    font: 400 1rem/1.5 var(--font-body);
+    font: 300 1rem/1.5 var(--font-body);
   }
   .social__item {
     display: grid;
@@ -1242,6 +1289,9 @@ blockquote span a:hover {
     aspect-ratio: 1;
     border: 1px solid var(--divider);
     border-radius: 0.125rem;
+  }
+  .social__item small {
+    display: none;
   }
 }
 .pro-bono .section__body {

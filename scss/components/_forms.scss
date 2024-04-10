@@ -46,7 +46,7 @@
 }
 
 
-input,
+input:not([type="radio"]),
 textarea {
     height: 3rem;
     box-shadow: inset 0 0 0 1px var(--divider);

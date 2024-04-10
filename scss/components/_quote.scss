@@ -1,12 +1,11 @@
 .quote .section__body {
+    position: relative;
     display: grid;
     box-shadow: 0 0 0 100vmax var(--quote-bg);
     clip-path: inset(0 -100vmax);
     background: var(--quote-bg);
     padding-block: 10rem;
     min-height: 20rem;
-    
-    gap: 4rem;
 }
 
 blockquote {
@@ -15,6 +14,11 @@ blockquote {
     gap: 2rem;
     max-width: 50rem;
     margin-inline: auto;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 500ms all;
+    translate: 0 -1rem;
     
     p {
         position: relative;
@@ -34,8 +38,12 @@ blockquote {
     }
 
     footer {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: .125rem;
         position: relative;        
         text-wrap: pretty;
+
 
         &::after {
             content: '';
@@ -47,7 +55,6 @@ blockquote {
     }
 
     cite {
-        display: block;
         font: 500 1rem/1.375 var(--font-body);
         color: var(--brand);
 
@@ -67,4 +74,47 @@ blockquote {
             }
         }
     }
+}
+
+fieldset {
+    position: absolute;
+    inset: auto auto 5rem 0;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    border: none;
+    padding: 0;
+
+    input {
+        appearance: none;
+        cursor: pointer;
+        width: .875rem;
+        aspect-ratio: 1;
+        height: auto;
+        border-radius: 1rem;
+        border: 1px solid var(--text-body-secondary);
+        margin: 0;
+        box-shadow: none;
+        background: transparent;
+        
+        &:checked {
+            background: var(--text-body-primary);
+        }
+
+        &:hover {
+            border-color: var(--text-body-primary);
+            background: var(--text-body-primary);
+        }
+    }
+}
+
+fieldset:has(input:nth-of-type(1):checked) ~ blockquote:nth-of-type(1),
+fieldset:has(input:nth-of-type(2):checked) ~ blockquote:nth-of-type(2),
+fieldset:has(input:nth-of-type(3):checked) ~ blockquote:nth-of-type(3),
+fieldset:has(input:nth-of-type(4):checked) ~ blockquote:nth-of-type(4),
+fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
+    opacity: 1;
+    visibility: visible;
+    translate: 0;
 }

@@ -135,7 +135,7 @@
     }
 
     p {
-        font: 400 1rem/1.5 var(--font-body);
+        font: 300 1rem/1.5 var(--font-body);
     }
 }
 
@@ -145,6 +145,10 @@
     aspect-ratio: 1;
     border: 1px solid var(--divider);
     border-radius: .125rem;
+
+    small {
+        display: none;
+    }
 }
 
 }
