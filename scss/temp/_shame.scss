@@ -41,7 +41,7 @@
     text-align: center;
     text-decoration: none;
 
-    span {
+    > span {
         position: absolute;
         inset: auto 2rem calc(100% - .75rem);
         box-shadow: 0 0 0 .5rem var(--page-bg);
@@ -60,6 +60,10 @@
         margin: 0;
         font: 700 1rem/1.25 var(--font-title);
         color: var(--text-body-primary);
+
+        span {
+            white-space: nowrap;
+        }
     }
     
     small {
@@ -88,5 +92,15 @@
 
     @media screen and (max-width: 800px) {
         grid-template-columns: 1fr;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+    .award__item {
+        h6 {
+            display: grid;
+            line-height: 1.375;
+        }
     }
 }

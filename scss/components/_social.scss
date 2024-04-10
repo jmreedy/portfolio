@@ -146,6 +146,12 @@
     border: 1px solid var(--divider);
     border-radius: .125rem;
 
+    i {
+        display: block;
+        text-align: center;
+        width: auto;
+    }
+
     small {
         display: none;
     }
