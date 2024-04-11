@@ -14,6 +14,7 @@ blockquote {
     display: grid;
     grid-area: 1 / -1 / 1 / -1;
     gap: 2rem;
+    align-self: center;
     max-width: 50rem;
     margin-inline: auto;
     width: 100%;
@@ -37,7 +38,6 @@ blockquote {
         position: relative;
         font: 700 1.25rem/1.5 var(--font-title);
         color: var(--text-body-primary);
-        align-self: center;
     }
 
 
@@ -122,3 +122,11 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
     visibility: visible;
     translate: 0;
 }
+
+// @media screen and (max-width: 430px) {
+
+// blockquote {
+//     align-self: center;
+// }
+
+// }

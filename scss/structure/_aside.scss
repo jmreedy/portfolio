@@ -162,12 +162,12 @@ h1 {
 
 .theme-toggle  {
     position: relative;
-    width: 2rem;
+    width: 1.5rem;
     aspect-ratio: 1;
     border-radius: 50%;
-    border: .25rem solid var(--brand);
+    border: 3px solid var(--brand);
     transition: 400ms all;
-    margin-block-end: 2rem;
+    margin-block-end: 1rem;
 
     &::before {
         content: '';
@@ -202,6 +202,14 @@ aside {
     .mark {
         width: 2.5rem;
     }
+
+    .nav--primary {
+        margin-block: 0;
+    }
+
+    .primary__item {
+        font-size: 1.25rem;
+    }
 }
 
 .noscroll {
@@ -212,10 +220,6 @@ aside {
 
 
 @media screen and (max-width: 430px) {
-
-.nav--primary {
-    gap: .5rem;
-}
 
 .nav--secondary {
     display: none;

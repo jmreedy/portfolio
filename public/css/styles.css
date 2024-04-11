@@ -307,6 +307,14 @@ aside.active ~ .overlay {
   visibility: visible;
 }
 
+.display--mobile {
+  display: none;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
 @media screen and (max-width: 960px) {
   html {
     scroll-padding-block-start: 6rem;
@@ -325,6 +333,17 @@ aside.active ~ .overlay {
   }
   main {
     gap: 3rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .display--mobile {
+    display: block;
+  }
+  .section__heading h3 {
+    font-size: 1.125rem;
+  }
+  h5 {
+    font-size: 0.875rem;
   }
 }
 aside {
@@ -443,12 +462,12 @@ h1 small {
 
 .theme-toggle {
   position: relative;
-  width: 2rem;
+  width: 1.5rem;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 0.25rem solid var(--brand);
+  border: 3px solid var(--brand);
   transition: 400ms all;
-  margin-block-end: 2rem;
+  margin-block-end: 1rem;
 }
 .theme-toggle::before {
   content: "";
@@ -477,14 +496,17 @@ h1 small {
   aside .mark {
     width: 2.5rem;
   }
+  aside .nav--primary {
+    margin-block: 0;
+  }
+  aside .primary__item {
+    font-size: 1.25rem;
+  }
   .noscroll {
     overflow: hidden;
   }
 }
 @media screen and (max-width: 430px) {
-  .nav--primary {
-    gap: 0.5rem;
-  }
   .nav--secondary {
     display: none;
   }
@@ -702,7 +724,7 @@ figure figcaption {
   }
   .proficiency__item {
     width: calc(100vw - 3rem);
-    max-width: 398px;
+    max-width: 358px;
     scroll-snap-align: start;
   }
 }
@@ -920,6 +942,7 @@ blockquote {
   display: grid;
   grid-area: 1/-1/1/-1;
   gap: 2rem;
+  align-self: center;
   max-width: 50rem;
   margin-inline: auto;
   width: 100%;
@@ -942,7 +965,6 @@ blockquote p {
   position: relative;
   font: 700 1.25rem/1.5 var(--font-title);
   color: var(--text-body-primary);
-  align-self: center;
 }
 blockquote footer {
   display: flex;
@@ -1238,6 +1260,12 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
     display: none;
   }
 } /* End 'prefers-color-scheme: dark' Media Query */
+@media screen and (max-width: 430px) {
+  .award__item h6 {
+    display: grid;
+    line-height: 1.375;
+  }
+}
 .qa {
   --qa-border: var(--divider);
   --qa-border-active: var(--brand);

@@ -109,6 +109,14 @@ section {
     }
 }
 
+.display--mobile {
+    display: none;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
 @media screen and (max-width: 960px) {
 
     html {
@@ -137,4 +145,24 @@ section {
         gap: 3rem;
     }
     
+}
+
+
+
+@media screen and (max-width: 430px) {
+
+.display--mobile {
+    display: block;
+}
+
+.section__heading {
+    h3 {
+        font-size: 1.125rem;
+    }
+}
+
+h5 {
+    font-size: .875rem;
+}
+
 }
