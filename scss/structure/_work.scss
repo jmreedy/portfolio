@@ -1,13 +1,16 @@
 .list--projects {
-    max-width: 50rem;
     display: grid;
-    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: .5rem;
     width: 100%;
 
     .project__item {
         display: grid;
         place-items: center;
+
+        aspect-ratio: 16 / 9;
+        background: var(--quote-bg);
+        border-radius: .5rem;
 
         img {
             object-fit: fill;
@@ -16,15 +19,5 @@
 
     @media screen and (max-width: 800px) {
         grid-template-columns: 1fr;
-    }
-}
-
-
-@media screen and (max-width: 430px) {
-    .award__item {
-        h6 {
-            display: grid;
-            line-height: 1.375;
-        }
     }
 }

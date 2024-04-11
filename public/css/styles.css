@@ -558,15 +558,17 @@ figure figcaption {
   }
 }
 .list--projects {
-  max-width: 50rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 0.5rem;
   width: 100%;
 }
 .list--projects .project__item {
   display: grid;
   place-items: center;
+  aspect-ratio: 16/9;
+  background: var(--quote-bg);
+  border-radius: 0.5rem;
 }
 .list--projects .project__item img {
   object-fit: fill;
@@ -577,12 +579,6 @@ figure figcaption {
   }
 }
 
-@media screen and (max-width: 430px) {
-  .award__item h6 {
-    display: grid;
-    line-height: 1.375;
-  }
-}
 .masthead {
   position: fixed;
   width: 319px;
