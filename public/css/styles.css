@@ -675,7 +675,7 @@ figure figcaption {
   gap: 1rem;
   border: 1px solid var(--divider);
   border-radius: 0.25rem;
-  box-shadow: 0 8px 12px -8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.1);
 }
 .proficiency__item i {
   margin-block-end: 1rem;
@@ -936,6 +936,7 @@ textarea {
   font-weight: 300;
   font-size: 1rem;
   align-self: center;
+  color: var(--text-body-secondary);
 }
 .contact__email a {
   color: var(--text-body-primary);
@@ -1218,6 +1219,9 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
 .pro-bono img {
   width: 320px;
 }
+.pro-bono img:last-of-type {
+  display: none;
+}
 
 .list--awards {
   display: grid;
@@ -1265,6 +1269,23 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
   color: var(--text-body-secondary);
 }
 
+/* default color component properties for dark theme */
+@media (prefers-color-scheme: dark) {
+  /* Swap out the OWC logo PNG because the SVG version was huge */
+  .pro-bono img:first-of-type {
+    display: none;
+  }
+  .pro-bono img:last-of-type {
+    display: block;
+  }
+  /* component properties if dark theme is default and user toggles to light theme */
+  .toggle-theme .pro-bono img:first-of-type {
+    display: block;
+  }
+  .toggle-theme .pro-bono img:last-of-type {
+    display: none;
+  }
+} /* End 'prefers-color-scheme: dark' Media Query */
 .qa {
   --qa-border: var(--divider);
   --qa-border-active: var(--brand);

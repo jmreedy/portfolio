@@ -12,6 +12,10 @@
 
     img {
         width: 320px;
+
+        &:last-of-type {
+            display: none;
+        }
     }
 }
 
@@ -66,3 +70,36 @@
         color: var(--text-body-secondary);
     }
 }
+
+/* default color component properties for dark theme */
+@media (prefers-color-scheme: dark) {    
+    
+    /* Swap out the OWC logo PNG because the SVG version was huge */
+    .pro-bono img {
+    
+        &:first-of-type {
+            display: none;
+        }
+    
+        &:last-of-type {
+            display: block;
+        }
+    }
+    
+    
+    /* component properties if dark theme is default and user toggles to light theme */
+    .toggle-theme {
+        
+        .pro-bono img {
+        
+            &:first-of-type {
+                display: block;
+            }
+        
+            &:last-of-type {
+                display: none;
+            }
+        }
+    }
+    
+    } /* End 'prefers-color-scheme: dark' Media Query */
