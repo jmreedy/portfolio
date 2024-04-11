@@ -10,6 +10,7 @@
 
 
 blockquote {
+    position: relative;
     display: grid;
     grid-area: 1 / -1 / 1 / -1;
     gap: 2rem;
@@ -21,22 +22,22 @@ blockquote {
     transition: 500ms all;
     translate: 0 -1rem;
     
+    &::before {
+        content: '\f10e';
+        position: absolute;
+        inset: auto auto calc(100% + 1rem) 0;
+        display: block;
+        width: 2.5rem;
+        aspect-ratio: 1;
+        font: 700 3rem/1 "Font Awesome 6 Sharp";
+        color: var(--brand);
+    }
 
     p {
         position: relative;
         font: 700 1.25rem/1.5 var(--font-title);
         color: var(--text-body-primary);
-
-        &::before {
-            content: '\f10e';
-            position: absolute;
-            inset: auto auto calc(100% + 1rem) 0;
-            display: block;
-            width: 2.5rem;
-            aspect-ratio: 1;
-            font: 700 3rem/1 "Font Awesome 6 Sharp";
-            color: var(--brand);
-        }
+        align-self: center;
     }
 
 
