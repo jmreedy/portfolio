@@ -4,14 +4,14 @@
     flex-wrap: wrap;
     justify-content: end;
     align-items: center;
-    gap: .5rem;
+    gap: .75rem;
     flex: 1 0;
     margin-block-start: 1rem;
 }
 
 .social__heading {
     position: absolute;
-    inset: auto 0 calc(100% + .75rem) auto;
+    inset: auto 0 calc(100% + .5rem) auto;
     font-size: .875rem;
     text-align: right;
     color: var(--text-body-secondary);
@@ -44,10 +44,6 @@
     }
 
     i {
-        display: grid;
-        place-items: center;
-        width: 2rem;
-        aspect-ratio: 1;
         font-size: 2rem;
 
         &:hover {
@@ -137,8 +133,9 @@
 }
 
 .social__item {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     aspect-ratio: 1;
     border: 1px solid var(--divider);
     border-radius: .125rem;

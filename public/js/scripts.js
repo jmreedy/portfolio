@@ -17,9 +17,9 @@
         $('html').toggleClass('toggle-theme');
     });
 
-    $('[data-hook="rewind"]').click(function(){
-        $('.about h2').text('Woah, Déjà Vu...');
-    });
+    // $('[data-hook="rewind"]').click(function(){
+    //     $('.about h2').text('Woah, Déjà Vu...');
+    // });
 
   
   })(jQuery);

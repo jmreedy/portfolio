@@ -91,27 +91,24 @@ fieldset {
     gap: .5rem;
     border: none;
     padding: 0;
+}
 
-    input {
-        appearance: none;
-        cursor: pointer;
-        width: .875rem;
-        aspect-ratio: 1;
-        height: auto;
-        border-radius: 1rem;
-        border: 1px solid var(--text-body-secondary);
-        margin: 0;
-        box-shadow: none;
-        background: transparent;
-        
-        &:checked {
-            background: var(--text-body-primary);
-        }
+input[type="radio"] {
+    appearance: none;
+    cursor: pointer;
+    width: .875rem;
+    aspect-ratio: 1;
+    height: auto;
+    border-radius: 1rem;
+    border: 1px solid var(--text-body-secondary);
+    margin: 0;
+    box-shadow: none;
+    background: transparent;
 
-        &:hover {
-            border-color: var(--text-body-primary);
-            background: var(--text-body-primary);
-        }
+    &:checked,
+    &:hover {
+        border-color: var(--text-body-primary);
+        background: var(--text-body-primary);
     }
 }
 

@@ -8,9 +8,6 @@
 .proficiency__item {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: start;
-    align-items: center;
-    text-align: center;
     padding: 4.5rem 2rem;
     gap: 1rem;
     border: 1px solid var(--divider);
@@ -22,6 +19,7 @@
         color: var(--brand);
         height: 4rem;
         aspect-ratio: 1;
+        justify-self: center;
     }
 
     h4 {

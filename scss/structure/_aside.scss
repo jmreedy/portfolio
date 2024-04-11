@@ -128,36 +128,36 @@ h1 {
         margin-block-start: 1rem;
 
         i {
-            color: var(--text-body-secondary);
+            color: var(--divider);
             padding-inline: .75em;
         }
     }
 
-    .fa-robot {
-        position: relative;
-        display: inline-grid;
-        place-items: center;
-        width: 3rem;
-        aspect-ratio: 1;
-        border-radius: 3rem;
-        border: .25rem solid tomato;
-        margin-block-end: 1rem;
+    // .fa-robot {
+    //     position: relative;
+    //     display: inline-grid;
+    //     place-items: center;
+    //     width: 3rem;
+    //     aspect-ratio: 1;
+    //     border-radius: 3rem;
+    //     border: .25rem solid tomato;
+    //     margin-block-end: 1rem;
 
-        &::before {
-            position: relative;
-            top: -.125rem;
-            color: var(--text-body-primary);
-            // color: pink;
-        }
+    //     &::before {
+    //         position: relative;
+    //         top: -.125rem;
+    //         color: var(--text-body-primary);
+    //         // color: pink;
+    //     }
 
-        &::after {
-            content: '';
-            position: absolute;
-            inset: 0 auto;
-            rotate: 45deg;
-            border-right: .375rem solid tomato;
-        }
-    }
+    //     &::after {
+    //         content: '';
+    //         position: absolute;
+    //         inset: 0 auto;
+    //         rotate: 45deg;
+    //         border-right: .375rem solid tomato;
+    //     }
+    // }
 }
 
 .theme-toggle  {
