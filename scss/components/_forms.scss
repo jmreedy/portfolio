@@ -90,22 +90,6 @@ textarea {
 }
 
 
-.contact__social {
-    position: relative;
-    top: -.75rem;
-    text-align: right;
-    margin-inline-start: auto;
-
-    span {
-        inset: auto 0 100% auto;
-        font-size: .75rem;
-        text-align: right;
-        text-wrap: pretty;
-        color: var(--text-body-secondary);
-    }
-}
-
-
 .contact__email {
     font-weight: 300;
     font-size: 1rem;

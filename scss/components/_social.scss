@@ -121,6 +121,7 @@
         font: 700 1.25rem/1.375 var(--font-title);
         color: var(--text-body-primary);
         display: block;
+        text-transform: capitalize;
     }
 
     p {

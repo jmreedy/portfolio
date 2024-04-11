@@ -93,7 +93,7 @@ section:target {
 @media (prefers-color-scheme: dark) {
   :root {
     --page-bg: var(--color-greyscale-900);
-    --quote-bg: rgb(0 0 0 / 10%);
+    --quote-bg: rgb(0 0 0 / 15%);
     --masthead-bg: rgb(36 39 43 / 75%);
     --text-body-primary: var(--color-greyscale-100);
     --text-body-secondary: var(--color-greyscale-500);
@@ -890,20 +890,6 @@ textarea {
   gap: 2rem;
 }
 
-.contact__social {
-  position: relative;
-  top: -0.75rem;
-  text-align: right;
-  margin-inline-start: auto;
-}
-.contact__social span {
-  inset: auto 0 100% auto;
-  font-size: 0.75rem;
-  text-align: right;
-  text-wrap: pretty;
-  color: var(--text-body-secondary);
-}
-
 .contact__email {
   font-weight: 300;
   font-size: 1rem;
@@ -1160,6 +1146,7 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
     font: 700 1.25rem/1.375 var(--font-title);
     color: var(--text-body-primary);
     display: block;
+    text-transform: capitalize;
   }
   .social__heading p {
     font: 300 1rem/1.5 var(--font-body);
