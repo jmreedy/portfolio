@@ -1082,9 +1082,6 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
   display: inline;
   font: 400 0.875rem/1 var(--font-body);
 }
-.social__heading h3 {
-  padding-inline-end: 0.3em;
-}
 
 .social__item {
   position: relative;
