@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Box sizing rules */
 @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 *,
@@ -101,13 +100,6 @@ section:target {
     --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
     --input-border: var(--color-greyscale-700);
   }
-  /* Swap out the OWC logo PNG because the SVG version was huge */
-  .pro-bono img:first-of-type {
-    display: none;
-  }
-  .pro-bono img:last-of-type {
-    display: block;
-  }
   /* component properties if dark theme is default and user toggles to light theme */
   .toggle-theme {
     --page-bg: var(--white);
@@ -117,12 +109,6 @@ section:target {
     --text-body-secondary: var(--color-greyscale-600);
     --input-border: var(--color-greyscale-200);
     --divider: var(--color-greyscale-200);
-  }
-  .toggle-theme .pro-bono img:first-of-type {
-    display: block;
-  }
-  .toggle-theme .pro-bono img:last-of-type {
-    display: none;
   }
 } /* End 'prefers-color-scheme: dark' Media Query */
 /* component properties for dark theme when a user switches from the light theme */
@@ -735,35 +721,21 @@ figure figcaption {
 }
 
 .list--tldr {
-  position: relative;
-  left: -1.25rem; /* This needs to be the same size as the width of the li::before */
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 0;
+  gap: 0.5rem;
   list-style: none;
-}
-.list--tldr::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  z-index: 1;
-  width: 1rem;
-  background: var(--page-bg);
 }
 
 .tldr__item {
-  font: 300 1rem/1.375 var(--font-body);
-  color: var(--text-body-secondary);
-}
-.tldr__item::before {
-  content: "•";
-  position: relative;
-  top: -1px;
-  display: inline-block;
-  width: 1.25rem;
-  text-align: center;
-  font-size: 75%;
-  color: var(--brand);
+  display: flex;
+  align-items: center;
+  font: 300 0.875rem/1 var(--font-body);
+  color: var(--text-body-primary);
+  background: var(--quote-bg);
+  padding-inline: 1rem;
+  border-radius: 1rem;
+  height: 1.5rem;
 }
 
 .collaborations .section__body {
