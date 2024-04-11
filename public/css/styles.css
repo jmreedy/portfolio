@@ -1200,6 +1200,9 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
 .list--awards {
   display: grid;
   gap: 2rem;
+  flex: 1 0;
+  min-width: 20rem;
+  max-width: 28rem;
 }
 
 .award__item {
@@ -1212,7 +1215,7 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
   display: grid;
   gap: 0.5rem;
   padding-block: 1.5rem 1rem;
-  padding-inline: 3rem;
+  padding-inline: 2rem;
   text-align: center;
   text-decoration: none;
 }
