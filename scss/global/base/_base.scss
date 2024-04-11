@@ -2,6 +2,7 @@ main {
     display: grid;
     margin-inline-start: 20rem;
     padding-block-start: 4rem;
+    padding-inline: 1.5rem;
     gap: 8rem;
 }
 
@@ -24,7 +25,8 @@ section {
     }
 
     h3 {
-        font: 700 1.125rem/1.25 var(--font-title);
+        font: 700 1.25rem/1.375 var(--font-title);
+        margin-block-end: .5rem;
     }
     
     p {
@@ -38,16 +40,17 @@ section {
     }
 }
 
+
 .section--primary {
     max-width: 70rem;
     margin-inline: auto;
-    padding-inline: 1.5rem;
+    // padding-inline: 1.5rem;
 }
 
 
 .section--secondary {
     margin-block-start: 3.5rem;
-    max-width: 50rem;
+    max-width: 70rem;
 }
 
 .section__body {
@@ -120,17 +123,6 @@ section {
 
 @media screen and (max-width: 640px) {
 
-    .section--primary {
-        padding-inline: 1.5rem;
-    }
-
-    .section--secondary {
-        
-        h3 {
-            font-size: 1rem;
-        }
-    }
-
     .section__heading {
         h2 {
             font-size: 2rem;
@@ -144,18 +136,5 @@ section {
     main {
         gap: 3rem;
     }
-    
-}
-
-
-@media screen and (max-width: 430px) {
-
-body {
-    padding: 0;
-}
-
-main {
-    padding-block-start: 0;
-}
     
 }

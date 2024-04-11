@@ -1,0 +1,84 @@
+.collaborations {
+
+    .section__body {
+        gap: 2rem;
+    }
+}
+
+.checklist {
+    li {
+        position: relative;
+        display: flex;
+        margin-block-end: .5rem;
+
+        &::before {
+            content: '';
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 1px solid var(--input-border);
+            border-radius: 2px;
+            margin-inline-end: .5rem;
+            font-family: var(--font-icon);
+            color: limegreen;
+            font-size: 80%;
+            text-align: center;
+        }
+
+        &.your-company::after {
+            content: '(ironic, I know)';
+            padding-inline-start: .5em;
+            align-self: start;
+            font-size: .875em;
+            color: var(--text-body-secondary);
+        }
+    }
+
+    a {
+        position: relative;
+        top: -.2em;
+        color: var(--text-body-primary);
+        text-underline-offset: .25em;
+        text-decoration-color: var(--input-border);
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:focus-visible {
+            color: var(--brand);
+            text-decoration-color: var(--brand);
+            outline: none;
+        }
+    }
+
+    sup {
+        font-style: italic;
+        color: var(--text-body-secondary);
+        font-size: 60%;
+        padding-inline-start: .25em;
+    }
+}
+
+.checklist__citation {
+    display: grid;
+    gap: .25em;
+    font-size: .75rem;
+    margin-block-start: 1.5rem;
+    color: var(--text-body-secondary);
+}
+
+.columns--2 {
+    columns: 2 240px;
+}
+
+.completed li::before {
+    content: '\f00c';
+}
+
+@media screen and (max-width: 640px) {
+    
+.columns--2 {
+    columns: 1;
+}
+
+}

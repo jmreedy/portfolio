@@ -48,14 +48,6 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/backup.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/backup.html",
-      "oF" : 0
-    },
     "\/favicon-16x16.png" : {
       "ft" : 32768,
       "iS" : 732,
@@ -194,50 +186,6 @@
       "oAP" : "\/partials\/_work.html",
       "oF" : 0
     },
-    "\/public\/css\/main-min.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/public\/css\/main-min-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/public\/css\/main.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/public\/css\/main-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/public\/css\/main.css.map" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/public\/css\/main.css.map",
-      "oF" : 0
-    },
-    "\/public\/css\/styles-min.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/public\/css\/styles-min-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/public\/css\/styles.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -369,6 +317,21 @@
       "rFN" : 0,
       "uCM" : 0
     },
+    "\/scss\/components\/_checklist.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/components\/_checklist.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_forms.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -414,6 +377,51 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/components\/_pro-bono.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/components\/_pro-bono.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/components\/_proficiencies.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/components\/_proficiencies.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/components\/_qa.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/components\/_qa.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_quote.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -444,7 +452,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/components\/_tiles.scss" : {
+    "\/scss\/global\/base\/_base.scss" : {
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
@@ -453,22 +461,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/scss\/components\/_tiles.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/global\/base\/_dark.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/scss\/global\/base\/_dark.css",
+      "oAP" : "\/scss\/global\/base\/_base.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -519,6 +512,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/global\/config\/_properties.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/global\/config\/_properties.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/global\/config\/_typography.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -564,7 +572,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/structure\/_main.scss" : {
+    "\/scss\/structure\/_work.scss" : {
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
@@ -573,7 +581,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/scss\/structure\/_main.css",
+      "oAP" : "\/scss\/structure\/_work.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

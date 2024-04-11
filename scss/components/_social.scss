@@ -13,14 +13,11 @@
     position: absolute;
     inset: auto 0 calc(100% + .75rem) auto;
     font-size: .875rem;
-    white-space: nowrap;
-    gap: .3em;
-    margin: 0;
     text-align: right;
     color: var(--text-body-secondary);
 
     h3,
-    small {
+    p {
         display: inline;
         font: 400 .875rem/1 var(--font-body);
     }
@@ -129,7 +126,7 @@
     text-align: left;
 
     h3 {
-        font: 700 1rem/1.25 var(--font-title);
+        font: 700 1.25rem/1.375 var(--font-title);
         color: var(--text-body-primary);
         display: block;
     }
@@ -145,12 +142,6 @@
     aspect-ratio: 1;
     border: 1px solid var(--divider);
     border-radius: .125rem;
-
-    i {
-        display: block;
-        text-align: center;
-        width: auto;
-    }
 
     small {
         display: none;

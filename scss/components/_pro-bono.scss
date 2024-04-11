@@ -1,0 +1,68 @@
+.pro-bono {
+    .section__body {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    figure {
+        margin-block: auto;
+    }
+
+    img {
+        width: 320px;
+    }
+}
+
+.list--awards {
+    display: grid;
+    gap: 2rem;
+}
+
+.award__item {
+
+    --award-bg: var(--brand);
+
+    position: relative;
+    width: 100%;
+    min-height: 75px;
+    border: 1px solid var(--divider);
+    border-radius: 4px;
+    display: grid;
+    gap: .5rem;
+    padding-block: 1.5rem 1rem;
+    padding-inline: 3rem;
+    text-align: center;
+    text-decoration: none;
+
+    > span {
+        position: absolute;
+        inset: auto 2rem calc(100% - .75rem);
+        box-shadow: 0 0 0 .5rem var(--page-bg);
+        background: var(--award-bg);
+        color: var(--white);
+        letter-spacing: .1em;
+        display: grid;
+        place-items: center;
+        border-radius: .25rem;
+        text-transform: uppercase;
+        height: 1.5rem;
+        font-size: .75rem;
+    }
+
+    h6 {
+        margin: 0;
+        font: 700 1rem/1.25 var(--font-title);
+        color: var(--text-body-primary);
+
+        span {
+            white-space: nowrap;
+        }
+    }
+    
+    small {
+        font: 400 .875rem/1.25 var(--font-body);
+        color: var(--text-body-secondary);
+    }
+}

@@ -1,18 +1,23 @@
 @import 'global/base/reset';
 @import 'global/config/colors';
 @import 'global/config/typography';
+@import 'global/config/properties';
+
 @import 'global/base/default';
+@import 'global/base/base';
 
 @import 'structure/aside';
-@import 'structure/main';
 @import 'structure/about';
+@import 'structure/work';
 
 @import 'components/masthead';
-@import 'components/tiles';
+@import 'components/proficiencies';
 @import 'components/lists';
+@import 'components/checklist';
 @import 'components/forms';
 @import 'components/quote';
 @import 'components/social';
+@import 'components/pro-bono';
+@import 'components/qa';
 
 @import 'temp/shame';
-@import 'global/base/dark';

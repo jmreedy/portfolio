@@ -15,84 +15,19 @@ figure {
     }
 }
 
-.qa {
-
-    --qa-border: var(--divider);
-    --qa-border-active: var(--brand);
-
-    display: grid;
-    gap: .25rem;
-    width: 100%;
-}
-
-
-.qa__item {
-    display: grid;
-    grid-template-rows: auto 0fr;
-    width: 100%;
-    border-radius: 4px;
-    border: 1px solid var(--qa-border);
-    padding: .5rem 1rem;
-    transition: 250ms grid-template-rows,
-                250ms border-color;
-
-    &:hover {
-        border-color: var(--brand);
-    }
-
-    &.expanded {
-        grid-template-rows: auto 1fr;
-        border-color: var(--qa-border-active);
-
-        dt::after {
-            rotate: -45deg;
-        }
-    }
-
-    dt {
-        position: relative;
-        font: 600 1rem/1.5 var(--font-title);
-        padding-inline-end: 2rem;
-
-        &::after {
-            content: '\2b';
-            position: absolute;
-            inset: .3125em 0 auto auto;
-            display: grid;
-            place-items: center;
-            color: var(--brand);
-            font: 300 1rem/1 var(--font-icon);
-            transition: 200ms rotate linear;
-        }
-    
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    dd {
-        overflow: hidden;
-    }
-
-    p {
-        padding-block: .5rem;
-        color: var(--text-body-secondary);
-        font: 400 .875rem/1.6 var(--font-body);
-        text-wrap: pretty;
-    }
-}
-
 @media screen and (max-width: 430px) {
-    
+
+main {
+    padding-block-start: 0;
+}
+
 .about {
-    padding: 0;
     
-    > header {
+    > .section__heading {
         position: relative;
         z-index: 2;
-        margin: -20svh auto 0 0;
+        margin: -20svh auto 0 -1.5rem;
         background: var(--page-bg);
-        width: calc(100% - 1rem);
         padding-block: 3rem 0;
         padding-inline: 1.5rem;
         box-shadow: 0 -12px 8px -8px rgb(0 0 0 / 25%);
@@ -103,6 +38,7 @@ figure {
         position: relative;
         order: -1;
         isolation: isolate;
+        margin-inline: -1.5rem;
 
         &::before,
         &::after {
@@ -134,22 +70,11 @@ figure {
             position: absolute;
             inset: auto 0 calc(20svh + 1rem);
             width: 100%;
-            padding-inline: 1.5rem 3rem;
+            padding-inline: 1.5rem;
             text-wrap: pretty;
             z-index: 2;
             color: var(--white);
             text-wrap: pretty;
-        }
-    }
-
-    section {
-        padding-inline: 1.5rem;
-    }
-
-    .section--secondary {
-        p {
-            font-size: 1rem;
-            padding-inline-end: 1.5rem;
         }
     }
 }

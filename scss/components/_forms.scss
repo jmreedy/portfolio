@@ -1,16 +1,3 @@
-.contact {
-
-    .section--secondary {
-        margin-block-start: 0;
-        justify-items: start;
-        gap: 1rem;
-
-        header {
-            margin: 0;
-        }
-    }
-}
-
 .contact__form {
     display: flex;
     flex-flow: row wrap;
@@ -21,6 +8,7 @@
         flex-basis: 100%;
     }
 }
+
 
 .form__item {
     position: relative;
@@ -58,7 +46,6 @@ textarea {
     box-shadow: inset 0 0 0 50vw var(--page-bg); // This is here to prevent auto-complete from changing the color of the input background
     -webkit-text-fill-color: var(--text-body-primary);
     caret-color: var(--text-body-primary);
-    transition: 200ms all;
 
     &:focus {
         border-color: var(--brand);
@@ -67,15 +54,17 @@ textarea {
     }
 }
 
+
 textarea {
     padding-block: 1.25rem;
     resize: vertical;
 }
 
+
 .contact__button {
     height: 3rem;
     padding-inline: 3rem;
-    border-radius: .5rem;
+    border-radius: .25rem;
     border: none;
     background: var(--brand);
     color: var(--white);
@@ -93,11 +82,13 @@ textarea {
     }
 }
 
+
 .contact__footer {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
 }
+
 
 .contact__social {
     position: relative;
@@ -113,6 +104,7 @@ textarea {
         color: var(--text-body-secondary);
     }
 }
+
 
 .contact__email {
     font-weight: 300;

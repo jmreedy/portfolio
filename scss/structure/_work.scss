@@ -1,0 +1,30 @@
+.list--projects {
+    max-width: 50rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: .5rem;
+    width: 100%;
+
+    .project__item {
+        display: grid;
+        place-items: center;
+
+        img {
+            object-fit: fill;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+    .award__item {
+        h6 {
+            display: grid;
+            line-height: 1.375;
+        }
+    }
+}
