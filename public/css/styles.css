@@ -533,13 +533,14 @@ figure figcaption {
   .about > .section__heading {
     position: relative;
     z-index: 2;
+    width: calc(100vw - 1.5rem);
     margin: -20svh auto 0 -1.5rem;
-    background: var(--page-bg);
     padding-block: 3rem 0;
     padding-inline: 1.5rem;
-    box-shadow: 0 -12px 8px -8px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    background: var(--page-bg);
     border-top: 0.25rem solid var(--brand);
-    width: calc(100vw - 1.5rem);
+    box-shadow: 0 -12px 8px -8px rgba(0, 0, 0, 0.25);
   }
   .about figure {
     position: relative;
@@ -599,6 +600,21 @@ figure figcaption {
   .list--projects {
     grid-template-columns: 1fr;
   }
+}
+
+.page--projects {
+  display: grid;
+  justify-items: center;
+  padding-block-start: 6rem;
+  padding-inline: 1.5rem;
+}
+
+.project {
+  max-width: 70rem;
+}
+.project header {
+  max-width: 50rem;
+  margin-inline: auto;
 }
 
 .masthead {

@@ -26,13 +26,14 @@ main {
     > .section__heading {
         position: relative;
         z-index: 2;
+        width: calc(100vw - 1.5rem);
         margin: -20svh auto 0 -1.5rem;
-        background: var(--page-bg);
         padding-block: 3rem 0;
         padding-inline: 1.5rem;
-        box-shadow: 0 -12px 8px -8px rgb(0 0 0 / 25%);
+        backdrop-filter: blur(8px);
+        background: var(--page-bg);
         border-top: .25rem solid var(--brand);
-        width: calc(100vw - 1.5rem);
+        box-shadow: 0 -12px 8px -8px rgb(0 0 0 / 25%);
     }
 
     figure {

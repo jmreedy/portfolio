@@ -1,0 +1,15 @@
+.page--projects {
+    display: grid;
+    justify-items: center;
+    padding-block-start: 6rem;
+    padding-inline: 1.5rem;
+}
+
+.project {
+    max-width: 70rem;
+
+    header {
+        max-width: 50rem;
+        margin-inline: auto;
+    }
+}
