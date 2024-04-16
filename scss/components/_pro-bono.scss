@@ -19,6 +19,15 @@
     }
 }
 
+.owc-logo {
+    transition: 200ms all;
+
+    &:hover {
+        rotate: 1deg;
+        opacity: .8;
+    }
+}
+
 .list--awards {
     display: grid;
     gap: 2rem;

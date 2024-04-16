@@ -108,8 +108,20 @@ textarea {
 
 @media screen and (max-width: 640px) {
 
-.contact__button {
-    flex: 1 0 100%;
+.contact {
+    .contact__button {
+        flex: 1 0 100%;
+    }
+}
+
+.section__heading {
+    margin-block-end: 1.5em;
+}
+
+.contact__email {
+    order: -1;
+    margin-block-end: 2rem;
+
 }
 
 }

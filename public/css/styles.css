@@ -81,7 +81,7 @@ section:target {
   --white: #FFFFFF;
   --brand: #219EBC;
   --page-bg: var(--white);
-  --masthead-bg: rgb(255 255 255 / 80%);
+  --masthead-bg: rgb(255 255 255 / 75%);
   --quote-bg: rgb( 0 0 0 / 5%);
   --text-body-primary: var(--color-greyscale-900);
   --text-body-secondary: var(--color-greyscale-600);
@@ -94,7 +94,7 @@ section:target {
   :root {
     --page-bg: var(--color-greyscale-900);
     --quote-bg: rgb(0 0 0 / 15%);
-    --masthead-bg: rgb(36 39 43 / 75%);
+    --masthead-bg: rgb(36 39 43 / 90%);
     --text-body-primary: var(--color-greyscale-100);
     --text-body-secondary: var(--color-greyscale-500);
     --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
@@ -116,7 +116,7 @@ section:target {
   .toggle-theme {
     --page-bg: var(--color-greyscale-900);
     --quote-bg: rgb(0 0 0 / 10%);
-    --masthead-bg: rgb(36 39 43 / 80%);
+    --masthead-bg: rgb(36 39 43 / 90%);
     --text-body-primary: var(--color-greyscale-100);
     --text-body-secondary: var(--color-greyscale-500);
     --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
@@ -248,7 +248,7 @@ section {
 }
 
 .section--secondary {
-  margin-block-start: 3.5rem;
+  margin-block-start: 4rem;
   max-width: 70rem;
 }
 
@@ -338,6 +338,9 @@ aside.active ~ .overlay {
 @media screen and (max-width: 430px) {
   .display--mobile {
     display: block;
+  }
+  .section--secondary {
+    margin-block-start: 2rem;
   }
   .section__heading h3 {
     font-size: 1.125rem;
@@ -539,8 +542,8 @@ figure figcaption {
     padding-inline: 1.5rem;
     backdrop-filter: blur(8px);
     background: var(--page-bg);
-    border-top: 0.25rem solid var(--brand);
-    box-shadow: 0 -12px 8px -8px rgba(0, 0, 0, 0.25);
+    border-radius: 0 1rem 0 0;
+    box-shadow: 6px -8px 8px -8px rgba(0, 0, 0, 0.15);
   }
   .about figure {
     position: relative;
@@ -565,7 +568,7 @@ figure figcaption {
   }
   .about figure img {
     border-radius: 0;
-    height: 100svh;
+    height: 90svh;
     max-height: 800px;
     object-fit: cover;
   }
@@ -589,7 +592,7 @@ figure figcaption {
 .list--projects .project__item {
   display: grid;
   place-items: center;
-  aspect-ratio: 16/9;
+  aspect-ratio: 9/16;
   background: var(--quote-bg);
   border-radius: 0.5rem;
 }
@@ -660,8 +663,7 @@ figure figcaption {
   .masthead {
     inset: 0 0 auto;
     width: auto;
-    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid color-mix(in lch, var(--masthead-bg), black 5%);
+    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -714,23 +716,20 @@ figure figcaption {
 
 @media screen and (max-width: 640px) {
   .proficiencies {
+    position: relative;
     width: calc(100% + 3rem);
     margin-inline-start: -1.5rem;
-    overflow-x: auto;
+    overflow-x: scroll;
     scroll-snap-type: inline mandatory;
     scroll-padding-inline-start: 1.5rem;
   }
   .proficiencies::-webkit-scrollbar {
-    width: 100%;
+    display: none;
   }
-  .proficiencies::-webkit-scrollbar-track {
-    background: var(--divider);
-    border-top: 0.75rem solid var(--page-bg);
-    margin-inline: 1.5rem;
-  }
-  .proficiencies::-webkit-scrollbar-thumb {
-    background: var(--brand);
-    border-top: 0.75rem solid var(--page-bg);
+  .arrow {
+    position: absolute;
+    animation: arrow linear;
+    animation-timeline: scroll();
   }
   .list--proficiencies {
     display: flex;
@@ -742,6 +741,14 @@ figure figcaption {
     width: calc(100vw - 3rem);
     max-width: 358px;
     scroll-snap-align: start;
+  }
+}
+@keyframes arrow {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
   }
 }
 .tldr {
@@ -939,8 +946,15 @@ textarea {
 }
 
 @media screen and (max-width: 640px) {
-  .contact__button {
+  .contact .contact__button {
     flex: 1 0 100%;
+  }
+  .section__heading {
+    margin-block-end: 1.5em;
+  }
+  .contact__email {
+    order: -1;
+    margin-block-end: 2rem;
   }
 }
 .quote .section__body {
@@ -1213,6 +1227,14 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
   display: none;
 }
 
+.owc-logo {
+  transition: 200ms all;
+}
+.owc-logo:hover {
+  rotate: 1deg;
+  opacity: 0.8;
+}
+
 .list--awards {
   display: grid;
   gap: 2rem;
@@ -1338,6 +1360,17 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
   color: var(--text-body-secondary);
   font: 400 0.875rem/1.6 var(--font-body);
   text-wrap: pretty;
+}
+
+.bfs {
+  position: fixed;
+  inset: 0 auto 0 calc(5120px - 3rem);
+  width: 10px;
+  writing-mode: vertical-rl;
+  text-align: center;
+}
+.bfs::after {
+  content: "Holy huge monitor, Batman!";
 }
 
 /*# sourceMappingURL=styles.css.map */

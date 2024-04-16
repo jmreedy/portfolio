@@ -48,8 +48,8 @@
 .masthead {
     inset: 0 0 auto;
     width: auto;
-    box-shadow: 0 4px 8px -4px rgb(0 0 0 / 20%);
-    border-bottom: 1px solid color-mix(in lch, var(--masthead-bg), black 5%);
+    box-shadow: 0 8px 16px -4px rgb(0 0 0 / 10%);
+    // border-bottom: 1px solid color-mix(in lch, var(--masthead-bg), black 5%);
     display: flex;
     justify-content: space-between;
     align-items: center;

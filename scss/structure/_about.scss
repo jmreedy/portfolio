@@ -32,8 +32,8 @@ main {
         padding-inline: 1.5rem;
         backdrop-filter: blur(8px);
         background: var(--page-bg);
-        border-top: .25rem solid var(--brand);
-        box-shadow: 0 -12px 8px -8px rgb(0 0 0 / 25%);
+        border-radius: 0 1rem 0 0;
+        box-shadow: 6px -8px 8px -8px rgb(0 0 0 / 15%);
     }
 
     figure {
@@ -63,7 +63,7 @@ main {
 
         img {
             border-radius: 0;
-            height: 100svh;
+            height: 90svh;
             max-height: 800px;
             object-fit: cover;
         }

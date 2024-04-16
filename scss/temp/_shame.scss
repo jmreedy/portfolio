@@ -1,0 +1,11 @@
+.bfs {
+    position: fixed;
+    inset: 0 auto 0 calc(5120px - 3rem);
+    width: 10px;
+    writing-mode: vertical-rl;
+    text-align: center;
+
+    &::after {
+        content: 'Holy huge monitor, Batman!';
+    }
+}
