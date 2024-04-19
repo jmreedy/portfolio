@@ -26,8 +26,9 @@
 
         &.your-company::after {
             content: '(ironic, I know)';
+            position: relative;
+            top: -.125rem;
             padding-inline-start: .5em;
-            align-self: start;
             font-size: .875em;
             color: var(--text-body-secondary);
         }
