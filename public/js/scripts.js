@@ -17,9 +17,10 @@
         $('html').toggleClass('toggle-theme');
     });
 
-    $('[data-hook="close"]').click(function(){
+    $('[data-hook="overlay"]').click(function(){
         $('html').removeClass('noscroll');
         $('.is-open').removeClass('is-open');
+        $('aside').removeClass('active');
     });
 
     $('.work__item').click(function(){
@@ -30,8 +31,8 @@
         $('html').toggleClass('noscroll');
     });
 
-    $('.project__close').click(function(){
-        $(this).closest('.dialog--projects').removeClass('is-open');
+    $('[data-hook="modalClose"]').click(function(){
+        $(this).closest('.modal').removeClass('is-open');
         $('html').removeClass('noscroll');
     });
 

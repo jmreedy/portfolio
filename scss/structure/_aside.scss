@@ -130,6 +130,11 @@ h1 {
         i {
             color: var(--divider);
             padding-inline: .75em;
+
+            &:hover,
+            &:focus {
+                color: lightpink;
+            }
         }
     }
 
@@ -182,8 +187,22 @@ h1 {
     }
 }
 
+// Disallow scrolling when modal is open only on touch devices
+
+// @media screen and not (pointer: coarse) {
+
+// .noscroll {
+//     overflow: hidden;
+// }
+
+// }
+
 
 @media screen and (max-width: 960px) {
+
+html {
+    padding: 0;
+}
 
 aside {
     z-index: 10;
@@ -210,10 +229,6 @@ aside {
     .primary__item {
         font-size: 1.25rem;
     }
-}
-
-.noscroll {
-    overflow: hidden;
 }
 
 }

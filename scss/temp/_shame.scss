@@ -9,3 +9,42 @@
         content: 'Holy huge monitor, Batman!';
     }
 }
+
+#mirror {
+    padding-block: 2rem;
+    padding-inline: 1.5rem;
+    align-content: end;
+    background-color: black;
+    background-image: linear-gradient(135deg, rgb(255 255 255 / 0) 30%, rgb(255 255 255 / 5%) 50%, rgb(0 0 0 / 0) 50%);
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle, transparent 0%, black 90%);
+    }
+
+
+    .modal__header {
+        position: absolute;
+        inset: auto 0 2rem;
+        background: transparent;
+        backdrop-filter: none;
+        max-width: none;
+        padding: 0;
+    }
+
+    .modal__title {
+        max-width: none;
+        gap: 1rem;
+        border: none;
+        text-align: center;
+    }
+
+    .modal__close {
+        inset: 2rem 2rem auto auto;
+        color: pink;
+        opacity: .5;
+    }
+}
+

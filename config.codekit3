@@ -9,38 +9,6 @@
   ],
   "creatorBuild" : "34472",
   "files" : {
-    "\/_chalkboard.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/_chalkboard.html",
-      "oF" : 0
-    },
-    "\/_marketwatch.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/_marketwatch.html",
-      "oF" : 0
-    },
-    "\/_mosby.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/_mosby.html",
-      "oF" : 0
-    },
-    "\/_totalexpert.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/_totalexpert.html",
-      "oF" : 0
-    },
     "\/android-chrome-192x192.png" : {
       "ft" : 32768,
       "iS" : 15340,
@@ -130,14 +98,6 @@
       "oAP" : "\/index.html",
       "oF" : 0
     },
-    "\/mirror.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/mirror.html",
-      "oF" : 0
-    },
     "\/partials\/_about.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -216,6 +176,46 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/partials\/_work.html",
+      "oF" : 0
+    },
+    "\/partials\/modals\/_chalkboard.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/partials\/modals\/_chalkboard.html",
+      "oF" : 0
+    },
+    "\/partials\/modals\/_marketwatch.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/partials\/modals\/_marketwatch.html",
+      "oF" : 0
+    },
+    "\/partials\/modals\/_mirror.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/partials\/modals\/_mirror.html",
+      "oF" : 0
+    },
+    "\/partials\/modals\/_mosby.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/partials\/modals\/_mosby.html",
+      "oF" : 0
+    },
+    "\/partials\/modals\/_totalexpert.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/partials\/modals\/_totalexpert.html",
       "oF" : 0
     },
     "\/public\/css\/styles.css" : {
@@ -708,7 +708,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/structure\/_projects.scss" : {
+    "\/scss\/structure\/_modals.scss" : {
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
@@ -717,7 +717,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/scss\/structure\/_projects.css",
+      "oAP" : "\/scss\/structure\/_modals.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

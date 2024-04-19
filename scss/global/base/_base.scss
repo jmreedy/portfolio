@@ -24,7 +24,7 @@ section {
         color: var(--text-body-primary);
     }
 
-    h3 {
+h3 {
         font: 700 1.25rem/1.375 var(--font-title);
         margin-block-end: .5rem;
     }
@@ -101,6 +101,7 @@ section {
     opacity: 0;
     visibility: hidden;
     transition: 400ms all;
+    overflow: none;
 
     aside.active ~ &,
     section.is-open ~ & {

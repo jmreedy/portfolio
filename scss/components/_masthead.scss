@@ -13,6 +13,8 @@
     .btn--icon {
         color: var(--text-body-primary);
         display: none;
+        height: 100%;
+        aspect-ratio: 1;
     }
 
     a {
@@ -46,8 +48,8 @@
 @media screen and (max-width: 960px) {
 
 .masthead {
-    inset: 0 0 auto;
-    width: auto;
+    // inset: 0 auto auto 0;
+    width: 100%;
     box-shadow: 0 8px 16px -4px rgb(0 0 0 / 10%);
     // border-bottom: 1px solid color-mix(in lch, var(--masthead-bg), black 5%);
     display: flex;
@@ -55,7 +57,7 @@
     align-items: center;
     height: 5rem;
     padding-block: 0;
-    padding-inline: 1.5rem 1rem;
+    padding-inline: 1.5rem 0;
 
     .btn--icon {
         display: block;

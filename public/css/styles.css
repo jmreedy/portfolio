@@ -83,6 +83,7 @@ section:target {
   --page-bg: var(--white);
   --masthead-bg: rgb(255 255 255 / 75%);
   --quote-bg: rgb(0 0 0 / 5%);
+  --tooltip-bg: rgb(0 0 0);
   --dialog-bg: var(--page-bg);
   --dialog-header: rgb(255 255 255 / 85%);
   --text-body-primary: var(--color-greyscale-900);
@@ -111,6 +112,8 @@ section:target {
     --page-bg: var(--white);
     --masthead-bg: rgb(255 255 255 / 75%);
     --quote-bg: rgb( 0 0 0 / 5%);
+    --dialog-bg: var(--page-bg);
+    --dialog-header: rgb(255 255 255 / 85%);
     --text-body-primary: var(--color-greyscale-900);
     --text-body-secondary: var(--color-greyscale-600);
     --input-border: var(--color-greyscale-200);
@@ -124,6 +127,8 @@ section:target {
     --page-bg: var(--color-greyscale-900);
     --quote-bg: rgb(0 0 0 / 10%);
     --masthead-bg: rgb(36 39 43 / 90%);
+    --dialog-bg: rgb(45 48 52);
+    --dialog-header: rgb(45 48 52 / 95%);
     --text-body-primary: var(--color-greyscale-100);
     --text-body-secondary: var(--color-greyscale-500);
     --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
@@ -174,11 +179,10 @@ html {
   color: var(--text-body-primary);
   min-height: 100.1vh;
   scroll-behavior: smooth;
-  scrollbar-gutter: stable;
   text-wrap: pretty;
   scroll-padding-top: 4rem;
+  scrollbar-width: none;
 }
-
 ::selection {
   background: var(--brand);
   color: white;
@@ -309,6 +313,7 @@ section {
   opacity: 0;
   visibility: hidden;
   transition: 400ms all;
+  overflow: none;
 }
 aside.active ~ .overlay, section.is-open ~ .overlay {
   opacity: 1;
@@ -474,6 +479,9 @@ h1 small {
   color: var(--divider);
   padding-inline: 0.75em;
 }
+.legal p:not(:first-of-type) i:hover, .legal p:not(:first-of-type) i:focus {
+  color: lightpink;
+}
 
 .theme-toggle {
   position: relative;
@@ -496,6 +504,9 @@ h1 small {
 }
 
 @media screen and (max-width: 960px) {
+  html {
+    padding: 0;
+  }
   aside {
     z-index: 10;
     translate: calc(-100% - 1rem) 0;
@@ -517,9 +528,6 @@ h1 small {
   aside .primary__item {
     font-size: 1.25rem;
   }
-  .noscroll {
-    overflow: hidden;
-  }
 }
 @media screen and (max-width: 430px) {
   .nav--secondary {
@@ -528,7 +536,7 @@ h1 small {
 }
 figure {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 figure img {
   border-radius: 0.5rem;
@@ -618,9 +626,10 @@ figure figcaption {
   }
 }
 
-.dialog--projects {
+.modal {
   position: fixed;
   inset: 2rem;
+  max-width: 90rem;
   z-index: 6;
   width: auto;
   justify-items: center;
@@ -631,28 +640,60 @@ figure figcaption {
   color: var(--text-body-primary);
   border-radius: 1rem;
   justify-content: center;
-  padding: 0;
   opacity: 0;
   visibility: hidden;
   translate: 0 -4rem;
-  transition: 500ms all;
+  transition: 400ms all;
+  scrollbar-width: none;
 }
-.dialog--projects::-webkit-scrollbar {
-  display: none;
-}
-.dialog--projects .project__close {
-  position: absolute;
-  inset: auto 0 2.5rem auto;
-  color: var(--text-body-secondary);
-}
-.dialog--projects .project__close:focus-visible {
-  outline: none;
-  color: var(--text-body-primary);
-}
-.dialog--projects.is-open {
+.modal.is-open {
   opacity: 1;
   visibility: visible;
   translate: 0;
+}
+
+.modal__header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  background: var(--dialog-header);
+  backdrop-filter: blur(16px);
+  padding-inline: 1.5rem;
+}
+.modal__header h2 {
+  font: 700 2.5rem/1 var(--font-hero);
+  color: var(--text-body-primary);
+}
+.modal__header p {
+  font: 400 1.125rem/1.5 var(--font-body);
+  color: var(--text-body-secondary);
+}
+.modal__header a {
+  color: var(--brand);
+  text-underline-offset: 0.125em;
+}
+.modal__header a:hover {
+  text-decoration: none;
+}
+
+.modal__title {
+  position: relative;
+  display: grid;
+  padding-block: 4rem 1rem;
+  border-bottom: 1px solid var(--divider);
+  max-width: 50rem;
+  margin-inline: auto;
+}
+
+.modal__close {
+  position: absolute;
+  inset: auto 0 2.75rem auto;
+  color: var(--text-body-secondary);
+}
+.modal__close:focus-visible {
+  outline: none;
+  color: var(--text-body-primary);
 }
 
 .project {
@@ -677,39 +718,69 @@ figure figcaption {
   text-underline-offset: 0.25em;
 }
 
-.project__heading {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-  background: var(--dialog-header);
-  backdrop-filter: blur(16px);
-}
-.project__heading .title {
-  position: relative;
+.project__group {
   display: grid;
-  gap: 1rem;
-  padding-block: 8rem 2rem;
-  border-bottom: 1px solid var(--divider);
-  max-width: 50rem;
-  margin-inline: auto;
+  gap: 2rem;
 }
-.project__heading small {
-  font: 400 1.125rem/1.5 var(--font-body);
-  color: var(--text-body-secondary);
-}
-.project__heading h2 {
-  font: 700 2.5rem/1 var(--font-hero);
-  color: var(--text-body-primary);
+.project__group h3 {
+  font: 800 1.25rem/1.25 var(--font-title);
+  margin-block-end: 1em;
 }
 
-.project__group h3 {
-  font: 800 1.5rem/1.25 var(--font-title);
-  margin-block-end: 1em;
+.color-scheme {
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 50rem;
+}
+.color-scheme li {
+  position: relative;
+  height: 1rem;
+  flex: 1 0;
+  cursor: pointer;
+}
+.color-scheme li:first-of-type {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.color-scheme li:last-of-type {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.color-scheme li small {
+  position: absolute;
+  inset: auto auto 100% 50%;
+  translate: -50% 0;
+  padding-block: 0.5rem;
+  padding-inline: 1.5rem;
+  background: var(--tooltip-bg);
+  color: var(--white);
+  border-radius: 0.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 200ms all;
+}
+.color-scheme li small::after {
+  content: "";
+  position: absolute;
+  inset: calc(100% - 0.5rem) auto auto 50%;
+  translate: -50% 0;
+  rotate: 45deg;
+  width: 0.75rem;
+  aspect-ratio: 1;
+  background: var(--tooltip-bg);
+}
+.color-scheme li:hover small, .color-scheme li:focus small {
+  opacity: 1;
+  visibility: visible;
+  translate: -50% -0.25rem;
 }
 
 .border {
   border: 1px solid var(--divider);
+}
+
+.shadow {
+  box-shadow: 0 0.25rem 0.5rem -1rem rgba(0, 0, 0, 0.25);
 }
 
 .br-md {
@@ -771,19 +842,34 @@ figure figcaption {
   }
 }
 @media screen and (max-width: 640px) {
-  .dialog--projects {
+  .modal {
     inset: 0.5rem;
-    max-height: calc(100svh - 1rem);
     margin: 0;
   }
-  .dialog--projects .project__close {
-    font-size: 1rem;
-  }
-  .dialog--projects .project {
+  .modal .project {
     padding-inline: 1rem;
   }
-  .dialog--projects p {
+  .modal p {
     font-size: 1rem;
+  }
+  .modal__header {
+    padding-inline: 0;
+  }
+  .modal__title {
+    padding-block: 2rem 1rem;
+    padding-inline: 1rem;
+    gap: 0;
+  }
+  .modal__title h2 {
+    font-size: 1.5rem;
+  }
+  .modal__title p,
+  .modal__title a {
+    font-size: 0.875rem;
+  }
+  .modal__close {
+    inset: 1.875rem 0.75rem auto auto;
+    font-size: 0.75rem;
   }
   .border {
     width: calc(100% + 2rem);
@@ -792,10 +878,6 @@ figure figcaption {
     object-fit: cover;
     margin-inline: -1rem;
     border-radius: 0;
-  }
-  .project__heading .title {
-    padding-block: 2rem 1rem;
-    padding-inline: 1rem;
   }
   .reduce {
     order: 2;
@@ -816,6 +898,8 @@ figure figcaption {
 .masthead .btn--icon {
   color: var(--text-body-primary);
   display: none;
+  height: 100%;
+  aspect-ratio: 1;
 }
 .masthead a {
   color: var(--text-body-primary);
@@ -842,15 +926,14 @@ figure figcaption {
 
 @media screen and (max-width: 960px) {
   .masthead {
-    inset: 0 0 auto;
-    width: auto;
+    width: 100%;
     box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 5rem;
     padding-block: 0;
-    padding-inline: 1.5rem 1rem;
+    padding-inline: 1.5rem 0;
   }
   .masthead .btn--icon {
     display: block;
@@ -1296,7 +1379,6 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
   inset: auto auto 100% 50%;
 }
 .social__item small {
-  --tooltip-bg: rgb(0 0 0);
   position: absolute;
   inset: auto auto calc(100% - 0.25rem) 50%;
   isolation: isolate;
@@ -1552,6 +1634,39 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
 }
 .bfs::after {
   content: "Holy huge monitor, Batman!";
+}
+
+#mirror {
+  padding-block: 2rem;
+  padding-inline: 1.5rem;
+  align-content: end;
+  background-color: black;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.05) 50%, rgba(0, 0, 0, 0) 50%);
+}
+#mirror::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, transparent 0%, black 90%);
+}
+#mirror .modal__header {
+  position: absolute;
+  inset: auto 0 2rem;
+  background: transparent;
+  backdrop-filter: none;
+  max-width: none;
+  padding: 0;
+}
+#mirror .modal__title {
+  max-width: none;
+  gap: 1rem;
+  border: none;
+  text-align: center;
+}
+#mirror .modal__close {
+  inset: 2rem 2rem auto auto;
+  color: pink;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=styles.css.map */

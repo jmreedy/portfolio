@@ -11,9 +11,14 @@ html {
     color: var(--text-body-primary);
     min-height: 100.1vh;
     scroll-behavior: smooth;
-    scrollbar-gutter: stable;
     text-wrap: pretty;
     scroll-padding-top: 4rem;
+    // scrollbar-gutter: stable;
+    scrollbar-width: none;
+
+    &.noscroll {
+        // padding-inline-end: 15px;
+    }
 }
 
 ::selection {
