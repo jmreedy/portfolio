@@ -7,6 +7,7 @@
     justify-items: center;
     background: var(--dialog-bg);
     overflow-y: scroll;
+    overflow-x: hidden;
     border: none;
     box-shadow: 0 8px 32px -16px rgb(0 0 0 / 80%); 
     color: var(--text-body-primary);
@@ -17,6 +18,7 @@
     translate: 0 -4rem;
     transition: 400ms all;
     scrollbar-width: none;
+
 
     &.is-open {
         opacity: 1;

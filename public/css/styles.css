@@ -635,6 +635,7 @@ figure figcaption {
   justify-items: center;
   background: var(--dialog-bg);
   overflow-y: scroll;
+  overflow-x: hidden;
   border: none;
   box-shadow: 0 8px 32px -16px rgba(0, 0, 0, 0.8);
   color: var(--text-body-primary);
