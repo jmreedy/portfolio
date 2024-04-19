@@ -99,12 +99,12 @@ h1 {
 }
 
 
-.nav--secondary {
+.nav--work {
     gap: .5rem;
     border-right: 1px solid var(--divider);
     margin-block-start: 1rem;
 
-    .secondary__item {
+    .work__item {
         padding-inline-end: 1rem;
         color: var(--text-body-secondary);
         font: var(--nav-secondary-font);

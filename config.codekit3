@@ -9,6 +9,38 @@
   ],
   "creatorBuild" : "34472",
   "files" : {
+    "\/_chalkboard.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/_chalkboard.html",
+      "oF" : 0
+    },
+    "\/_marketwatch.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/_marketwatch.html",
+      "oF" : 0
+    },
+    "\/_mosby.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/_mosby.html",
+      "oF" : 0
+    },
+    "\/_totalexpert.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/_totalexpert.html",
+      "oF" : 0
+    },
     "\/android-chrome-192x192.png" : {
       "ft" : 32768,
       "iS" : 15340,
@@ -96,14 +128,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/index.html",
-      "oF" : 0
-    },
-    "\/marketwatch.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/marketwatch.html",
       "oF" : 0
     },
     "\/mirror.html" : {
@@ -267,6 +291,110 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/public\/img\/work\/chalkboard\/chalkboard-decorations.jpg" : {
+      "ft" : 16384,
+      "iS" : 247510,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/chalkboard\/chalkboard-decorations.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/public\/img\/work\/chalkboard\/chalkboard-hero.jpg" : {
+      "ft" : 16384,
+      "iS" : 703070,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/chalkboard\/chalkboard-hero.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/public\/img\/work\/chalkboard\/chalkboard-invitations.jpg" : {
+      "ft" : 16384,
+      "iS" : 203251,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/chalkboard\/chalkboard-invitations.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/public\/img\/work\/chalkboard\/chalkboard-mobile-1.png" : {
+      "ft" : 32768,
+      "iS" : 171823,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/chalkboard\/chalkboard-mobile-1.png",
+      "oF" : 0,
+      "oIPL" : 1,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/public\/img\/work\/chalkboard\/chalkboard-mobile-2.png" : {
+      "ft" : 32768,
+      "iS" : 99169,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/chalkboard\/chalkboard-mobile-2.png",
+      "oF" : 0,
+      "oIPL" : 1,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/public\/img\/work\/chalkboard\/chalkboard-mobile-3.png" : {
+      "ft" : 32768,
+      "iS" : 47593,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/chalkboard\/chalkboard-mobile-3.png",
+      "oF" : 0,
+      "oIPL" : 1,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/public\/img\/work\/chalkboard\/chalkboard-moodboard.jpg" : {
+      "ft" : 16384,
+      "iS" : 472170,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/chalkboard\/chalkboard-moodboard.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/public\/img\/work\/chalkboard\/chalkboard-sign.jpg" : {
+      "ft" : 16384,
+      "iS" : 81519,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/chalkboard\/chalkboard-sign.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75

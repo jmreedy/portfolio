@@ -79,10 +79,12 @@ section:target {
   --color-greyscale-800: #3E4145;
   --color-greyscale-900: #24272B;
   --white: #FFFFFF;
-  --brand: #219EBC;
+  --brand: #387DA7;
   --page-bg: var(--white);
   --masthead-bg: rgb(255 255 255 / 75%);
-  --quote-bg: rgb( 0 0 0 / 5%);
+  --quote-bg: rgb(0 0 0 / 5%);
+  --dialog-bg: var(--page-bg);
+  --dialog-header: rgb(255 255 255 / 85%);
   --text-body-primary: var(--color-greyscale-900);
   --text-body-secondary: var(--color-greyscale-600);
   --input-border: var(--color-greyscale-200);
@@ -92,9 +94,12 @@ section:target {
 /* default color component properties for dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
+    --brand: #2999B4;
     --page-bg: var(--color-greyscale-900);
     --quote-bg: rgb(0 0 0 / 15%);
     --masthead-bg: rgb(36 39 43 / 90%);
+    --dialog-bg: rgb(45 48 52);
+    --dialog-header: rgb(45 48 52 / 95%);
     --text-body-primary: var(--color-greyscale-100);
     --text-body-secondary: var(--color-greyscale-500);
     --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
@@ -102,6 +107,7 @@ section:target {
   }
   /* component properties if dark theme is default and user toggles to light theme */
   .toggle-theme {
+    --brand: #387DA7;
     --page-bg: var(--white);
     --masthead-bg: rgb(255 255 255 / 75%);
     --quote-bg: rgb( 0 0 0 / 5%);
@@ -114,6 +120,7 @@ section:target {
 /* component properties for dark theme when a user switches from the light theme */
 @media not (prefers-color-scheme: dark) {
   .toggle-theme {
+    --brand: #2999B4;
     --page-bg: var(--color-greyscale-900);
     --quote-bg: rgb(0 0 0 / 10%);
     --masthead-bg: rgb(36 39 43 / 90%);
@@ -297,12 +304,13 @@ section {
   position: fixed;
   inset: 0;
   z-index: 5;
+  backdrop-filter: blur(8px);
   background: rgba(15, 15, 15, 0.95);
   opacity: 0;
   visibility: hidden;
   transition: 400ms all;
 }
-aside.active ~ .overlay {
+aside.active ~ .overlay, section.is-open ~ .overlay {
   opacity: 1;
   visibility: visible;
 }
@@ -313,6 +321,10 @@ aside.active ~ .overlay {
 
 .nowrap {
   white-space: nowrap;
+}
+
+html:has(dialog[open]) {
+  overflow-y: hidden;
 }
 
 @media screen and (max-width: 960px) {
@@ -433,19 +445,19 @@ h1 small {
   inset: 100% 0 auto;
 }
 
-.nav--secondary {
+.nav--work {
   gap: 0.5rem;
   border-right: 1px solid var(--divider);
   margin-block-start: 1rem;
 }
-.nav--secondary .secondary__item {
+.nav--work .work__item {
   padding-inline-end: 1rem;
   color: var(--text-body-secondary);
   font: var(--nav-secondary-font);
   border-right: 0 solid var(--brand);
   transition: 100ms border-width;
 }
-.nav--secondary .secondary__item:hover, .nav--secondary .secondary__item:focus-visible {
+.nav--work .work__item:hover, .nav--work .work__item:focus-visible {
   border-width: 0 0.25rem 0 0;
   color: var(--brand);
   outline: none;
@@ -520,6 +532,7 @@ figure {
 }
 figure img {
   border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -1rem rgba(0, 0, 0, 0.5);
 }
 figure figcaption {
   font: 400 0.875rem/1.5 var(--font-body);
@@ -605,21 +618,189 @@ figure figcaption {
   }
 }
 
-.page--projects {
-  display: grid;
+.dialog--projects {
+  position: fixed;
+  inset: 2rem;
+  z-index: 6;
+  width: auto;
   justify-items: center;
-  padding-block-start: 6rem;
-  padding-inline: 1.5rem;
+  background: var(--dialog-bg);
+  overflow-y: scroll;
+  border: none;
+  box-shadow: 0 8px 32px -16px rgba(0, 0, 0, 0.8);
+  color: var(--text-body-primary);
+  border-radius: 1rem;
+  justify-content: center;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 -4rem;
+  transition: 500ms all;
+}
+.dialog--projects::-webkit-scrollbar {
+  display: none;
+}
+.dialog--projects .project__close {
+  position: absolute;
+  inset: auto 0 2.5rem auto;
+  color: var(--text-body-secondary);
+}
+.dialog--projects .project__close:focus-visible {
+  outline: none;
+  color: var(--text-body-primary);
+}
+.dialog--projects.is-open {
+  opacity: 1;
+  visibility: visible;
+  translate: 0;
 }
 
 .project {
-  max-width: 70rem;
+  display: grid;
+  place-content: center;
+  gap: 3rem;
+  margin-inline: auto;
+  padding-block: 2rem 8rem;
+  padding-inline: 1.5rem;
 }
-.project header {
+.project p {
+  font: 300 1.125rem/1.5 var(--font-body);
+  text-align: left;
+  width: 100%;
+  max-width: 50rem;
+  margin-block-end: 1rem;
+  margin-inline: auto;
+  color: var(--text-body-secondary);
+}
+.project p a {
+  color: var(--text-body-primary);
+  text-underline-offset: 0.25em;
+}
+
+.project__heading {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  background: var(--dialog-header);
+  backdrop-filter: blur(16px);
+}
+.project__heading .title {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  padding-block: 8rem 2rem;
+  border-bottom: 1px solid var(--divider);
   max-width: 50rem;
   margin-inline: auto;
 }
+.project__heading small {
+  font: 400 1.125rem/1.5 var(--font-body);
+  color: var(--text-body-secondary);
+}
+.project__heading h2 {
+  font: 700 2.5rem/1 var(--font-hero);
+  color: var(--text-body-primary);
+}
 
+.project__group h3 {
+  font: 800 1.5rem/1.25 var(--font-title);
+  margin-block-end: 1em;
+}
+
+.border {
+  border: 1px solid var(--divider);
+}
+
+.br-md {
+  border-radius: 0.5rem;
+}
+
+.grid--3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.occupy--1 {
+  grid-column: span 1;
+}
+
+.occupy--2 {
+  grid-column: span 2;
+}
+
+.occupy--3 {
+  grid-column: span 3;
+}
+
+.br--md {
+  border-radius: 0.5rem;
+}
+
+.testing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  isolation: isolate;
+}
+.testing img {
+  box-shadow: 0 1.75rem 1rem -1.5rem rgba(0, 0, 0, 0.25);
+}
+
+.reduce {
+  transform: scale(0.95);
+}
+
+.width--sm {
+  max-width: 50rem;
+  margin-inline: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .reduce {
+    transform: scale(1);
+    order: 2;
+  }
+  .reduce + figure {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .dialog--projects {
+    inset: 0.5rem;
+    max-height: calc(100svh - 1rem);
+    margin: 0;
+  }
+  .dialog--projects .project__close {
+    font-size: 1rem;
+  }
+  .dialog--projects .project {
+    padding-inline: 1rem;
+  }
+  .dialog--projects p {
+    font-size: 1rem;
+  }
+  .border {
+    width: calc(100% + 2rem);
+    max-width: none;
+    aspect-ratio: 5/7;
+    object-fit: cover;
+    margin-inline: -1rem;
+    border-radius: 0;
+  }
+  .project__heading .title {
+    padding-block: 2rem 1rem;
+    padding-inline: 1rem;
+  }
+  .reduce {
+    order: 2;
+  }
+}
 .masthead {
   position: fixed;
   width: 319px;

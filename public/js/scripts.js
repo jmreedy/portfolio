@@ -17,30 +17,41 @@
         $('html').toggleClass('toggle-theme');
     });
 
-    // $('[data-hook="rewind"]').click(function(){
-    //     $('.about h2').text('Woah, Déjà Vu...');
+    $('[data-hook="close"]').click(function(){
+        $('html').removeClass('noscroll');
+        $('.is-open').removeClass('is-open');
+    });
+
+    $('.work__item').click(function(){
+        var projectID = $(this).attr('data-hook');
+
+        $('#' + projectID).toggleClass('is-open');
+        $('aside').removeClass('active');
+        $('html').toggleClass('noscroll');
+    });
+
+    $('.project__close').click(function(){
+        $(this).closest('.dialog--projects').removeClass('is-open');
+        $('html').removeClass('noscroll');
+    });
+
+    // $('[data-hook="next"]').click(function(){
+    //     console.log('click');
+    //     $('article.current-project').removeClass('current-project').next('article').addClass('current-project');
     // });
 
   
   })(jQuery);
 
-// const nav = document.querySelector(".masthead");
-// let lastScrollY = window.scrollY;
+//   const modal = document.querySelector('#dialog-panel');
 
-// window.addEventListener("scroll", () => {
-//     if (lastScrollY >= 16) {
-//         nav.classList.add("is-hidden");
-//     }
-    
-//     if (lastScrollY > window.scrollY && lastScrollY > 64) {
-//         nav.classList.add("scroll-up");
-//     }
-//     if (lastScrollY < window.scrollY && lastScrollY > 64) {
-//         nav.classList.remove("scroll-up");
-//     }
-//     if (lastScrollY <= 8) {
-//         nav.classList.remove("is-hidden");
-//     }
-
-//     lastScrollY = window.scrollY;
-// });
+//   const openModal = document.querySelector('[data-hook="chalkboard"]');
+//   const closeModal = document.querySelector('[data-hook="dialogClose"]');
+  
+//   openModal.addEventListener('click', function() {
+//       modal.showModal();
+//   });
+  
+//   closeModal.addEventListener('click', function() {
+//       modal.close();
+//   })
