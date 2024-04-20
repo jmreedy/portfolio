@@ -605,25 +605,23 @@ figure figcaption {
   }
 }
 .list--projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
   width: 100%;
+  margin-block-end: 2rem;
 }
-.list--projects .project__item {
-  display: grid;
-  place-items: center;
-  aspect-ratio: 1;
-  background: var(--quote-bg);
-  border-radius: 0.5rem;
+.list--projects .project__item .work__item {
+  display: block;
+  transform: scale(1);
+  transition: 400ms all;
+}
+.list--projects .project__item .work__item:hover, .list--projects .project__item .work__item:focus {
+  transform: scale(0.98);
 }
 .list--projects .project__item img {
-  object-fit: fill;
-}
-@media screen and (max-width: 800px) {
-  .list--projects {
-    grid-template-columns: 1fr;
-  }
+  width: 100%;
+  max-width: 20rem;
 }
 
 .modal {
@@ -722,6 +720,11 @@ figure figcaption {
 .project__group {
   display: grid;
   gap: 2rem;
+}
+.project__group header,
+.project__group p {
+  width: 100%;
+  max-width: 50rem;
 }
 .project__group h3 {
   font: 800 1.25rem/1.25 var(--font-title);
@@ -1699,6 +1702,19 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
   justify-content: center;
   gap: 2rem;
   padding-block-start: 3rem;
+}
+
+.notification--temp {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--divider);
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  border-radius: 0.25rem;
+}
+.notification--temp i {
+  color: var(--brand);
 }
 
 /*# sourceMappingURL=styles.css.map */

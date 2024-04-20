@@ -108,6 +108,12 @@
     display: grid;
     gap: 2rem;
 
+    header,
+    p {
+        width: 100%;
+        max-width: 50rem;
+    }
+
     h3 {
         font: 800 1.25rem/1.25 var(--font-title);
         margin-block-end: 1em;

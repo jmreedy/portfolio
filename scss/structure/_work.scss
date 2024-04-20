@@ -1,23 +1,26 @@
 .list--projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: .5rem;
+    display: flex;
+    // grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    justify-content: center;
+    gap: 1rem;
     width: 100%;
+    margin-block-end: 2rem;
 
     .project__item {
-        display: grid;
-        place-items: center;
 
-        aspect-ratio: 1;
-        background: var(--quote-bg);
-        border-radius: .5rem;
+        .work__item {
+            display: block;
+            transform: scale(1);
+            transition: 400ms all;
 
-        img {
-            object-fit: fill;
+            &:hover,
+            &:focus {
+                transform: scale(.98);
+            }
         }
-    }
-
-    @media screen and (max-width: 800px) {
-        grid-template-columns: 1fr;
+        img {
+            width: 100%;
+            max-width: 20rem;
+        }
     }
 }

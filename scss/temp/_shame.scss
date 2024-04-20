@@ -74,3 +74,17 @@
         padding-block-start: 3rem;
     }
 }
+
+.notification--temp {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--divider);
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    border-radius: .25rem;
+
+    i {
+        color: var(--brand);
+    }
+}
