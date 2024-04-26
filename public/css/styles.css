@@ -538,9 +538,8 @@ figure {
   display: grid;
   gap: 0.5rem;
 }
-figure img {
+figure > img {
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem -1rem rgba(0, 0, 0, 0.5);
 }
 figure figcaption {
   font: 400 0.875rem/1.5 var(--font-body);
@@ -687,7 +686,7 @@ figure figcaption {
 
 .modal__close {
   position: absolute;
-  inset: auto 0 2.75rem auto;
+  inset: auto 0 1.25rem auto;
   color: var(--text-body-secondary);
 }
 .modal__close:focus-visible {
@@ -779,12 +778,23 @@ figure figcaption {
   translate: -50% -0.25rem;
 }
 
+.photo-credit {
+  text-align: center;
+  color: var(--text-body-secondary);
+}
+.photo-credit a {
+  color: var(--text-body-primary);
+}
+.photo-credit a:hover {
+  text-decoration: none;
+}
+
 .border {
   border: 1px solid var(--divider);
 }
 
 .shadow--generic {
-  box-shadow: 0 0.25rem 0.5rem -1rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.5rem 1rem -1rem rgba(0, 0, 0, 0.5);
 }
 
 .shadow--mobile {
@@ -824,11 +834,14 @@ figure figcaption {
 
 .flex--3 {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   isolation: isolate;
+}
+.flex--3 img {
+  min-widtH: 14rem;
 }
 
 .reduce {
@@ -839,6 +852,24 @@ figure figcaption {
   max-width: 50rem;
   margin-inline: auto;
   width: 100%;
+}
+
+.figure--responsive {
+  position: relative;
+}
+.figure--responsive .mobile {
+  position: absolute;
+  inset: auto 5rem -2rem auto;
+  box-shadow: 0 1.5rem 1rem -1.5rem rgba(0, 0, 0, 0.45);
+  border-radius: 0 0 1rem 1rem;
+}
+.figure--responsive figcaption {
+  padding-inline-end: 18rem;
+}
+
+.flex--2 {
+  display: flex;
+  gap: 1rem;
 }
 
 @media screen and (max-width: 960px) {
@@ -882,7 +913,7 @@ figure figcaption {
     font-size: 0.75rem;
     translate: 0 -50%;
   }
-  .border {
+  .marketwatch .border {
     width: calc(100% + 2rem);
     max-width: none;
     aspect-ratio: 5/7;
@@ -892,6 +923,37 @@ figure figcaption {
   }
   .reduce {
     order: 2;
+  }
+  .figure--responsive .desktop {
+    filter: grayscale(100%) blur(8px);
+    opacity: 0.5;
+    border: 1px solid pink;
+  }
+  .figure--responsive .mobile {
+    inset: auto auto -2rem 50%;
+    translate: -50% 0;
+  }
+}
+@media screen and (max-width: 430px) {
+  .overflow--mobile {
+    --offset: calc(50vw - 8.5rem);
+    position: relative;
+    width: calc(100% + 2rem);
+    margin-inline-start: -1rem;
+    overflow-x: scroll;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline-start: var(--offset);
+    padding-inline-start: var(--offset);
+  }
+  .overflow--mobile figure {
+    display: flex;
+    flex-flow: row nowrap;
+    width: fit-content;
+    padding-inline: var(--offset);
+  }
+  .overflow--mobile img {
+    scroll-snap-align: start;
+    min-width: 16rem;
   }
 }
 .masthead {

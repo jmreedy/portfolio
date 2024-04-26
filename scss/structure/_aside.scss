@@ -137,32 +137,6 @@ h1 {
             }
         }
     }
-
-    // .fa-robot {
-    //     position: relative;
-    //     display: inline-grid;
-    //     place-items: center;
-    //     width: 3rem;
-    //     aspect-ratio: 1;
-    //     border-radius: 3rem;
-    //     border: .25rem solid tomato;
-    //     margin-block-end: 1rem;
-
-    //     &::before {
-    //         position: relative;
-    //         top: -.125rem;
-    //         color: var(--text-body-primary);
-    //         // color: pink;
-    //     }
-
-    //     &::after {
-    //         content: '';
-    //         position: absolute;
-    //         inset: 0 auto;
-    //         rotate: 45deg;
-    //         border-right: .375rem solid tomato;
-    //     }
-    // }
 }
 
 .theme-toggle  {
@@ -186,17 +160,6 @@ h1 {
         rotate: 180deg;
     }
 }
-
-// Disallow scrolling when modal is open only on touch devices
-
-// @media screen and not (pointer: coarse) {
-
-// .noscroll {
-//     overflow: hidden;
-// }
-
-// }
-
 
 @media screen and (max-width: 960px) {
 

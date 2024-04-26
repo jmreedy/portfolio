@@ -2,9 +2,8 @@ figure {
     display: grid;
     gap: .5rem;
 
-    img {
+    > img {
         border-radius: .5rem;
-        box-shadow: 0 .5rem 1rem -1rem rgb(0 0 0 / 50%);
     }
     
     figcaption {
