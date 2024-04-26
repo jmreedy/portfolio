@@ -96,7 +96,9 @@ h3 {
     position: fixed;
     inset: 0;
     z-index: 5;
-    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+       -moz-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
     background: rgb(15 15 15 / 95%);
     opacity: 0;
     visibility: hidden;

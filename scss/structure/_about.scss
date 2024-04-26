@@ -30,7 +30,9 @@ main {
         margin: -20svh auto 0 -1.5rem;
         padding-block: 3rem 0;
         padding-inline: 1.5rem;
-        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(.5rem);
+           -moz-backdrop-filter: blur(.5rem);
+                backdrop-filter: blur(.5rem);
         background: var(--page-bg);
         border-radius: 0 1rem 0 0;
         box-shadow: 6px -8px 8px -8px rgb(0 0 0 / 15%);
