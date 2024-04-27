@@ -508,7 +508,7 @@
       "oAP" : "\/public\/img\/work\/marketwatch\/marketwatch-barrons.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -568,8 +568,8 @@
       "oA" : 0,
       "oAP" : "\/public\/img\/work\/marketwatch\/marketwatch-homepage-mobile.png",
       "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
+      "oIPL" : 1,
+      "opt" : 1,
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 90,
@@ -599,6 +599,19 @@
       "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
+      "rq" : 75
+    },
+    "\/public\/img\/work\/marketwatch\/marketwatch-quote-old-mobile.png" : {
+      "ft" : 32768,
+      "iS" : 46986,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/marketwatch\/marketwatch-quote-old-mobile.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
       "rq" : 75
     },
     "\/public\/img\/work\/marketwatch\/marketwatch-quotepage-mobile-1.png" : {
