@@ -1836,7 +1836,7 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
   width: 100%;
   border-radius: 4px;
   border: 1px solid var(--qa-border);
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   transition: 250ms grid-template-rows;
 }
 .qa__item:hover {
@@ -1873,7 +1873,7 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
 .qa__item p {
   padding-block: 0.5rem;
   color: var(--text-body-secondary);
-  font: 400 0.875rem/1.6 var(--font-body);
+  font: 400 1rem/1.6 var(--font-body);
   text-wrap: pretty;
 }
 
