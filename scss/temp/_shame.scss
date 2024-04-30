@@ -89,3 +89,21 @@
         color: var(--brand);
     }
 }
+
+.flex--vertical {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+
+    > *:first-child {
+        flex-grow: 1;
+    }
+
+    img {
+        object-fit: cover;
+    }
+}
+
+.gap--lg {
+    gap: 1rem;
+}

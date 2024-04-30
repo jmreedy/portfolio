@@ -545,7 +545,7 @@ figure {
   display: grid;
   gap: 0.5rem;
 }
-figure > img {
+figure img {
   border-radius: 0.5rem;
 }
 figure figcaption {
@@ -731,6 +731,10 @@ figure figcaption {
 }
 .project strong {
   color: var(--text-body-primary);
+}
+.project h4 {
+  font-size: 1rem;
+  margin-block-end: 0.5em;
 }
 
 .project__link {
@@ -1981,6 +1985,22 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
 }
 .notification--temp i {
   color: var(--brand);
+}
+
+.flex--vertical {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+}
+.flex--vertical > *:first-child {
+  flex-grow: 1;
+}
+.flex--vertical img {
+  object-fit: cover;
+}
+
+.gap--lg {
+  gap: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
