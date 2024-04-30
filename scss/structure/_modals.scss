@@ -90,7 +90,7 @@
     padding-inline: 1.5rem;
 
     p {
-        font: 300 1.125rem/1.5 var(--font-body);
+        font: 300 1rem/1.5 var(--font-body);
         text-align: left;
         width: 100%;
         max-width: 50rem;
@@ -98,36 +98,49 @@
         margin-inline: auto;
         color: var(--text-body-secondary);
     }
+
+    strong {
+        color: var(--text-body-primary);
+    }
 }
 
 .project__link {
-    display: flex;
-    gap: .5rem;
-    align-items: center;
     color: var(--brand);
-    font-weight: 500;
-    text-decoration: none;
-
-    span {
-        text-decoration: underline;
-    }
+    font-weight: 400;
 
     &:hover {
-        span {
-            text-decoration: none;
-        }
-
-        i {
-            padding-inline-start: .25rem;
-        }
-    }
-
-    i {
-        translate: 0 1px;
         text-decoration: none;
-        transition: 200ms padding;
     }
 }
+
+// .project__link {
+//     display: flex;
+//     gap: .5rem;
+//     align-items: center;
+//     color: var(--brand);
+//     font-weight: 500;
+//     text-decoration: none;
+
+//     span {
+//         text-decoration: underline;
+//     }
+
+//     &:hover {
+//         span {
+//             text-decoration: none;
+//         }
+
+//         i {
+//             padding-inline-start: .25rem;
+//         }
+//     }
+
+//     i {
+//         translate: 0 1px;
+//         text-decoration: none;
+//         transition: 200ms padding;
+//     }
+// }
 
 .project__group {
     display: grid;

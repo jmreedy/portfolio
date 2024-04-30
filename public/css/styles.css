@@ -246,7 +246,7 @@ article {
   color: var(--text-body-primary);
 }
 .section__heading h3 {
-  font: 700 1.25rem/1.375 var(--font-title);
+  font: 800 1.25rem/1.375 var(--font-title);
   margin-block-end: 0.5rem;
 }
 .section__heading p {
@@ -549,11 +549,18 @@ figure > img {
   border-radius: 0.5rem;
 }
 figure figcaption {
-  font: 400 0.875rem/1.5 var(--font-body);
+  font: 300 0.875rem/1.6 var(--font-body);
   color: var(--text-body-secondary);
   max-width: 50rem;
   width: 100%;
   margin-inline: auto;
+}
+
+.paragraph--ammended {
+  max-width: 50rem;
+  font: 300 1.125rem/1.5 var(--font-body);
+  color: var(--text-body-secondary);
+  padding-block-start: 2rem;
 }
 
 @media screen and (max-width: 430px) {
@@ -714,7 +721,7 @@ figure figcaption {
   padding-inline: 1.5rem;
 }
 .project p {
-  font: 300 1.125rem/1.5 var(--font-body);
+  font: 300 1rem/1.5 var(--font-body);
   text-align: left;
   width: 100%;
   max-width: 50rem;
@@ -722,28 +729,16 @@ figure figcaption {
   margin-inline: auto;
   color: var(--text-body-secondary);
 }
+.project strong {
+  color: var(--text-body-primary);
+}
 
 .project__link {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
   color: var(--brand);
-  font-weight: 500;
+  font-weight: 400;
+}
+.project__link:hover {
   text-decoration: none;
-}
-.project__link span {
-  text-decoration: underline;
-}
-.project__link:hover span {
-  text-decoration: none;
-}
-.project__link:hover i {
-  padding-inline-start: 0.25rem;
-}
-.project__link i {
-  translate: 0 1px;
-  text-decoration: none;
-  transition: 200ms padding;
 }
 
 .project__group {
@@ -1324,7 +1319,7 @@ figure figcaption {
   align-items: center;
 }
 .checklist li.your-company button {
-  color: var(--white);
+  color: var(--text-body-primary);
   text-decoration: underline;
   text-decoration-color: var(--divider);
   text-underline-offset: 0.25rem;
@@ -1500,7 +1495,7 @@ textarea {
   box-shadow: 0 0 0 100vmax var(--quote-bg);
   clip-path: inset(0 -100vmax);
   background: var(--quote-bg);
-  padding-block: 8rem;
+  padding-block: 9rem 8rem;
   min-height: 20rem;
 }
 
@@ -1952,6 +1947,7 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
 }
 #mirror .modal__title p {
   color: var(--color-greyscale-500);
+  font: 300 1rem/1.5 var(--font-body);
 }
 #mirror .modal__close {
   z-index: 2;

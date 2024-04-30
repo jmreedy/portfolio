@@ -7,12 +7,19 @@ figure {
     }
     
     figcaption {
-        font: 400 .875rem/1.5 var(--font-body);
+        font: 300 .875rem/1.6 var(--font-body);
         color: var(--text-body-secondary);
         max-width: 50rem;
         width: 100%;
         margin-inline: auto;
     }
+}
+
+.paragraph--ammended {
+    max-width: 50rem;
+    font: 300 1.125rem/1.5 var(--font-body);
+    color: var(--text-body-secondary);
+    padding-block-start: 2rem;
 }
 
 @media screen and (max-width: 430px) {
