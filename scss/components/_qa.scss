@@ -62,4 +62,12 @@
         font: 400 1rem/1.6 var(--font-body);
         text-wrap: pretty;
     }
+
+    a {
+        color: var(--brand);
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }

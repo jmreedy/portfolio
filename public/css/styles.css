@@ -183,6 +183,10 @@ html {
   scroll-padding-top: 4rem;
   scrollbar-width: none;
 }
+html.noscroll {
+  overflow: hidden;
+}
+
 ::selection {
   background: var(--brand);
   color: white;
@@ -224,7 +228,8 @@ main {
   gap: 8rem;
 }
 
-section {
+section,
+article {
   display: grid;
   justify-items: center;
   width: 100%;
@@ -317,7 +322,7 @@ section {
   transition: 400ms all;
   overflow: none;
 }
-aside.active ~ .overlay, section.is-open ~ .overlay {
+aside.active ~ .overlay, article.is-open ~ .overlay {
   opacity: 1;
   visibility: visible;
 }
@@ -1315,10 +1320,26 @@ figure figcaption {
   font-size: 80%;
   text-align: center;
 }
+.checklist li.your-company {
+  align-items: center;
+}
+.checklist li.your-company button {
+  color: var(--white);
+  text-decoration: underline;
+  text-decoration-color: var(--divider);
+  text-underline-offset: 0.25rem;
+  line-height: 1;
+  padding: 0;
+}
+.checklist li.your-company button:hover {
+  text-decoration: none;
+}
+.checklist li.your-company button:focus-visible {
+  outline: none;
+  color: var(--brand);
+}
 .checklist li.your-company::after {
   content: "(ironic, I know)";
-  position: relative;
-  top: -0.125rem;
   padding-inline-start: 0.5em;
   font-size: 0.875em;
   color: var(--text-body-secondary);
@@ -1479,7 +1500,7 @@ textarea {
   box-shadow: 0 0 0 100vmax var(--quote-bg);
   clip-path: inset(0 -100vmax);
   background: var(--quote-bg);
-  padding-block: 10rem;
+  padding-block: 8rem;
   min-height: 20rem;
 }
 
@@ -1491,6 +1512,7 @@ blockquote {
   align-self: center;
   max-width: 50rem;
   margin-inline: auto;
+  padding-inline-end: 3rem;
   width: 100%;
   opacity: 0;
   visibility: hidden;
@@ -1545,9 +1567,11 @@ blockquote span a:hover {
 
 fieldset {
   position: absolute;
-  inset: auto auto 5rem 0;
+  inset: 0 0 0 auto;
   order: 2;
+  z-index: 2;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   gap: 0.5rem;
   border: none;
@@ -1665,7 +1689,7 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
   color: #C32AA3;
 }
 .social__item:hover .fa-steam {
-  color: #171A21;
+  color: var(--text-body-primary);
 }
 .social__item:hover .fa-linkedin {
   color: #0A66C2;
@@ -1680,7 +1704,7 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
   color: #EA4C89;
 }
 .social__item:hover .fa-github {
-  color: #222222;
+  color: var(--text-body-primary);
 }
 .social__item:hover .fa-figma {
   color: #1ABCFE;
@@ -1875,6 +1899,12 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
   color: var(--text-body-secondary);
   font: 400 1rem/1.6 var(--font-body);
   text-wrap: pretty;
+}
+.qa__item a {
+  color: var(--brand);
+}
+.qa__item a:hover {
+  text-decoration: none;
 }
 
 .bfs {

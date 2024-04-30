@@ -7,7 +7,8 @@ main {
 }
 
 
-section {
+section,
+article {
     display: grid;
     justify-items: center;
     width: 100%;
@@ -106,7 +107,7 @@ h3 {
     overflow: none;
 
     aside.active ~ &,
-    section.is-open ~ & {
+    article.is-open ~ & {
         opacity: 1;
         visibility: visible;
     }

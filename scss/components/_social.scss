@@ -86,12 +86,12 @@
 .social__item:hover {
     .fa-facebook  { color: #3B5998; }
     .fa-instagram { color: #C32AA3; }
-    .fa-steam     { color: #171A21; }
+    .fa-steam     { color: var(--text-body-primary); }
     .fa-linkedin  { color: #0A66C2; }
     .fa-discord   { color: #5865f2; }
     .fa-lastfm    { color: #BA0000; }
     .fa-dribbble  { color: #EA4C89; }
-    .fa-github    { color: #222222; }
+    .fa-github    { color: var(--text-body-primary); }
     .fa-figma     { color: #1ABCFE; }
     .fa-spotify   { color: #1DB954; }
     .fa-gitlab    { color: #E24329; }

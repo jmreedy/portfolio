@@ -13,11 +13,10 @@ html {
     scroll-behavior: smooth;
     text-wrap: pretty;
     scroll-padding-top: 4rem;
-    // scrollbar-gutter: stable;
     scrollbar-width: none;
 
     &.noscroll {
-        // padding-inline-end: 15px;
+        overflow: hidden;
     }
 }
 

@@ -24,13 +24,33 @@
             text-align: center;
         }
 
-        &.your-company::after {
-            content: '(ironic, I know)';
-            position: relative;
-            top: -.125rem;
-            padding-inline-start: .5em;
-            font-size: .875em;
-            color: var(--text-body-secondary);
+        &.your-company {
+            align-items: center;
+            
+            button {
+                color: var(--white);
+                text-decoration: underline;
+                text-decoration-color: var(--divider);
+                text-underline-offset: .25rem;
+                line-height: 1;
+                padding: 0;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                &:focus-visible {
+                    outline: none;
+                    color: var(--brand);
+                }
+            }
+
+            &::after {
+                content: '(ironic, I know)';
+                padding-inline-start: .5em;
+                font-size: .875em;
+                color: var(--text-body-secondary);
+            }
         }
     }
 
