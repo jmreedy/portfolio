@@ -118,6 +118,28 @@
     }
 }
 
+.project__button {
+    display: inline-flex;
+    align-items: center;
+    background: var(--brand);
+    width: auto;
+    padding-inline: 3rem;
+    border-radius: .25rem;
+    color: var(--white);
+    height: 3rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        background: color-mix(in lch, var(--brand), black 20%);
+    }
+
+    & + small {
+        display: block;
+        margin-block-start: 1em;
+    }
+}
+
 // .project__link {
 //     display: flex;
 //     gap: .5rem;
@@ -274,6 +296,11 @@
 
 .grid--3 {
     grid-template-columns: repeat(3, 1fr);
+
+    // img {
+    //     height: 100%;
+    //     object-fit: cover;
+    // }
 }
 
 .occupy--1 { grid-column: span 1; }
@@ -475,11 +502,6 @@
     }
 }
 
-.grid--2 {
-    grid-template-columns: 1fr;
-    justify-items: stretch;
-}
-
 }
 
 
@@ -488,6 +510,16 @@
 
 .project {
     padding-block-end: 1rem;
+}
+
+.project__button {
+    width: 100%;
+    justify-content: center;
+
+    & + small {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .overflow--mobile {
@@ -542,8 +574,19 @@
     border-radius: 0;
 }
 
-.grid--2 {
-    justify-items: start;
+.grid--2,
+.grid--3 {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5rem 0;
+
+    > * {
+        width: 100%;
+    }
+
+    .gap--lg {
+        gap: .5rem;
+    }
 }
 
 // .has-overlap {

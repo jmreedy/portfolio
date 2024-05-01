@@ -30,7 +30,7 @@
     gap: 2rem;
 }
 
-.work__item {
+.work__item:hover {
     cursor: pointer;
 }
 
@@ -76,7 +76,7 @@
 
         p {
             font: 300 1rem/1.5 var(--font-body);
-            color: var(--color-greyscale-700);
+            color: var(--color-greyscale-900);
             margin-block-end: 1em;
         }
 
@@ -151,8 +151,9 @@
         padding: 0;
         background: transparent;
         width: 100%;
-        margin-bottom: 2rem;
+        margin-block-start: 2rem;
         max-width: none;
+        box-shadow: none;
 
         h3 {
             color: var(--text-body-primary);

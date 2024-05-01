@@ -415,7 +415,7 @@ aside nav a {
 
 h1 {
   color: var(--text-body-primary);
-  font: 700 2rem/1 var(--font-hero);
+  font: 700 2rem/1.125 var(--font-hero);
 }
 h1 a {
   color: var(--text-body-primary);
@@ -625,7 +625,7 @@ figure figcaption {
   gap: 2rem;
 }
 
-.work__item {
+.work__item:hover {
   cursor: pointer;
 }
 
@@ -667,7 +667,7 @@ figure figcaption {
 }
 .project__container header p {
   font: 300 1rem/1.5 var(--font-body);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-900);
   margin-block-end: 1em;
 }
 .project__container header button {
@@ -725,8 +725,9 @@ figure figcaption {
     padding: 0;
     background: transparent;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-block-start: 2rem;
     max-width: none;
+    box-shadow: none;
   }
   .project__container header h3 {
     color: var(--text-body-primary);
@@ -848,6 +849,25 @@ figure figcaption {
 }
 .project__link:hover {
   text-decoration: none;
+}
+
+.project__button {
+  display: inline-flex;
+  align-items: center;
+  background: var(--brand);
+  width: auto;
+  padding-inline: 3rem;
+  border-radius: 0.25rem;
+  color: var(--white);
+  height: 3rem;
+  text-decoration: none;
+}
+.project__button:hover, .project__button:focus {
+  background: color-mix(in lch, var(--brand), black 20%);
+}
+.project__button + small {
+  display: block;
+  margin-block-start: 1em;
 }
 
 .project__group {
@@ -1186,14 +1206,18 @@ figure figcaption {
     border-radius: 0;
     object-fit: cover;
   }
-  .grid--2 {
-    grid-template-columns: 1fr;
-    justify-items: stretch;
-  }
 }
 @media screen and (max-width: 430px) {
   .project {
     padding-block-end: 1rem;
+  }
+  .project__button {
+    width: 100%;
+    justify-content: center;
+  }
+  .project__button + small {
+    text-align: center;
+    width: 100%;
   }
   .overflow--mobile {
     --offset: calc(50vw - 8.5rem);
@@ -1239,8 +1263,19 @@ figure figcaption {
   }
 }
 @media screen and (max-width: 430px) {
-  .grid--2 {
-    justify-items: start;
+  .grid--2,
+  .grid--3 {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem 0;
+  }
+  .grid--2 > *,
+  .grid--3 > * {
+    width: 100%;
+  }
+  .grid--2 .gap--lg,
+  .grid--3 .gap--lg {
+    gap: 0.5rem;
   }
 }
 .masthead {
@@ -1280,7 +1315,6 @@ figure figcaption {
   font-size: 1.75rem;
 }
 .masthead h1 small {
-  font-size: 0.75rem;
   color: var(--text-body-secondary);
 }
 
@@ -1295,6 +1329,9 @@ figure figcaption {
     padding-block: 0;
     padding-inline: 1.5rem 0;
   }
+  .masthead h1 {
+    line-height: 1;
+  }
   .masthead .btn--icon {
     display: block;
   }
@@ -1304,7 +1341,9 @@ figure figcaption {
     text-align: left;
   }
   .masthead svg {
-    width: 2rem;
+    position: relative;
+    top: 0.125rem;
+    width: 2.25rem;
   }
 }
 .list--proficiencies {
