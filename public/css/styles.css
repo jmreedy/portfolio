@@ -379,7 +379,7 @@ aside {
   --nav-border: var(--divider);
   --nav-primary-font: 800 1rem/1.5 var(--font-title);
   --nav-secondary-font: 300 .875rem/1.375 var(--font-title);
-  --nav-legal-font: 300 .75rem/1.375 var(--font-body);
+  --nav-legal-font: 300 0.8125rem/1.375 var(--font-body);
   position: fixed;
   inset: 0 auto 0 0;
   z-index: 1;
@@ -478,6 +478,7 @@ h1 small {
 .legal {
   margin-block-start: auto;
   font: var(--nav-legal-font);
+  color: var(--text-body-secondary);
 }
 .legal p:not(:first-of-type) {
   margin-block-start: 1rem;
