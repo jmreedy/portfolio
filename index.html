@@ -199,23 +199,43 @@
                 <p>You're only as good as the things you create so allow me to put my money where my mouth is. Here's a small collection of past work that I happen to be particularly fond of.
             </header>
         
-            <div class="section__body sm">
-                <ul class="list--projects">
-                    <li class="work__item" data-hook="chalkboard">
-                        <img loading="lazy" class="shadow--moblie" src="public/img/work/chalkboard/chalkboard-mobile-1.png" alt="A clickable mobile representation of work completed for a personal wedding website.">
-                    </li>
-                    <li class="work__item" data-hook="marketwatch">
-                        <img loading="lazy" class="shadow--moblie" src="public/img/work/marketwatch/marketwatch-quote-old-mobile.png" alt="A clickable mobile representation of work completed for the quote page of a fincial news website.">
-                    </li>
-                    <li class="work__item" data-hook="totalexpert">
-                        <img loading="lazy" class="shadow--moblie" src="public/img/work/totalexpert/totalexpert-web-dashboard.png" alt="A clickable mobile representation of work completed for a customer relationship manangement tool.">
-                    </li>
-                </ul>
-            </div>
+            <div class="projects">
+                <section class="work__item project__container " data-hook="chalkboard">
+                    <header>
+                        <h3>Chalkboard Wedding</h3>
+                        <p>What do you get when you combine two obsessive designers with a all the chaos that goes into planning a wedding?</p>
+                        <button type="button">Let's Find Out</a>
+                    </header>
+                    <img class="hero border shadow--generic" src="public/img/work/chalkboard/chalkboard-project-hero.jpg" alt="The top portion of a website displaying a young couple between a large metal ampersand sign artistically cropped to only show their wardrobe.">
+                    <img class="mobile shadow--mobile" src="public/img/work/chalkboard/chalkboard-mobile-1.png" alt="A mobile phone rendering of the top portion of a website that shows a girl helping her fiance tighten his tie.">
+                </section>
         
-            <div class="width--sm align--center notification--temp">
-                <!-- <i class="fa-solid fa-dumpster-fire"></i> -->
-                <p>I've got hard drives of files to sort through yet, so check back often for additional work musings.</p>
+                <section class="work__item project--totalexpert project__container" data-hook="chalkboard">
+                    <header>
+                        <h3>Total Expert</h3>
+                        <p>Yo dawg, I heard you like mobile. So we put mobile screens inside of your mobile app so you could utilize mobile while being mobile.</p>
+                        <button type="button" >Pimp That Phone</button>
+                    </header>
+                    <img class="hero border shadow--generic" src="public/img/work/totalexpert/totalexpert-project-hero.jpg" alt="A desktop rendering of a task application inside of a customer relationship management tool. ">
+                    <div class="mobile-group">
+                        <img class="mobile shadow--mobile" src="public/img/work/totalexpert/totalexpert-web-tasks.png" alt="A mobile phone with a task panel exposed from the right hand side displaying a list of relevant tasks for a particular contact.">
+                        <img class="mobile small shadow--mobile" src="public/img/work/totalexpert/totalexpert-web-dashboard.png" alt="The mobile version of a dashboard for a customer relationship management platform with a collection of items on an agenda including appointments and tasks below a yellow notification bar.">
+                    </div>
+                </section>
+        
+                <section class="work__item project__container" data-hook="chalkboard">
+                    <header>
+                        <h3>MarketWatch</h3>
+                        <p>Sections, articles, and quote pages&hellip;oh my! Seriously though, grab a cup of coffee; you're gonna be here for awhile.</p>
+                        <button type="button">8 Glorious Years</button>
+                    </header>
+                    <img class="hero border shadow--generic"src="public/img/work/marketwatch/marketwatch-project-hero.jpg" alt="A large stylized financial chart showing the percent change for Apple and Twitter compared against each other.">
+                    <img class="mobile shadow--mobile" src="public/img/work/marketwatch/marketwatch-articlepage-mobile.png" alt="A mobile presentation of the MarketWatch artcle page with a large image of a laptop computer with the Netflix logo being displayed on the screen underneath a relevant headline.">
+                </section>
+        
+                <div class="width--sm align--center notification--temp">
+                    <p>I've got hard drives of files to sort through yet, so check back often for additional musings of work.</p>
+                </div>
             </div>
         </section>
     <section class="section--primary collaborations" id="collaborations">
@@ -520,7 +540,7 @@
                 <h3>Buckle Up, This Is Gonna Be A Long Ride</h3>
                 <p>To the surprise of many, the engineering crew that keeps the lights on over at MarketWatch wouldn't fill even one side of AFC Richmond's pitch and for 8 1/2 years I was lucky enough to be part of that team.</p>
                 <p>As the design and front-end development lead, we set to rebuild the whole site from the ground up. Legacy technology stacks were successfully sunset in the process while each corner of the overall aesthetic and experience was given a well deserved modern facelift.</p>
-                <p><strong>Project Responsibilities</strong><br>UX/UI Design, Front-End Development, Systems Architect, Team Scapegoat</p>
+                <p><strong>Role Responsibilities</strong><br>UX/UI Design, Front-End Development, Systems Architect, Project Management, QA Testing, Team Scapegoat</p>
                 <p><a class="project__link" href="https://www.marketwatch.com/" target="_blank">MarketWatch Home Page</a></p>
             </header>
     
@@ -553,7 +573,7 @@
 
         <section class="project__group">
             <header>
-                <h3>Making Financial Jargon Sexy</h3>
+                <h3>Making Financial Data Sexy</h3>
                 <p>I'm not going to pretend there isn't a bias when I say that the MarketWatch quote page remains the best offerings of stock data in the public space. It remains one of the crowning achievements of my time working within the confines of Dow Jones.</p>
                 <p><a class="project__link" href="https://www.marketwatch.com/investing/stock/aapl" target="_blank">MarketWatch Quote Page</a></p>
             </header>
@@ -630,7 +650,7 @@
         </section>
     </div>
 </article>
-<article class="modal is-open" id="totalexpert">
+<article class="modal" id="totalexpert">
     <header class="modal__header">
         <div class="modal__title">
             <h2>Total Expert</h2>
@@ -717,13 +737,13 @@
             </header>
 
             <figure class="width--md">
-                <img loading="lazy" class="border shadow--generic" src="public/img/work/mosby/mosby-hero.jpg" alt="A blue gradient accent image to separate mobile assets from the background.">
+                <img loading="lazy" class="border shadow--generic" src="public/img/work/mosby/mosby-hero.jpg" alt="A stylized crop of an assortment of multi-select dropdown menus, all with a small amount of deviation from one another.">
             </figure>
             
             <p>It's a necessary evil to outline all the possible edge cases that a particular component like the multi-select dropdown can offer. In this case the multi-select dropdown can be presented in one of nine different ways. My responsibility with the design system was to ensure all nine of those deviations all presented themselves to the end user in the same manner on screen.</p>
             
             <figure>
-                <img loading="lazy" class="border shadow--generic" src="public/img/work/mosby/mosby-components.jpg" alt="A blue gradient accent image to separate mobile assets from the background.">
+                <img loading="lazy" class="border shadow--generic" src="public/img/work/mosby/mosby-components.jpg" alt="An organized collection of various design components commonly used for web development, including buttons, input fields, icons, and menus.">
             </figure>
             
             <section class="project__group">
@@ -734,17 +754,17 @@
             </section>
             
             <figure class="width--sm grid grid--3">
-                <img loading="lazy" class="occupy--2 border shadow--generic" src="public/img/work/mosby/mosby-comparison.jpg" alt="The Total Expert native application biometric login request screen.">
+                <img loading="lazy" class="occupy--2 border shadow--generic" src="public/img/work/mosby/mosby-comparison.jpg" alt="A side by side comparrison of a menu dropdown; one being the original version and the other being the new design system equivalent.">
                 <div class="occupy--1 flex--vertical gap--lg">
-                    <img loading="lazy" class="occupy--1 border shadow--generic" src="public/img/work/mosby/mosby-documentation.jpg" alt="A standard login screen with two options on a Total Expert branded blue gradient background.">
-                    <img loading="lazy" class="occupy--1 border shadow--generic" src="public/img/work/mosby/mosby-padding.jpg" alt="A mobile device screen displaying additional options that could be used for Single Sign-On via services like Google, Microsoft and Okta.">
+                    <img loading="lazy" class="occupy--1 border shadow--generic" src="public/img/work/mosby/mosby-documentation.jpg" alt="A series of required input fields with green checkmarks next to those that are being used correctly given the defined guidelines.">
+                    <img loading="lazy" class="occupy--1 border shadow--generic" src="public/img/work/mosby/mosby-padding.jpg" alt="A visual aid displaying appropriately allocated padding for items found inside a form field. ">
                 </div>
             </figure>
 
             <p>The inevitable struggle was discovering the threshold for what should and shouldn't be editable for each graphical asset. Nothing illustrates that idea more than the behemoth that is a data table component and the variety of information that can be presented in each indivdiual cell.</p>
         
             <figure class="width--sm">
-                <img loading="lazy" class="shadow--generic" src="public/img/work/mosby/mosby-table.jpg" alt="">
+                <img loading="lazy" class="shadow--generic" src="public/img/work/mosby/mosby-table.jpg" alt="A large data table containing a collection of contact names along with an assortment of corresponding details.">
             </figure>
         </section>
     </div>

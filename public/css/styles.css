@@ -619,26 +619,129 @@ figure figcaption {
     text-wrap: pretty;
   }
 }
-.list--projects {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  width: 100%;
-  margin-block-end: 2rem;
-}
-.list--projects .project__item .work__item {
-  display: block;
-  transform: scale(1);
-  transition: 400ms all;
-}
-.list--projects .project__item .work__item:hover, .list--projects .project__item .work__item:focus {
-  transform: scale(0.98);
-}
-.list--projects .project__item img {
-  width: 100%;
-  max-width: 20rem;
+.projects {
+  display: grid;
+  gap: 2rem;
 }
 
+.work__item {
+  cursor: pointer;
+}
+
+.project__container {
+  position: relative;
+  display: grid;
+  max-width: 50rem;
+  margin-block-end: 2rem;
+  isolation: isolate;
+}
+.project__container .hero {
+  border-radius: 0.5rem;
+  min-height: 28rem;
+  object-fit: cover;
+}
+.project__container .mobile {
+  position: absolute;
+  inset: auto auto -2rem 1rem;
+  max-width: 14rem;
+}
+.project__container header {
+  position: absolute;
+  inset: auto 1.5rem 1.5rem auto;
+  z-index: 2;
+  display: grid;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  width: 25rem;
+  padding-block: 2rem;
+  padding-inline: 2rem;
+  backdrop-filter: blur(16px);
+  max-width: calc(100vw - 6rem);
+}
+.project__container header h3 {
+  font: 800 1.25rem/1.125 var(--font-title);
+  color: var(--color-greyscale-900);
+  margin-block-end: 0.5em;
+}
+.project__container header p {
+  font: 300 1rem/1.5 var(--font-body);
+  color: var(--color-greyscale-700);
+  margin-block-end: 1em;
+}
+.project__container header button {
+  background: var(--brand);
+  width: auto;
+  padding-inline: 3rem;
+  border-radius: 0.25rem;
+  color: var(--white);
+  height: 3rem;
+}
+.project__container header button:hover, .project__container header button:focus {
+  background: color-mix(in lch, var(--brand), black 20%);
+}
+
+.project--totalexpert .mobile-group {
+  position: absolute;
+  inset: auto 1rem -2rem auto;
+  display: flex;
+  align-items: end;
+  isolation: isolate;
+}
+.project--totalexpert .mobile-group .mobile {
+  position: relative;
+  inset: auto;
+  z-index: 1;
+  max-width: 14rem;
+  translate: 0;
+}
+.project--totalexpert .mobile-group .mobile.small {
+  position: absolute;
+  z-index: -1;
+  inset: 50% 80% auto auto;
+  translate: 0 -50%;
+  max-width: 13rem;
+}
+.project--totalexpert header {
+  inset: auto auto 1.5rem 1.5rem;
+}
+
+@media screen and (max-width: 430px) {
+  .project__container .hero {
+    display: none;
+  }
+  .project__container > .mobile,
+  .project__container > .mobile-group {
+    position: relative;
+    inset: auto;
+  }
+  .project__container .mobile {
+    max-width: 16rem;
+    width: 100%;
+  }
+  .project__container header {
+    position: static;
+    padding: 0;
+    background: transparent;
+    width: 100%;
+    margin-bottom: 2rem;
+    max-width: none;
+  }
+  .project__container header h3 {
+    color: var(--text-body-primary);
+  }
+  .project__container header p {
+    color: var(--text-body-secondary);
+  }
+  .project--totalexpert .mobile-group {
+    translate: 1.5rem 0;
+  }
+  .project--totalexpert .mobile-group .mobile {
+    max-width: 16rem;
+  }
+  .project--totalexpert .mobile-group .mobile.small {
+    right: 4rem;
+  }
+}
 .modal {
   position: fixed;
   inset: 2rem;

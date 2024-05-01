@@ -401,6 +401,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/public\/img\/work\/chalkboard\/chalkboard-project-hero.jpg" : {
+      "ft" : 16384,
+      "iS" : 285083,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/chalkboard\/chalkboard-project-hero.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/public\/img\/work\/chalkboard\/chalkboard-sign-bar.jpg" : {
       "ft" : 16384,
       "iS" : 92181,
@@ -586,6 +599,19 @@
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/public\/img\/work\/marketwatch\/marketwatch-moodboard.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/public\/img\/work\/marketwatch\/marketwatch-project-hero.jpg" : {
+      "ft" : 16384,
+      "iS" : 207208,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/marketwatch\/marketwatch-project-hero.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
@@ -931,6 +957,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/public\/img\/work\/totalexpert\/totalexpert-project-hero.jpg" : {
+      "ft" : 16384,
+      "iS" : 285083,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/totalexpert\/totalexpert-project-hero.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/public\/img\/work\/totalexpert\/totalexpert-thumbnail.jpg" : {
       "ft" : 16384,
       "iS" : 90039,
@@ -1043,6 +1082,19 @@
       "oF" : 0,
       "oIPL" : 1,
       "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/public\/img\/work\/totalexpert\/totalexpert-web-tasks.png" : {
+      "ft" : 32768,
+      "iS" : 30673,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/totalexpert\/totalexpert-web-tasks.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 90,
