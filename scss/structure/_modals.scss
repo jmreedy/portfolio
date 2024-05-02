@@ -280,6 +280,8 @@
 .grid {
     display: grid;
     gap: 1rem;
+    align-items: stretch;
+
      img {
         width: 100%;
      }

@@ -971,6 +971,7 @@ figure figcaption {
 .grid {
   display: grid;
   gap: 1rem;
+  align-items: stretch;
 }
 .grid img {
   width: 100%;
