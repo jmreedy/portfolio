@@ -88,7 +88,7 @@ section:target {
   --dialog-bg: var(--page-bg);
   --dialog-header: rgb(255 255 255 / 85%);
   --text-body-primary: var(--color-greyscale-900);
-  --text-body-secondary: var(--color-greyscale-600);
+  --text-body-secondary: var(--color-greyscale-700);
   --input-border: var(--color-greyscale-200);
   --divider: var(--color-greyscale-200);
 }
@@ -103,7 +103,7 @@ section:target {
     --dialog-bg: rgb(45 48 52);
     --dialog-header: rgb(45 48 52 / 95%);
     --text-body-primary: var(--color-greyscale-100);
-    --text-body-secondary: var(--color-greyscale-500);
+    --text-body-secondary: var(--color-greyscale-300);
     --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
     --input-border: var(--color-greyscale-700);
   }
@@ -116,7 +116,7 @@ section:target {
     --dialog-bg: var(--page-bg);
     --dialog-header: rgb(255 255 255 / 85%);
     --text-body-primary: var(--color-greyscale-900);
-    --text-body-secondary: var(--color-greyscale-600);
+    --text-body-secondary: var(--color-greyscale-700);
     --input-border: var(--color-greyscale-200);
     --divider: var(--color-greyscale-200);
   }
@@ -131,7 +131,7 @@ section:target {
     --dialog-bg: rgb(45 48 52);
     --dialog-header: rgb(45 48 52 / 95%);
     --text-body-primary: var(--color-greyscale-100);
-    --text-body-secondary: var(--color-greyscale-500);
+    --text-body-secondary: var(--color-greyscale-300);
     --divider: color-mix(in lch, var(--color-greyscale-700), black 25%);
     --input-border: var(--color-greyscale-700);
   }
@@ -580,7 +580,6 @@ figure figcaption {
     -moz-backdrop-filter: blur(0.5rem);
     backdrop-filter: blur(0.5rem);
     background: var(--page-bg);
-    border-radius: 0 1rem 0 0;
     box-shadow: 6px -8px 8px -8px rgba(0, 0, 0, 0.15);
   }
   .about figure {
@@ -1376,6 +1375,7 @@ figure figcaption {
 .proficiency__item p {
   font: 300 1rem/1.6 var(--font-body);
   text-wrap: pretty;
+  color: var(--text-body-secondary);
 }
 
 @media screen and (max-width: 640px) {
@@ -2142,9 +2142,15 @@ fieldset:has(input:nth-of-type(5):checked) ~ blockquote:nth-of-type(5) {
   padding-block: 1rem;
   padding-inline: 1rem;
   border-radius: 0.25rem;
+  color: var(--text-body-secondary);
 }
 .notification--temp i {
   color: var(--brand);
+}
+@media screen and (max-width: 430px) {
+  .notification--temp {
+    text-align: left;
+  }
 }
 
 .flex--vertical {
