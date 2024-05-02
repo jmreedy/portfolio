@@ -41,7 +41,7 @@ main {
            -moz-backdrop-filter: blur(.5rem);
                 backdrop-filter: blur(.5rem);
         background: var(--page-bg);
-        box-shadow: 6px -8px 8px -8px rgb(0 0 0 / 15%);
+        box-shadow: 6px -8px 8px -8px rgb(0 0 0 / 10%);
     }
 
     figure {
@@ -84,7 +84,7 @@ main {
             text-wrap: pretty;
             z-index: 2;
             color: var(--white);
-            text-wrap: pretty;
+            font-weight: 400;
         }
     }
 }

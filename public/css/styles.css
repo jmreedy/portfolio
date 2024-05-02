@@ -580,7 +580,7 @@ figure figcaption {
     -moz-backdrop-filter: blur(0.5rem);
     backdrop-filter: blur(0.5rem);
     background: var(--page-bg);
-    box-shadow: 6px -8px 8px -8px rgba(0, 0, 0, 0.15);
+    box-shadow: 6px -8px 8px -8px rgba(0, 0, 0, 0.1);
   }
   .about figure {
     position: relative;
@@ -617,7 +617,7 @@ figure figcaption {
     text-wrap: pretty;
     z-index: 2;
     color: var(--white);
-    text-wrap: pretty;
+    font-weight: 400;
   }
 }
 .projects {
@@ -1216,7 +1216,6 @@ figure figcaption {
     justify-content: center;
   }
   .project__button + small {
-    text-align: center;
     width: 100%;
   }
   .overflow--mobile {
