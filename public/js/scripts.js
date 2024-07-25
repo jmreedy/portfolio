@@ -26,9 +26,22 @@
     $('.work__item').click(function(){
         var projectID = $(this).attr('data-hook');
 
-        $('#' + projectID).toggleClass('is-open');
-        $('aside').removeClass('active');
-        $('html').toggleClass('noscroll');
+        if(projectID === 'totalexpert') {
+            const password = prompt('Woah buddy, ya gotta enter the super secret password first.');
+
+            if(password == 'aardvark') {
+                $('#totalexpert').toggleClass('is-open');
+            }
+            else {
+                return;
+            }
+        }
+
+        else {
+            $('#' + projectID).toggleClass('is-open');
+            $('aside').removeClass('active');
+            $('html').toggleClass('noscroll');
+        }
     });
 
     $('[data-hook="modalClose"]').click(function(){

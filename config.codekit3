@@ -827,6 +827,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/public\/img\/work\/totalexpert\/bunny_ears_square-512.png" : {
+      "ft" : 32768,
+      "iS" : 340846,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/totalexpert\/bunny_ears_square-512.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
     "\/public\/img\/work\/totalexpert\/totalexpert-bg.jpg" : {
       "ft" : 16384,
       "iS" : 165682,
