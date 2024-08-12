@@ -801,6 +801,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/public\/img\/work\/mosby\/mosby-playlist.jpg" : {
+      "ft" : 16384,
+      "iS" : 80093,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/img\/work\/mosby\/mosby-playlist.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/public\/img\/work\/mosby\/mosby-table.jpg" : {
       "ft" : 16384,
       "iS" : 224897,
