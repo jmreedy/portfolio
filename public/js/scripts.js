@@ -27,10 +27,12 @@
         var projectID = $(this).attr('data-hook');
 
         if(projectID === 'totalexpert') {
-            const password = prompt('Woah buddy, ya gotta enter the super secret password first.');
+            const password = prompt('Woah friend, ya gotta enter the super secret password first.');
 
             if(password == 'aardvark') {
                 $('#totalexpert').toggleClass('is-open');
+                $('aside').removeClass('active');
+                $('html').toggleClass('noscroll');
             }
             else {
                 return;
